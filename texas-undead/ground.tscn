@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfpvx43iebad5"]
+[gd_scene load_steps=8 format=3 uid="uid://dfpvx43iebad5"]
 
 [ext_resource type="Texture2D" uid="uid://bao4b70wjwj0r" path="res://Forest_DeadEvergreen_S.jpg" id="1_p8yq4"]
 [ext_resource type="Texture2D" uid="uid://dtytf0qlswe0y" path="res://Forest_DeadEvergreen_N.jpg" id="2_2pr1m"]
 [ext_resource type="MeshLibrary" uid="uid://b0qjm62y34ipf" path="res://trees_mesh.tres" id="3_bxco1"]
+[ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="4_11xl8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yomx"]
 albedo_texture = ExtResource("1_p8yq4")
@@ -15,10 +16,16 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_1yomx")
 size = Vector2(250, 250)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxe28"]
+size = Vector3(250, 0, 250)
+
 [node name="Ground" type="Node3D"]
 
 [node name="GroundMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_cht7n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundMesh"]
+shape = SubResource("BoxShape3D_pxe28")
 
 [node name="tree" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -26,3 +33,10 @@ mesh_library = ExtResource("3_bxco1")
 data = {
 "cells": PackedInt32Array(0, 0, 0, 65535, 65534, 0, 65527, 1, 0, 65531, 11, 0, 65522, 18, 0, 65531, 17, 0, 2, 20, 0, 3, 11, 0, 6, 14, 0, 0, 3, 0, 1, 2, 0, 2, 4, 0, 1, 5, 0)
 }
+
+[node name="Player" parent="." instance=ExtResource("4_11xl8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.293408, 0)
+collision_layer = 2
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.997841, 0, 0.0656817, 0, 1, 0, -0.0656817, 0, -0.997841, 0, 1.73884, -2.38861)

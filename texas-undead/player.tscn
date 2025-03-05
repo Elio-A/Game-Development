@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kp363"]
 
-[node name="Player" type="Area3D"]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_f2ft1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
