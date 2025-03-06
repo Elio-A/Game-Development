@@ -6,12 +6,15 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kp363"]
 
-[node name="Player" type="Area3D"]
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_f2ft1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0359, 0)
 mesh = SubResource("CapsuleMesh_0terg")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0359, 0)
 shape = SubResource("CapsuleShape3D_kp363")

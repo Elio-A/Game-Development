@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfpvx43iebad5"]
+[gd_scene load_steps=9 format=3 uid="uid://dfpvx43iebad5"]
 
 [ext_resource type="Texture2D" uid="uid://bao4b70wjwj0r" path="res://Forest_DeadEvergreen_S.jpg" id="1_p8yq4"]
 [ext_resource type="Texture2D" uid="uid://dtytf0qlswe0y" path="res://Forest_DeadEvergreen_N.jpg" id="2_2pr1m"]
 [ext_resource type="MeshLibrary" uid="uid://b0qjm62y34ipf" path="res://trees_mesh.tres" id="3_bxco1"]
+[ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="4_11xl8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yomx"]
 albedo_texture = ExtResource("1_p8yq4")
@@ -15,10 +16,33 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_1yomx")
 size = Vector2(250, 250)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xj2v6"]
+data = PackedVector3Array(125, 0, 125, -125, 0, 125, 125, 0, -125, -125, 0, 125, -125, 0, -125, 125, 0, -125)
+
+[sub_resource type="GDScript" id="GDScript_nbrmo"]
+script/source = "extends Camera3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Ground" type="Node3D"]
 
 [node name="GroundMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_cht7n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GroundMesh"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundMesh/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_xj2v6")
 
 [node name="tree" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -26,3 +50,13 @@ mesh_library = ExtResource("3_bxco1")
 data = {
 "cells": PackedInt32Array(0, 0, 0, 65535, 65534, 0, 65527, 1, 0, 65531, 11, 0, 65522, 18, 0, 65531, 17, 0, 2, 20, 0, 3, 11, 0, 6, 14, 0, 0, 3, 0, 1, 2, 0, 2, 4, 0, 1, 5, 0)
 }
+
+[node name="Player" parent="." instance=ExtResource("4_11xl8")]
+transform = Transform3D(-0.999965, 0, 0.00837737, 0, 1, 0, -0.00837737, 0, -0.999965, 0, 0.293408, 0)
+
+[node name="Head" type="Node3D" parent="Player"]
+transform = Transform3D(-0.994799, 0, -0.101873, 0, 1, 0, 0.101873, 0, -0.994799, -0.000177349, 1.80967, -0.0211693)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head"]
+transform = Transform3D(-0.997841, 0, 0.0656817, 0, 1, 0, -0.0656817, 0, -0.997841, 0, 0.00563228, -0.005373)
+script = SubResource("GDScript_nbrmo")

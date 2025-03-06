@@ -1,12 +1,65 @@
-extends Area3D
+extends CharacterBody3D
 
+@export var speed = 10
+@export var gravity = -9
+@export var jumpForce = 5
 
+const sensitivity = 0.01
+const runSpeed = 15
+#Camera/Head Bob
+const bobFreq = 1 #How often the footsteps happen
+const bobAmp = 0.20 #How far up and down the camera will go
+var sinVal = 0.8
+
+@onready var head = $Head
+@onready var camera = $Head/Camera3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	#Making mouse not visible:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		#Head movement left and right
+		head.rotate_y(-event.relative.x * sensitivity)
+		
+		#Head movement up and down
+		camera.rotate_object_local(Vector3(1, 0, 0), -event.relative.y * sensitivity)
+		
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(70))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("Forward"):
+func _physics_process(delta: float) -> void:
+	#Getting input direction:
+	var inputDirection = Input.get_vector("Left", "Right", "Forward", "Backward")
+	var direction = (head.transform.basis * Vector3(inputDirection.x, 0, inputDirection.y)).normalized()
+	
+	#Applying Gravity:
+	if not is_on_floor():
+		velocity.y += gravity * delta
 		
+	#Jump:
+	if Input.is_action_pressed("Jump") and is_on_floor():
+		velocity.y = jumpForce
+		
+	#Set Horizontal Velocity:
+	if direction && Input.is_action_pressed("Run"):
+		velocity.x = direction.x * runSpeed
+		velocity.z = direction.z * runSpeed
+	elif direction:
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
+
+	#Head Bop:
+	sinVal += delta * velocity.length() * float(is_on_floor())
+	camera.transform.origin = headBob(sinVal)
+	
+	move_and_slide()
+
+func headBob(time) ->Vector3:
+	var pos = Vector3.ZERO
+	pos.y = sin(time * bobFreq) * bobAmp
+	return pos
