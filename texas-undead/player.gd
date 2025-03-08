@@ -13,6 +13,8 @@ var sinVal = 0.8
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+
+@onready var gun = $Head/Camera3D/Revolver/AnimationPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Making mouse not visible:
@@ -56,6 +58,11 @@ func _physics_process(delta: float) -> void:
 	#Head Bop:
 	sinVal += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = headBob(sinVal)
+	
+	#Gun Animation:
+	if Input.is_action_pressed('Shoot'):
+		if !gun.is_playing():
+			gun.play("Shoot")
 	
 	move_and_slide()
 
