@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcsye3rf54yq5"]
+
+[ext_resource type="PackedScene" uid="uid://dy2kye7t0mxmf" path="res://Revolver.glb" id="1_l565l"]
+
+[node name="Revolver" instance=ExtResource("1_l565l")]
