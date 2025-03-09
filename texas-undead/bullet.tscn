@@ -48,10 +48,10 @@ transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
 script = ExtResource("1_lmbul")
 
 [node name="Bullet1" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0150791, 0.999886, 0, -0.999886, 0.0150791, 0, 7.36361, 0)
+transform = Transform3D(-0.999994, 0.00357745, -5.39506e-05, 0, 0.0150791, 0.999886, 0.00357785, 0.99988, -0.015079, 0.102577, 7.83355, -0.0461422)
 mesh = SubResource("ArrayMesh_vft5l")
 skeleton = NodePath("")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14178, -0.325986)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75101, 0.628338)
 target_position = Vector3(0, 0, -0.6)
