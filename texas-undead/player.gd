@@ -1,11 +1,12 @@
 extends CharacterBody3D
 
 @export var speed = 10
-@export var gravity = -9
+@export var gravity = -20
 @export var jumpForce = 5
 
-const sensitivity = 0.01
+const sensitivity = 0.005
 const runSpeed = 15
+const normSpeed = 10
 #Camera/Head Bob
 const bobFreq = 1 #How often the footsteps happen
 const bobAmp = 0.20 #How far up and down the camera will go
@@ -30,9 +31,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		head.rotate_y(-event.relative.x * sensitivity)
 		
 		#Head movement up and down
-		camera.rotate_object_local(Vector3(1, 0, 0), -event.relative.y * sensitivity)
+		var verticalInput = -event.relative.y * sensitivity
 		
+		camera.rotation.x += verticalInput
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(70))
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -48,11 +51,14 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Jump") and is_on_floor():
 		velocity.y = jumpForce
 		
+	#Running:
+	if Input.is_action_pressed("Run"):
+		speed = runSpeed
+	else:
+		speed = normSpeed
+	
 	#Set Horizontal Velocity:
-	if direction && Input.is_action_pressed("Run"):
-		velocity.x = direction.x * runSpeed
-		velocity.z = direction.z * runSpeed
-	elif direction:
+	if direction:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 	else:
@@ -68,12 +74,14 @@ func _physics_process(delta: float) -> void:
 		if !gun.is_playing():
 			gun.play("Shoot")
 			instance = bullet.instantiate()
+			instance.scale = Vector3(0.1, 0.1, 0.1)
 			instance.position = barrel.global_position
 			instance.transform.basis = barrel.global_transform.basis
 			get_parent().add_child(instance)
 			
 	move_and_slide()
 
+#Headbob handling:
 func headBob(time) ->Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * bobFreq) * bobAmp

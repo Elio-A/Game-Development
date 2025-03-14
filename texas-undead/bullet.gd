@@ -9,7 +9,6 @@ const Speed = 35
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position += transform.basis * Vector3(0, 0, -Speed) * delta
