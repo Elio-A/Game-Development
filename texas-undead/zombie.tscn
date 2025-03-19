@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3cyuasnv61ky"]
+[gd_scene load_steps=5 format=3 uid="uid://b3cyuasnv61ky"]
 
-[ext_resource type="PackedScene" path="res://cac-1741419376402.glb" id="1_8331f"]
-[ext_resource type="Script" path="res://zombie.gd" id="1_bj3dk"]
+[ext_resource type="Script" uid="uid://dqmirm20a3c01" path="res://zombie.gd" id="1_bj3dk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fulhy"]
 radius = 0.36435
@@ -24,51 +23,7 @@ script = ExtResource("1_bj3dk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00987339, 0, 0)
 shape = SubResource("CapsuleShape3D_fulhy")
 
-[node name="AuxScene" parent="." instance=ExtResource("1_8331f")]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
-
-[node name="Node" parent="AuxScene" index="0"]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.00300217, -88.3962, -3.37515)
-
-[node name="Skeleton3D" parent="AuxScene/Node" index="0"]
-bones/0/scale = Vector3(1, 1, 1)
-bones/3/rotation = Quaternion(0.469741, 0.103156, 0.196714, 0.854404)
-bones/4/rotation = Quaternion(0.312143, 0.0762813, -0.0251531, 0.946634)
-bones/7/rotation = Quaternion(0.0233235, 0.0179249, -0.00630291, 0.999547)
-bones/9/rotation = Quaternion(0.1125, -0.0176015, 0.0102481, 0.993443)
-bones/9/scale = Vector3(1, 1, 1)
-bones/10/scale = Vector3(1, 1, 1)
-bones/15/rotation = Quaternion(-0.204429, 0.000440983, 0.00800419, 0.978849)
-bones/17/rotation = Quaternion(0.0485284, 0.0228753, 0.0199112, 0.998361)
-bones/20/rotation = Quaternion(0.128427, -0.0677175, 0.102611, 0.984069)
-bones/22/rotation = Quaternion(0.29059, -0.00116168, -0.0493896, 0.955572)
-bones/25/rotation = Quaternion(0.401844, -0.0101398, -0.0686666, 0.913074)
-bones/26/rotation = Quaternion(0.151567, -0.00490306, -0.0238826, 0.988146)
-bones/28/rotation = Quaternion(-0.0795225, -0.0240339, -0.0603903, 0.994712)
-bones/29/rotation = Quaternion(0.219034, -0.00647897, -0.0413067, 0.974821)
-bones/30/rotation = Quaternion(0.283075, -0.00352123, -0.0492288, 0.957827)
-bones/34/rotation = Quaternion(0.384915, -0.00221934, -0.0850585, 0.919021)
-bones/36/scale = Vector3(1, 1, 1)
-bones/37/rotation = Quaternion(-0.168187, 0.278811, 0.0353589, 0.944842)
-bones/38/rotation = Quaternion(0.160013, 0.125114, -0.663277, 0.720282)
-bones/39/rotation = Quaternion(-0.164437, -0.0198567, -0.187782, 0.968145)
-bones/40/rotation = Quaternion(0.0327912, -0.0505244, -0.407105, 0.911393)
-bones/41/rotation = Quaternion(-0.0180225, 0.0488689, 0.322244, 0.945222)
-bones/44/rotation = Quaternion(-0.161142, -0.000273791, -0.0269221, 0.986564)
-bones/45/rotation = Quaternion(0.358688, 0.00294799, 0.0440441, 0.932413)
-bones/46/rotation = Quaternion(0.0590772, 0.00138712, 0.00621927, 0.998233)
-bones/48/rotation = Quaternion(-0.0905795, 0.0137365, -0.0255824, 0.995466)
-bones/49/rotation = Quaternion(0.444891, 0.0096314, 0.0559009, 0.893787)
-bones/50/rotation = Quaternion(0.318954, 0.00410898, 0.041788, 0.94684)
-bones/52/rotation = Quaternion(0.11397, 0.00535634, 0.0126435, 0.993389)
-bones/58/rotation = Quaternion(0.288816, 0.0023938, 0.0467223, 0.956241)
-bones/60/rotation = Quaternion(0.0110416, 0.250928, 0.959377, -0.128488)
-bones/60/scale = Vector3(1, 1, 1)
-bones/61/rotation = Quaternion(-0.746951, -0.151516, 0.234806, 0.603302)
-
 [node name="AnimationTree" type="AnimationTree" parent="."]
 root_node = NodePath("../AuxScene")
 tree_root = SubResource("AnimationNodeBlendTree_jw2s6")
 anim_player = NodePath("../AuxScene/AnimationPlayer")
-
-[editable path="AuxScene"]

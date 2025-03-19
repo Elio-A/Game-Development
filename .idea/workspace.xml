@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dba3e6ef-3bb5-4b8b-bde8-14357680c132" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver.glb.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver_file1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver_file1.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver_file3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver_file3.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/bullet.gd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/bullet.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_0.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_1.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_2.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_3.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/revolver.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Diffuse.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Glossiness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Glossiness.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Normal.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Specular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Specular.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Diffuse.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Glossiness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Glossiness.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Normal.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Specular.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Specular.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/zombie.gd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/zombie.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/ground.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/ground.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/player.gd" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/player.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/player.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/player.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/tree.glb.import" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/tree.glb.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/trees_mesh.tres" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/trees_mesh.tres" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2uXyVOg9bNIYoRXMrNa1OKexltT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging Player",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dba3e6ef-3bb5-4b8b-bde8-14357680c132" name="Changes" comment="" />
+      <created>1742409236679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742409236679</updated>
+    </task>
+    <servers />
+  </component>
+</project>

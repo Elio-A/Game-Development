@@ -2,6 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://dy2kye7t0mxmf" path="res://Revolver.glb" id="1_l565l"]
 
+[sub_resource type="Animation" id="Animation_gfk2e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Revovler_38:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_8jqt2"]
 resource_name = "Shoot"
 length = 0.1
@@ -19,30 +34,19 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0.05), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_gfk2e"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Revovler_38:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tl5pe"]
 _data = {
-"RESET": SubResource("Animation_gfk2e"),
-"Shoot": SubResource("Animation_8jqt2")
+&"RESET": SubResource("Animation_gfk2e"),
+&"Shoot": SubResource("Animation_8jqt2")
 }
 
 [node name="Revolver" instance=ExtResource("1_l565l")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
-"": SubResource("AnimationLibrary_tl5pe")
+&"": SubResource("AnimationLibrary_tl5pe")
 }
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0640305, -0.0689194)
+target_position = Vector3(0, 0, -1)
