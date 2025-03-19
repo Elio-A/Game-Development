@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://2gunl84f4jk8"]
 
-[ext_resource type="Script" path="res://bullet.gd" id="1_lmbul"]
+[ext_resource type="Script" uid="uid://6cngkqlh186w" path="res://bullet.gd" id="1_lmbul"]
 [ext_resource type="Texture2D" uid="uid://cskud0s82dyms" path="res://Revolver_file3.png" id="2_whr1a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8utn"]

@@ -12,14 +12,14 @@ const bobFreq = 1 #How often the footsteps happen
 const bobAmp = 0.20 #How far up and down the camera will go
 var sinVal = 0.8
 
-var bullet = load("res://bullet.tscn")
+var bullet = load("res://bullet_2.tscn")
 var instance
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 
 @onready var gun = $Head/Camera3D/Revolver/AnimationPlayer
-@onready var barrel = $Head/Camera3D/Revolver
+@onready var barrel = $Head/Camera3D/Revolver/RayCast3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Making mouse not visible:
@@ -74,7 +74,6 @@ func _physics_process(delta: float) -> void:
 		if !gun.is_playing():
 			gun.play("Shoot")
 			instance = bullet.instantiate()
-			instance.scale = Vector3(0.1, 0.1, 0.1)
 			instance.position = barrel.global_position
 			instance.transform.basis = barrel.global_transform.basis
 			get_parent().add_child(instance)
