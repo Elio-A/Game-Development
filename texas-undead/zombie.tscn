@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3cyuasnv61ky"]
+
+[ext_resource type="Script" path="res://zombie.gd" id="1_bj3dk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fulhy"]
+radius = 0.36435
+height = 2.46919
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5stx8"]
+animation = &"Walking0"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_jw2s6"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_5stx8")
+nodes/Animation/position = Vector2(-36.1013, 141.429)
+node_connections = [&"output", 0, &"Animation"]
+
+[node name="Zombie" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_bj3dk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00987339, 0, 0)
+shape = SubResource("CapsuleShape3D_fulhy")
+
+[node name="AuxScene" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+script = null
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../AuxScene")
+tree_root = SubResource("AnimationNodeBlendTree_jw2s6")
+anim_player = NodePath("../AuxScene/AnimationPlayer")

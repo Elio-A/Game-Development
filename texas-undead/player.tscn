@@ -1,12 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3i5gjwp8tnfb"]
+[gd_scene load_steps=6 format=3 uid="uid://c3i5gjwp8tnfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_f2ft1"]
+[ext_resource type="PackedScene" uid="uid://bcsye3rf54yq5" path="res://revolver.tscn" id="2_4yft6"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0terg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kp363"]
 
-[node name="Player" type="CharacterBody3D"]
+[sub_resource type="GDScript" id="GDScript_s1thy"]
+script/source = "extends Camera3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+transform = Transform3D(-0.99929, 0, -0.0376728, 0, 1, 0, 0.0376728, 0, -0.99929, 0, 0, 0)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_f2ft1")
@@ -18,3 +34,13 @@ mesh = SubResource("CapsuleMesh_0terg")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0359, 0)
 shape = SubResource("CapsuleShape3D_kp363")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(-0.994799, 0, -0.101873, 0, 1, 0, 0.101873, 0, -0.994799, -0.000177349, 1.80967, -0.0211693)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(-0.997841, 0, 0.0656817, 0, 1, 0, -0.0656817, 0, -0.997841, 0, 0.00563228, -0.005373)
+script = SubResource("GDScript_s1thy")
+
+[node name="Revolver" parent="Head/Camera3D" instance=ExtResource("2_4yft6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300267, -0.218144, -0.396083)
