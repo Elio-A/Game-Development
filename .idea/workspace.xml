@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dba3e6ef-3bb5-4b8b-bde8-14357680c132" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver.glb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver.glb.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver_file1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver_file1.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver_file3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/Revolver_file3.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/bullet.gd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/bullet.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_0.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_1.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_2.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/cac-1741419376402_3.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/revolver.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Diffuse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Diffuse.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Glossiness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Glossiness.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Normal.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Specular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1001_Specular.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Diffuse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Diffuse.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Glossiness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Glossiness.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Normal.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Specular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/untitled_Ch10_1002_Specular.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/zombie.gd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/texas-undead/zombie.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/texas-undead/ground.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/ground.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/texas-undead/player.gd" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/player.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/texas-undead/player.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/player.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/texas-undead/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/texas-undead/tree.glb.import" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/tree.glb.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/texas-undead/trees_mesh.tres" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/trees_mesh.tres" afterDir="false" />
-    </list>
+    <list default="true" id="dba3e6ef-3bb5-4b8b-bde8-14357680c132" name="Changes" comment="Merging Player into Zombie" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,9 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2uXyVOg9bNIYoRXMrNa1OKexltT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -63,7 +21,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging Player",
+    "git-widget-placeholder": "Zombie",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
@@ -76,6 +34,19 @@
       <option name="presentableId" value="Default" />
       <updated>1742409236679</updated>
     </task>
+    <task id="LOCAL-00001" summary="Merging Player into Zombie">
+      <option name="closed" value="true" />
+      <created>1742426057769</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742426057769</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merging Player into Zombie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merging Player into Zombie" />
   </component>
 </project>
