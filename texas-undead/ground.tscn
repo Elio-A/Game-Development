@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfpvx43iebad5"]
+[gd_scene load_steps=16 format=3 uid="uid://dfpvx43iebad5"]
 
 [ext_resource type="Texture2D" uid="uid://bao4b70wjwj0r" path="res://Forest_DeadEvergreen_S.jpg" id="1_p8yq4"]
 [ext_resource type="Texture2D" uid="uid://dtytf0qlswe0y" path="res://Forest_DeadEvergreen_N.jpg" id="2_2pr1m"]
@@ -35,6 +35,28 @@ func _process(delta: float) -> void:
 	pass
 "
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_d4pc4"]
+fractal_weighted_strength = 0.3
+domain_warp_enabled = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_eprha"]
+seamless = true
+noise = SubResource("FastNoiseLite_d4pc4")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_511ym"]
+sky_top_color = Color(0.157241, 0.494421, 0.584589, 1)
+sky_horizon_color = Color(1, 0.491706, 0.0660818, 1)
+sky_curve = 0.0609189
+sky_cover = SubResource("NoiseTexture2D_eprha")
+
+[sub_resource type="Sky" id="Sky_gc4ql"]
+sky_material = SubResource("ProceduralSkyMaterial_511ym")
+
+[sub_resource type="Environment" id="Environment_ktdun"]
+background_mode = 2
+background_color = Color(0.295867, 0.295866, 0.295866, 1)
+sky = SubResource("Sky_gc4ql")
+
 [node name="Ground" type="Node3D"]
 
 [node name="GroundMesh" type="MeshInstance3D" parent="."]
@@ -69,63 +91,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300267, -0.218144, -0.3960
 [node name="Zombie" parent="." instance=ExtResource("5_dtu2u")]
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 0, 1.69981, 6.5642)
 
-[node name="Skeleton3D" parent="Zombie/AuxScene/Node" index="0"]
-bones/0/position = Vector3(-2.7753, 90.7644, -0.626841)
-bones/0/rotation = Quaternion(0.075053, 0.294412, 0.0169424, 0.952576)
-bones/1/rotation = Quaternion(-0.134974, 0.413088, 0.875624, 0.210769)
-bones/2/rotation = Quaternion(-0.361774, -0.0379962, -0.00736786, 0.931462)
-bones/3/rotation = Quaternion(0.418572, 0.0527056, 0.0781532, 0.903278)
-bones/4/rotation = Quaternion(0.312255, 0.0762904, -0.0251544, 0.946596)
-bones/6/rotation = Quaternion(-0.00727733, 0.00465678, 0.0385806, 0.999218)
-bones/7/rotation = Quaternion(0.138, 0.0299966, 0.0343858, 0.989381)
-bones/8/rotation = Quaternion(0.14018, 0.0298722, 0.0240316, 0.989384)
-bones/9/rotation = Quaternion(0.0862244, -0.0271533, -0.00927419, 0.995862)
-bones/10/rotation = Quaternion(0.00988362, -0.0277581, -0.00710871, 0.999541)
-bones/12/rotation = Quaternion(-0.406425, -0.557984, 0.307687, -0.654829)
-bones/13/rotation = Quaternion(0.109727, -0.387699, 0.535491, 0.742226)
-bones/14/rotation = Quaternion(0.0490884, -0.00276419, 0.300549, 0.952498)
-bones/15/rotation = Quaternion(0.0107495, 0.00853786, -0.0545461, 0.998417)
-bones/16/rotation = Quaternion(0.0302137, 0.0864291, 0.427308, 0.899458)
-bones/17/rotation = Quaternion(-0.0115109, -0.0173052, -0.14049, 0.989864)
-bones/18/rotation = Quaternion(-0.022855, -0.00329154, 0.0947358, 0.995235)
-bones/20/rotation = Quaternion(0.108448, 0.00626058, 0.0356459, 0.993443)
-bones/21/rotation = Quaternion(0.116811, -0.000174461, -0.01717, 0.993006)
-bones/22/rotation = Quaternion(0.11681, 7.94604e-05, -0.0199033, 0.992955)
-bones/24/rotation = Quaternion(0.13925, 0.00545099, 0.0325421, 0.989707)
-bones/25/rotation = Quaternion(0.175136, -7.07982e-05, -0.0311949, 0.98405)
-bones/26/rotation = Quaternion(0.180125, 0.000557836, -0.0266144, 0.983283)
-bones/28/rotation = Quaternion(0.20479, 0.000174476, 0.0173039, 0.978653)
-bones/29/rotation = Quaternion(0.251141, 0.000330347, -0.0441638, 0.966942)
-bones/30/rotation = Quaternion(0.258401, -0.000148365, -0.0416154, 0.965141)
-bones/32/rotation = Quaternion(0.308247, 0.00140551, -0.0400715, 0.950461)
-bones/33/rotation = Quaternion(0.327042, 0.0116492, -0.0333268, 0.94435)
-bones/34/rotation = Quaternion(0.320272, 8.11061e-05, -0.0660019, 0.945024)
-bones/36/rotation = Quaternion(0.430046, -0.525421, 0.617644, 0.396874)
-bones/37/rotation = Quaternion(-0.148643, 0.312087, -0.636378, 0.689587)
-bones/38/rotation = Quaternion(0.0205606, 0.00345965, -0.127177, 0.991661)
-bones/39/rotation = Quaternion(-0.0675621, -0.0337721, 0.0114907, 0.997077)
-bones/40/rotation = Quaternion(-0.00454197, -0.0742841, -0.422583, 0.903264)
-bones/41/rotation = Quaternion(0.0412161, 0.0385201, 0.113531, 0.991932)
-bones/42/rotation = Quaternion(-0.0217554, 0.00560082, -0.036216, 0.999092)
-bones/44/rotation = Quaternion(0.089514, -0.00699379, -0.0439417, 0.994991)
-bones/45/rotation = Quaternion(0.104878, -4.87929e-05, 0.0119804, 0.994413)
-bones/46/rotation = Quaternion(0.104878, 1.8514e-05, 0.0105834, 0.994429)
-bones/48/rotation = Quaternion(0.142712, -0.004664, -0.0371727, 0.989055)
-bones/49/rotation = Quaternion(0.186917, 2.10498e-05, 0.0229792, 0.982107)
-bones/50/rotation = Quaternion(0.192381, -4.7768e-05, 0.0233959, 0.981041)
-bones/52/rotation = Quaternion(0.232215, -0.012029, -0.0260643, 0.972241)
-bones/53/rotation = Quaternion(0.2923, -6.94022e-06, 0.0341284, 0.955718)
-bones/54/rotation = Quaternion(0.300683, -2.4938e-05, 0.034788, 0.95309)
-bones/56/rotation = Quaternion(0.372524, -0.00955906, -0.00207062, 0.927971)
-bones/57/rotation = Quaternion(0.385856, 0.000267321, 0.0508952, 0.921154)
-bones/58/rotation = Quaternion(0.385856, 0.000564692, 0.0561863, 0.920846)
-bones/60/rotation = Quaternion(0.0650465, 0.234681, 0.961906, -0.124221)
-bones/61/rotation = Quaternion(-0.429635, 0.0528928, 0.0255822, 0.901089)
-bones/62/rotation = Quaternion(0.661303, 0.0493277, -0.133922, 0.736417)
-bones/63/rotation = Quaternion(0.381713, -0.080061, 0.0258024, 0.920446)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.474088, 0.880477, 0, -0.880477, 0.474088, 0, 10.8195, 0)
 
+[node name="Sky" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ktdun")
+
 [editable path="Zombie"]
-[editable path="Zombie/AuxScene"]
