@@ -42,3 +42,12 @@ func _process(delta: float) -> void:
 
 func playerInRange():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
+
+func hitComplete():
+	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1:
+		player.hit()
+
+#Not working, do not know why?
+func _on_body_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Bullet"):
+		print("Headshot!")

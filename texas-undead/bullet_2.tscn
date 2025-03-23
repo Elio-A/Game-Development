@@ -25,7 +25,7 @@ initial_velocity_max = 5.0
 [sub_resource type="BoxMesh" id="BoxMesh_ct3fc"]
 size = Vector3(0.04, 0.04, 0.04)
 
-[node name="bullet2" type="Node3D"]
+[node name="bullet2" type="Node3D" groups=["Bullet"]]
 script = ExtResource("1_tucj7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

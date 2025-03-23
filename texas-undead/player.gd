@@ -12,10 +12,13 @@ const bobFreq = 1 #How often the footsteps happen
 const bobAmp = 0.20 #How far up and down the camera will go
 var sinVal = 0.8
 
+#Hit stagger
+const HIT_STAG = 5
+
 var bullet = load("res://bullet_2.tscn")
 var instance
 
-signal playerHit
+signal playerBeenHit
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
@@ -87,3 +90,6 @@ func headBob(time) ->Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * bobFreq) * bobAmp
 	return pos
+
+func hit():
+	emit_signal("playerBeenHit")
