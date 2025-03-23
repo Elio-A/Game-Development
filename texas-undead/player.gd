@@ -15,6 +15,8 @@ var sinVal = 0.8
 var bullet = load("res://bullet_2.tscn")
 var instance
 
+signal playerHit
+
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 
