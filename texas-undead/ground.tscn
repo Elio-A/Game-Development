@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfpvx43iebad5"]
+[gd_scene load_steps=14 format=3 uid="uid://dfpvx43iebad5"]
 
 [ext_resource type="Script" uid="uid://bcle1yxs3gbvq" path="res://scene1.gd" id="1_d4pc4"]
 [ext_resource type="Texture2D" uid="uid://bao4b70wjwj0r" path="res://Forest_DeadEvergreen_S.jpg" id="1_p8yq4"]
@@ -6,10 +6,11 @@
 [ext_resource type="MeshLibrary" uid="uid://b0qjm62y34ipf" path="res://trees_mesh.tres" id="3_bxco1"]
 [ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="4_11xl8"]
 [ext_resource type="PackedScene" uid="uid://c8w0pd8lowlql" path="res://normal_zombie.tscn" id="4_vkp31"]
+[ext_resource type="PackedScene" uid="uid://bqqt76pbpmbk5" path="res://SceneModels/Crypt/crypt.tscn" id="7_eprha"]
+[ext_resource type="PackedScene" uid="uid://cg4ksrlqto51h" path="res://SceneModels/Path/path_pebble.tscn" id="8_511ym"]
+[ext_resource type="PackedScene" uid="uid://tpgd25224xre" path="res://SceneModels/Fence/fence.tscn" id="9_s3mfy"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_d4pc4"]
-vertices = PackedVector3Array(-124.5, 0.459042, 3, -18, 0.459042, 3, -18, 0.459042, 2.75, -18.25, 0.459042, -124.5, -124.5, 0.459042, -124.5, -16.75, 0.459042, 2.25, -2, 0.459042, -2.75, -2, 0.459042, -3.5, -17.75, 0.459042, 2.25, -1, 0.459042, -124.5, -1, 0.459042, -3.75, -0.25, 0.459042, -2.5, 0.5, 0.459042, 0.25, 1.5, 0.459042, 0.25, -0.25, 0.459042, -3.5, 1.75, 0.459042, 1.5, 2.5, 0.459042, 4.25, 3.5, 0.459042, 4.25, 3.75, 0.459042, 5.25, 4.5, 0.459042, 8.25, 5.25, 0.459042, 8.25, 124.5, 0.459042, 8, 124.5, 0.459042, -124.5, 0, 0.459042, 0.5, -1.75, 0.459042, -2.25, -16.25, 0.459042, 2.75, 0, 0.459042, 1.25, -16.25, 0.459042, 3.5, -16.75, 0.459042, 3.75, -16.5, 0.459042, 4.5, 3.75, 0.459042, 10.5, 4.25, 0.459042, 9.75, 4, 0.459042, 8.5, 1.75, 0.459042, 7.5, 1.25, 0.459042, 7.75, 2.25, 0.459042, 10.25, 1.5, 0.459042, 6.25, 2.25, 0.459042, 5.75, 2, 0.459042, 4.5, 2, 0.459042, 10.75, 3.5, 0.459042, 5.75, 0.25, 0.459042, 1.75, 0.25, 0.459042, 6.25, 0, 0.459042, 6.75, -17.75, 0.459042, 3.75, -10, 0.459042, 34.5, -9.25, 0.459042, 34.25, -9.25, 0.459042, 23.75, -10, 0.459042, 23.5, -27.75, 0.459042, 36.25, -124.5, 0.459042, 37, -28, 0.459042, 37, -26.5, 0.459042, 36.25, -10, 0.459042, 35.25, -10, 0.459042, 22.75, 0.25, 0.459042, 7.75, 2, 0.459042, 11.25, -9.75, 0.459042, 22.25, -8.75, 0.459042, 22.25, 3.75, 0.459042, 11.25, 6.5, 0.459042, 22.25, 7.5, 0.459042, 22.25, 5.75, 0.459042, 9.5, 13.5, 0.459042, 28.25, 13.75, 0.459042, 29, 124.5, 0.459042, 29, 7.75, 0.459042, 23.25, 12.5, 0.459042, 28.25, 5.75, 0.459042, 8.5, 3.5, 0.459042, 11.75, 2.25, 0.459042, 11.75, 6, 0.459042, 23, -8.25, 0.459042, 23, 7.5, 0.459042, 23.75, 12, 0.459042, 28.5, 4.5, 0.459042, 40.25, 5.5, 0.459042, 40.25, 12, 0.459042, 29.5, 6.25, 0.459042, 23.75, -8.25, 0.459042, 35.25, 5.75, 0.459042, 40.75, 12.5, 0.459042, 29.75, -8.5, 0.459042, 34.25, -8.5, 0.459042, 23.75, 13.5, 0.459042, 29.75, 5.75, 0.459042, 41.5, 5, 0.459042, 124.5, 124.5, 0.459042, 124.5, 5, 0.459042, 41.75, -8.5, 0.459042, 36.5, -8.75, 0.459042, 35.75, -9.75, 0.459042, 35.75, -26.25, 0.459042, 37.5, -27.25, 0.459042, 37.75, -27.25, 0.459042, 124.5, -8.5, 0.459042, 124.5, 4, 0.459042, 40.75, 4, 0.459042, 41.5, -28, 0.459042, 37.5, -124.5, 0.459042, 124.5)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(6, 5, 7), PackedInt32Array(5, 8, 7), PackedInt32Array(7, 8, 3), PackedInt32Array(7, 3, 9), PackedInt32Array(9, 10, 7), PackedInt32Array(3, 8, 2), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 13), PackedInt32Array(20, 19, 18), PackedInt32Array(9, 14, 10), PackedInt32Array(18, 17, 20), PackedInt32Array(20, 17, 21), PackedInt32Array(13, 14, 17), PackedInt32Array(17, 14, 21), PackedInt32Array(21, 14, 9), PackedInt32Array(21, 9, 22), PackedInt32Array(11, 12, 23), PackedInt32Array(23, 26, 11), PackedInt32Array(11, 26, 24), PackedInt32Array(24, 26, 25), PackedInt32Array(24, 25, 6), PackedInt32Array(6, 25, 5), PackedInt32Array(29, 28, 27), PackedInt32Array(31, 30, 32), PackedInt32Array(32, 30, 35), PackedInt32Array(32, 35, 33), PackedInt32Array(33, 35, 34), PackedInt32Array(38, 37, 36), PackedInt32Array(35, 39, 34), PackedInt32Array(40, 18, 19), PackedInt32Array(36, 42, 38), PackedInt32Array(38, 42, 41), PackedInt32Array(38, 41, 15), PackedInt32Array(42, 43, 41), PackedInt32Array(41, 43, 26), PackedInt32Array(26, 43, 27), PackedInt32Array(27, 43, 29), PackedInt32Array(36, 37, 33), PackedInt32Array(33, 37, 40), PackedInt32Array(33, 40, 32), PackedInt32Array(32, 40, 19), PackedInt32Array(27, 25, 26), PackedInt32Array(15, 16, 38), PackedInt32Array(44, 28, 29), PackedInt32Array(46, 45, 47), PackedInt32Array(47, 45, 48), PackedInt32Array(44, 49, 1), PackedInt32Array(1, 49, 51), PackedInt32Array(1, 51, 50), PackedInt32Array(1, 50, 0), PackedInt32Array(45, 53, 52), PackedInt32Array(52, 49, 45), PackedInt32Array(45, 49, 48), PackedInt32Array(48, 49, 29), PackedInt32Array(29, 49, 44), PackedInt32Array(29, 54, 48), PackedInt32Array(55, 34, 39), PackedInt32Array(39, 56, 55), PackedInt32Array(55, 56, 58), PackedInt32Array(55, 58, 57), PackedInt32Array(55, 57, 29), PackedInt32Array(29, 57, 54), PackedInt32Array(29, 43, 55), PackedInt32Array(30, 31, 59), PackedInt32Array(59, 31, 62), PackedInt32Array(59, 62, 60), PackedInt32Array(60, 62, 61), PackedInt32Array(65, 64, 63), PackedInt32Array(67, 66, 63), PackedInt32Array(63, 66, 61), PackedInt32Array(21, 68, 20), PackedInt32Array(62, 68, 61), PackedInt32Array(61, 68, 63), PackedInt32Array(63, 68, 65), PackedInt32Array(65, 68, 21), PackedInt32Array(69, 59, 60), PackedInt32Array(70, 69, 60), PackedInt32Array(70, 60, 56), PackedInt32Array(56, 60, 71), PackedInt32Array(56, 71, 72), PackedInt32Array(56, 72, 58), PackedInt32Array(74, 73, 67), PackedInt32Array(67, 73, 66), PackedInt32Array(76, 75, 77), PackedInt32Array(77, 75, 78), PackedInt32Array(78, 75, 79), PackedInt32Array(78, 79, 72), PackedInt32Array(74, 77, 73), PackedInt32Array(73, 77, 78), PackedInt32Array(77, 81, 76), PackedInt32Array(76, 81, 80), PackedInt32Array(83, 82, 47), PackedInt32Array(47, 82, 46), PackedInt32Array(72, 71, 78), PackedInt32Array(83, 72, 82), PackedInt32Array(82, 72, 79), PackedInt32Array(80, 81, 85), PackedInt32Array(85, 81, 84), PackedInt32Array(84, 64, 86), PackedInt32Array(86, 64, 65), PackedInt32Array(86, 65, 87), PackedInt32Array(86, 88, 85), PackedInt32Array(86, 85, 84), PackedInt32Array(91, 90, 89), PackedInt32Array(91, 92, 53), PackedInt32Array(53, 92, 52), PackedInt32Array(92, 91, 93), PackedInt32Array(93, 91, 89), PackedInt32Array(93, 89, 94), PackedInt32Array(94, 89, 95), PackedInt32Array(90, 79, 89), PackedInt32Array(89, 79, 96), PackedInt32Array(96, 79, 75), PackedInt32Array(89, 96, 97), PackedInt32Array(97, 88, 86), PackedInt32Array(86, 95, 97), PackedInt32Array(97, 95, 89), PackedInt32Array(93, 94, 98), PackedInt32Array(98, 94, 99), PackedInt32Array(98, 99, 50), PackedInt32Array(50, 51, 98)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yomx"]
 albedo_texture = ExtResource("1_p8yq4")
@@ -53,61 +54,62 @@ transform = Transform3D(-0.0099635, 0, 0.000853647, 0, 0.01, 0, -0.000853647, 0,
 playerPath = NodePath("../../Player")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/NormalZombie/Node" index="0"]
-bones/0/position = Vector3(3.08709, 12.3563, -19.4495)
-bones/0/rotation = Quaternion(-0.741015, 0.209681, -0.153624, 0.619137)
-bones/1/rotation = Quaternion(-0.0688503, 0.210259, 0.975205, 0.00515637)
-bones/2/rotation = Quaternion(-0.62074, -0.0888514, -0.0267035, 0.778508)
-bones/3/rotation = Quaternion(0.122346, -0.00515372, 0.235861, 0.964041)
-bones/4/rotation = Quaternion(0.378068, 0.0815667, -0.0259157, 0.921813)
-bones/6/rotation = Quaternion(0.0500217, -0.0391878, -0.0769309, 0.995009)
-bones/7/rotation = Quaternion(0.07699, -0.0243937, -0.0329192, 0.99619)
-bones/8/rotation = Quaternion(0.0769483, -0.0259917, -0.031652, 0.996194)
-bones/9/rotation = Quaternion(0.0159687, 0.0663367, -0.139279, 0.9879)
-bones/10/rotation = Quaternion(-0.0667485, 0.0502219, -0.110511, 0.990358)
-bones/12/rotation = Quaternion(-0.520577, -0.483858, 0.52997, -0.462616)
-bones/13/rotation = Quaternion(0.0585346, -0.15187, 0.142363, 0.976341)
-bones/14/rotation = Quaternion(0.128383, -0.00175474, 0.786037, 0.604698)
-bones/15/rotation = Quaternion(0.108602, 0.193316, -0.120632, 0.967617)
-bones/16/rotation = Quaternion(0.164347, 0.0666084, 0.205054, 0.962552)
-bones/17/rotation = Quaternion(0.0059851, -0.00429437, -0.0211807, 0.999749)
+bones/0/position = Vector3(0.703587, 92.0036, -0.843739)
+bones/0/rotation = Quaternion(0.0410531, 0.281728, 0.0386354, 0.957837)
+bones/1/rotation = Quaternion(-0.144075, 0.344584, 0.899219, 0.227836)
+bones/2/rotation = Quaternion(-0.271803, -0.0635153, -0.0199035, 0.960048)
+bones/3/rotation = Quaternion(0.372572, 0.0598255, 0.103065, 0.92032)
+bones/4/rotation = Quaternion(0.312259, 0.0762907, -0.0251544, 0.946595)
+bones/6/rotation = Quaternion(-0.00994647, 0.00550478, 0.0217636, 0.999699)
+bones/7/rotation = Quaternion(0.127298, 0.0335909, 0.00725945, 0.991269)
+bones/8/rotation = Quaternion(0.127334, 0.0340324, -0.00162691, 0.991275)
+bones/9/rotation = Quaternion(0.0930914, -0.0267471, -0.0495446, 0.994064)
+bones/10/rotation = Quaternion(0.016943, -0.0304509, -0.0473582, 0.99827)
+bones/12/rotation = Quaternion(-0.460166, -0.518329, 0.285207, -0.661996)
+bones/13/rotation = Quaternion(0.119599, -0.357524, 0.530538, 0.759212)
+bones/14/rotation = Quaternion(0.0464237, -0.00277916, 0.284235, 0.957626)
+bones/15/rotation = Quaternion(0.0185203, 0.00380765, -0.0562879, 0.998236)
+bones/16/rotation = Quaternion(0.0302137, 0.0864291, 0.427308, 0.899458)
+bones/17/rotation = Quaternion(-0.0115109, -0.0173052, -0.14049, 0.989864)
 bones/18/rotation = Quaternion(-0.022855, -0.00329154, 0.0947358, 0.995235)
-bones/20/rotation = Quaternion(-0.00825297, 0.000321345, 0.0533786, 0.99854)
-bones/21/rotation = Quaternion(3.69189e-07, -2.85171e-06, 0.0001799, 1)
-bones/22/rotation = Quaternion(-2.17065e-07, -2.80626e-05, -0.00256906, 0.999997)
-bones/24/rotation = Quaternion(-0.00828519, -0.00178068, 0.0554167, 0.998427)
-bones/25/rotation = Quaternion(0.000139025, 6.76531e-05, -0.004532, 0.99999)
-bones/26/rotation = Quaternion(-4.86274e-07, 4.90551e-05, 0.000897025, 1)
-bones/28/rotation = Quaternion(-0.00764902, -0.0110602, 0.0526066, 0.998525)
-bones/29/rotation = Quaternion(-4.81668e-08, -3.68478e-05, -0.00102084, 1)
-bones/30/rotation = Quaternion(-3.73911e-07, -3.27853e-05, 0.00292996, 0.999996)
-bones/32/rotation = Quaternion(-0.0131767, -0.0282293, 0.0180503, 0.999352)
-bones/33/rotation = Quaternion(0.00737954, 4.26546e-07, 0.0345895, 0.999374)
-bones/34/rotation = Quaternion(-2.25918e-07, 1.53519e-05, 5.21941e-05, 1)
-bones/36/rotation = Quaternion(0.595019, -0.448141, 0.427212, 0.512457)
-bones/37/rotation = Quaternion(0.353613, -0.108097, -0.419471, 0.829046)
-bones/38/rotation = Quaternion(0.112309, 0.00247871, -0.694672, 0.710501)
-bones/39/rotation = Quaternion(0.217207, -0.139101, 0.0599212, 0.964304)
-bones/40/rotation = Quaternion(0.147688, -0.0591821, -0.22876, 0.960393)
-bones/41/rotation = Quaternion(0.0141084, 0.00224611, 0.0242725, 0.999603)
-bones/42/rotation = Quaternion(-0.0217587, 0.00561328, -0.0361771, 0.999093)
-bones/44/rotation = Quaternion(-0.0152683, -0.00129334, -0.0559764, 0.998314)
-bones/45/rotation = Quaternion(-1.65208e-07, 4.39584e-06, 0.000377561, 1)
-bones/46/rotation = Quaternion(-3.55855e-07, 3.42279e-06, -0.00102811, 0.999999)
-bones/48/rotation = Quaternion(-0.0149765, 0.00391177, -0.0563533, 0.998291)
-bones/49/rotation = Quaternion(7.7649e-08, -5.53206e-06, 0.000327086, 1)
-bones/50/rotation = Quaternion(-2.17624e-07, 2.66265e-06, 7.77974e-05, 1)
-bones/52/rotation = Quaternion(-0.0151151, 0.00143001, -0.0561512, 0.998307)
-bones/53/rotation = Quaternion(4.94627e-07, 4.40195e-06, 0.00017631, 1)
-bones/54/rotation = Quaternion(-1.26525e-07, -6.3864e-06, -0.000152381, 1)
-bones/56/rotation = Quaternion(-0.0144621, 0.0128009, -0.0551592, 0.998291)
-bones/57/rotation = Quaternion(1.24448e-07, -7.78213e-05, -0.00306438, 0.999995)
-bones/58/rotation = Quaternion(3.94612e-07, 8.33795e-05, 0.00267794, 0.999996)
-bones/60/rotation = Quaternion(0.00790678, 0.520986, 0.800282, -0.296749)
-bones/61/rotation = Quaternion(-0.698421, -0.0564032, 0.0457759, 0.711991)
-bones/62/rotation = Quaternion(0.406411, -0.111629, 0.0729281, 0.903909)
-bones/63/rotation = Quaternion(0.315684, -0.0747286, 0.0249483, 0.945588)
+bones/20/rotation = Quaternion(0.108448, 0.00626058, 0.0356459, 0.993443)
+bones/21/rotation = Quaternion(0.116811, -0.000174462, -0.01717, 0.993006)
+bones/22/rotation = Quaternion(0.11681, 7.94614e-05, -0.0199033, 0.992955)
+bones/24/rotation = Quaternion(0.13925, 0.00545099, 0.0325421, 0.989707)
+bones/25/rotation = Quaternion(0.175136, -7.07973e-05, -0.0311949, 0.98405)
+bones/26/rotation = Quaternion(0.180125, 0.000557836, -0.0266144, 0.983283)
+bones/28/rotation = Quaternion(0.204789, 0.000174477, 0.0173039, 0.978653)
+bones/29/rotation = Quaternion(0.251141, 0.000330348, -0.0441638, 0.966942)
+bones/30/rotation = Quaternion(0.258401, -0.000148366, -0.0416154, 0.965141)
+bones/32/rotation = Quaternion(0.308247, 0.00140551, -0.0400714, 0.950461)
+bones/33/rotation = Quaternion(0.327042, 0.0116492, -0.0333268, 0.94435)
+bones/34/rotation = Quaternion(0.320272, 8.11126e-05, -0.0660019, 0.945024)
+bones/36/rotation = Quaternion(0.460334, -0.498625, 0.629641, 0.378178)
+bones/37/rotation = Quaternion(-0.225273, 0.181166, -0.588056, 0.755395)
+bones/38/rotation = Quaternion(0.0330214, 0.00341327, -0.204252, 0.978355)
+bones/39/rotation = Quaternion(0.0962728, -0.0511612, 0.04571, 0.992988)
+bones/40/rotation = Quaternion(-0.00454198, -0.0742841, -0.422583, 0.903264)
+bones/41/rotation = Quaternion(0.0412161, 0.0385201, 0.113531, 0.991932)
+bones/42/rotation = Quaternion(-0.0217554, 0.00560082, -0.036216, 0.999092)
+bones/44/rotation = Quaternion(0.089514, -0.00699378, -0.0439417, 0.994991)
+bones/45/rotation = Quaternion(0.104878, -4.87939e-05, 0.0119804, 0.994413)
+bones/46/rotation = Quaternion(0.104878, 1.85142e-05, 0.0105834, 0.994429)
+bones/48/rotation = Quaternion(0.142712, -0.004664, -0.0371727, 0.989055)
+bones/49/rotation = Quaternion(0.186917, 2.10507e-05, 0.0229792, 0.982107)
+bones/50/rotation = Quaternion(0.192381, -4.7768e-05, 0.0233959, 0.981041)
+bones/52/rotation = Quaternion(0.232215, -0.012029, -0.0260643, 0.972241)
+bones/53/rotation = Quaternion(0.2923, -6.94021e-06, 0.0341284, 0.955718)
+bones/54/rotation = Quaternion(0.300683, -2.4938e-05, 0.034788, 0.95309)
+bones/56/rotation = Quaternion(0.372524, -0.00955906, -0.00207062, 0.927971)
+bones/57/rotation = Quaternion(0.385856, 0.000267319, 0.0508952, 0.921154)
+bones/58/rotation = Quaternion(0.385856, 0.000564692, 0.0561863, 0.920846)
+bones/60/rotation = Quaternion(0.031727, 0.181418, 0.979531, -0.0812468)
+bones/61/rotation = Quaternion(-0.412444, 0.0617561, 0.0396422, 0.908022)
+bones/62/rotation = Quaternion(0.676097, 0.110517, -0.124762, 0.717714)
+bones/63/rotation = Quaternion(0.363287, -0.078598, 0.0255746, 0.928004)
 
 [node name="Player" parent="." instance=ExtResource("4_11xl8")]
+transform = Transform3D(-0.99929, 0, -0.0376728, 0, 1, 0, 0.0376728, 0, -0.99929, -4.52802, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.474088, 0.880477, 0, -0.880477, 0.474088, 0, 10.8195, 0)
@@ -126,6 +128,217 @@ offset_right = 1254.0
 offset_bottom = 740.0
 mouse_filter = 2
 color = Color(0.47451, 0.0509804, 0, 0.345098)
+
+[node name="Crypt" parent="." instance=ExtResource("7_eprha")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -34, 0, 50.2079)
+
+[node name="Path" type="Node3D" parent="."]
+
+[node name="PathPebble" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.1817, 0, 50.1299)
+
+[node name="PathPebble2" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1968, 0, 50.1299)
+
+[node name="PathPebble3" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1782, 0, 50.1299)
+
+[node name="PathPebble4" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.1396, 0, 50.1299)
+
+[node name="PathPebble5" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0686, 0, 50.1299)
+
+[node name="PathPebble6" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8751, 0, 50.1299)
+
+[node name="PathPebble7" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6491, 0, 50.1299)
+
+[node name="PathPebble8" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5831, 0, 50.1299)
+
+[node name="PathPebble9" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4717, 0, 50.1299)
+
+[node name="PathPebble10" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3745, 0, 50.1299)
+
+[node name="PathPebble11" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27688, 0, 50.1299)
+
+[node name="PathPebble12" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1342, 0, 50.1299)
+
+[node name="PathPebble13" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96098, 0, 50.1299)
+
+[node name="PathPebble14" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77923, 0, 50.1299)
+
+[node name="PathPebble15" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 50.1299)
+
+[node name="PathPebble16" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 47.9482)
+
+[node name="PathPebble17" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 45.651)
+
+[node name="PathPebble18" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 43.5288)
+
+[node name="PathPebble19" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 41.3187)
+
+[node name="PathPebble20" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 39.1514)
+
+[node name="PathPebble21" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 37.0104)
+
+[node name="PathPebble22" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 34.7784)
+
+[node name="PathPebble23" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 32.5115)
+
+[node name="PathPebble24" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 30.2283)
+
+[node name="PathPebble25" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 28.04)
+
+[node name="PathPebble26" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 25.7369)
+
+[node name="PathPebble27" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 23.3934)
+
+[node name="PathPebble28" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 21.2042)
+
+[node name="PathPebble29" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 19.0738)
+
+[node name="PathPebble30" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 16.8293)
+
+[node name="PathPebble31" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.484699, 0, 14.443)
+
+[node name="PathPebble32" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91991, 0, 14.443)
+
+[node name="PathPebble33" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10136, 0, 14.443)
+
+[node name="PathPebble34" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10136, 0, 12.4219)
+
+[node name="PathPebble35" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10136, 0, 10.2836)
+
+[node name="PathPebble36" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10136, 0, 7.91669)
+
+[node name="PathPebble37" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10136, 0, 5.76867)
+
+[node name="PathPebble38" parent="Path" instance=ExtResource("8_511ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10136, 0, 3.54778)
+
+[node name="Fence" type="Node3D" parent="."]
+
+[node name="Fence2" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5758, -4.76837e-07, 39.8818)
+
+[node name="Fence3" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0661, -4.76837e-07, 39.8818)
+
+[node name="Fence4" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5417, -4.76837e-07, 39.8818)
+
+[node name="Fence5" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0298, -4.76837e-07, 39.8818)
+
+[node name="Fence6" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.53194, -4.76837e-07, 39.8818)
+
+[node name="Fence21" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1388, -4.76837e-07, 39.8818)
+
+[node name="Fence22" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.6292, -4.76837e-07, 39.8818)
+
+[node name="Fence23" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.1047, -4.76837e-07, 39.8818)
+
+[node name="Fence24" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5929, -4.76837e-07, 39.8818)
+
+[node name="Fence25" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.095, -4.76837e-07, 39.8818)
+
+[node name="Fence11" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5758, -4.76837e-07, 60.3448)
+
+[node name="Fence12" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0661, -4.76837e-07, 60.3448)
+
+[node name="Fence13" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5417, -4.76837e-07, 60.3448)
+
+[node name="Fence14" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0298, -4.76837e-07, 60.3448)
+
+[node name="Fence15" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.53194, -4.76837e-07, 60.3448)
+
+[node name="Fence16" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1267, -4.76837e-07, 60.3448)
+
+[node name="Fence17" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.6171, -4.76837e-07, 60.3448)
+
+[node name="Fence18" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.0926, -4.76837e-07, 60.3448)
+
+[node name="Fence19" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5808, -4.76837e-07, 60.3448)
+
+[node name="Fence20" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0829, -4.76837e-07, 60.3448)
+
+[node name="Fence7" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.7952, -4.76837e-07, 41.6246)
+
+[node name="Fence8" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.7952, -4.76837e-07, 45.1432)
+
+[node name="Fence9" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.7952, -4.76837e-07, 55.1063)
+
+[node name="Fence10" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.7952, -4.76837e-07, 58.5961)
+
+[node name="Fence26" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -40.8989, -4.76837e-07, 41.6246)
+
+[node name="Fence27" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -40.8989, -4.76837e-07, 45.1432)
+
+[node name="Fence30" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -40.8989, -4.76837e-07, 48.5937)
+
+[node name="Fence31" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -40.8989, -4.76837e-07, 52.08)
+
+[node name="Fence28" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -40.8989, -4.76837e-07, 55.1063)
+
+[node name="Fence29" parent="." instance=ExtResource("9_s3mfy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -40.8989, -4.76837e-07, 58.5961)
 
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 
