@@ -21,7 +21,7 @@ func _ready():
 	
 	stateMachine = animationTree.get("parameters/playback")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	velocity = Vector3.ZERO
 	
 	match stateMachine.get_current_node():

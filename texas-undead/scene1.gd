@@ -14,7 +14,7 @@ func _ready() -> void:
 	restartDialog.connect("confirmed", restartLevel)
 	restartDialog.connect("custom_action", quitGame)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_player_player_been_hit() -> void:
@@ -38,3 +38,7 @@ func restartLevel():
 func quitGame(action: String):
 	if action == "quit":
 		get_tree().quit()
+
+func _on_zombie_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Bullet"):
+		print("Zombie hit!")

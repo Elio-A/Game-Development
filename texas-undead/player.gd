@@ -93,3 +93,6 @@ func headBob(time) ->Vector3:
 
 func hit():
 	emit_signal("playerBeenHit")
+	
+func dead():
+	set_physics_process(false)
