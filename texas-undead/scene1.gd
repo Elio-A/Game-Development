@@ -1,14 +1,40 @@
 extends Node3D
 
 @onready var hitRectangle = $UI/HitScreen
+@onready var restartDialog = $Dialogs/GameLost
+@onready var player = $Player
+
+var playerHealth = 100
 
 func _ready() -> void:
 	hitRectangle.visible = false
+	
+	#Restart dialog functionality:
+	restartDialog.add_button("QUIT", true, "quit")
+	restartDialog.connect("confirmed", restartLevel)
+	restartDialog.connect("custom_action", quitGame)
 	
 func _process(delta: float) -> void:
 	pass
 
 func _on_player_player_been_hit() -> void:
+	#Hit screen
 	hitRectangle.visible = true
 	await get_tree().create_timer(0.3).timeout
 	hitRectangle.visible = false
+	
+	#Damage dealing:
+	playerHealth -= 5
+	#print("The player health is now: " + playerHealth)
+	
+	if playerHealth <= 0:
+		print("Player dead!")
+		player.dead()
+		restartDialog.visible = true
+		
+func restartLevel():
+	get_tree().reload_current_scene()
+		
+func quitGame(action: String):
+	if action == "quit":
+		get_tree().quit()

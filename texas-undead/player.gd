@@ -75,7 +75,7 @@ func _physics_process(delta: float) -> void:
 	camera.transform.origin = headBob(sinVal)
 	
 	#Gun Animation:
-	if Input.is_action_pressed('Shoot'):
+	if Input.is_action_just_pressed('Shoot'):
 		if !gun.is_playing():
 			gun.play("Shoot")
 			instance = bullet.instantiate()
