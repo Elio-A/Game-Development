@@ -1,10 +1,16 @@
 extends CharacterBody3D
 
+signal zombieHit(zombie, isHeadshot)
+signal zombieDied(zombie)
+
 var player = null
 var stateMachine
 
 const speed = 4
 const ATTACK_RANGE = 2
+
+const MAX_HEALTH = 50
+var zombieHealth = MAX_HEALTH
 
 @export var playerPath : NodePath
 
@@ -22,6 +28,9 @@ func _ready():
 	stateMachine = animationTree.get("parameters/playback")
 
 func _process(_delta: float) -> void:
+	if animationTree.get("parameters/conditions/isDead"):
+		return #As to not process movements when zombie dies
+	
 	velocity = Vector3.ZERO
 	
 	match stateMachine.get_current_node():
@@ -47,7 +56,27 @@ func hitComplete():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1:
 		player.hit()
 
-#Not working, do not know why?
-func _on_body_area_body_entered(body: Node3D) -> void:
+#Not working, do not know why
+
+func _on_zombie_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Bullet"):
-		print("Headshot!")
+		emit_signal("zombieHit", self, false) #Body shot
+
+func _on_head_area_entered(body: Node3D) -> void:
+	if body.is_in_group("Bullet"):
+		emit_signal("zombieHit", self, true) #Head shot
+		
+func takeDamage(amount: int):
+	zombieHealth -= amount
+	if zombieHealth <= 0:
+		dead()
+		
+func dead():
+	animationTree.set("parameters/conditions/isDead", true)
+	await get_tree().create_timer(animationPlayer.get_animation("ZombieDeath0").length).timeout
+	despawn()
+
+func despawn():
+	print("ZOmbie died!")
+	emit_signal("zombieDied", self)
+	queue_free()
