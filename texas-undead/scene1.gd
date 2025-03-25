@@ -42,3 +42,12 @@ func quitGame(action: String):
 func _on_zombie_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Bullet"):
 		print("Zombie hit!")
+
+
+func _on_crypt_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Player"):
+		moveToNextLevel()
+		
+func moveToNextLevel():
+	get_tree().change_scene_to_file("res://player.tscn")
+		
