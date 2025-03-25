@@ -7,6 +7,7 @@ extends CharacterBody3D
 const sensitivity = 0.005
 const runSpeed = 15
 const normSpeed = 10
+const shootCooldown = 1
 #Camera/Head Bob
 const bobFreq = 1 #How often the footsteps happen
 const bobAmp = 0.20 #How far up and down the camera will go
@@ -17,6 +18,7 @@ const HIT_STAG = 5
 
 var bullet = load("res://bullet_2.tscn")
 var instance
+var canShoot = true
 
 signal playerBeenHit
 
@@ -75,16 +77,26 @@ func _physics_process(delta: float) -> void:
 	camera.transform.origin = headBob(sinVal)
 	
 	#Gun Animation:
-	if Input.is_action_just_pressed('Shoot'):
-		if !gun.is_playing():
-			gun.play("Shoot")
-			instance = bullet.instantiate()
-			instance.position = barrel.global_position
-			instance.transform.basis = barrel.global_transform.basis
-			get_parent().add_child(instance)
+	if Input.is_action_just_pressed('Shoot') and canShoot:
+		shootGun()
 			
 	move_and_slide()
 
+func shootGun():
+	if !gun.is_playing():
+		gun.play("Shoot")
+		spawnBullet()
+		canShoot = false
+		await get_tree().create_timer(shootCooldown).timeout
+		canShoot = true
+		
+
+func spawnBullet():
+	instance = bullet.instantiate()
+	instance.position = barrel.global_position
+	instance.transform.basis = barrel.global_transform.basis
+	get_parent().add_child(instance)
+	
 #Headbob handling:
 func headBob(time) ->Vector3:
 	var pos = Vector3.ZERO
