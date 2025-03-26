@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg4ksrlqto51h"]
+
+[ext_resource type="PackedScene" uid="uid://c73lpea08jstk" path="res://SceneModels/Path/path_B.gltf" id="1_dxalq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbvjm"]
+albedo_color = Color(0.329158, 0.329158, 0.329158, 1)
+
+[node name="PathPebble" instance=ExtResource("1_dxalq")]
+
+[node name="path_B" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_cbvjm")
