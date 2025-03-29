@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://eok3joya6bol"]
+
+[ext_resource type="PackedScene" uid="uid://cew4b1ja12g4p" path="res://Level2/Zombie/zombie.tscn" id="1_64jee"]
+[ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="1_t4ii8"]
+[ext_resource type="PackedScene" uid="uid://vxhkes0qilc" path="res://Level2/HospitalMap.tscn" id="2_64jee"]
+[ext_resource type="PackedScene" uid="uid://bc78t37nce5h6" path="res://Level2/Hospital Resources/Furniture/Scenes/Door_swing.tscn" id="3_6vi5b"]
+
+[node name="Level3" type="Node3D"]
+
+[node name="Zombies" type="Node3D" parent="."]
+
+[node name="Zombie" parent="Zombies" instance=ExtResource("1_64jee")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.93638, 0.141491, 18.9107)
+
+[node name="Player" parent="." instance=ExtResource("1_t4ii8")]
+transform = Transform3D(-0.99929, 0, -0.0376728, 0, 1, 0, 0.0376728, 0, -0.99929, 4, 0, 0)
+
+[node name="Hospital" parent="." instance=ExtResource("2_64jee")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Door_swing" parent="Hospital" instance=ExtResource("3_6vi5b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01843, 0.0432081, -4.0014)
+
+[node name="Door_swing2" parent="Hospital" instance=ExtResource("3_6vi5b")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.99917, 0.0432081, -4.0014)

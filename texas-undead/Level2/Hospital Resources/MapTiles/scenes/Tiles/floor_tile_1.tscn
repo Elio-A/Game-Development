@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=4 uid="uid://3lrjhsp5amf2"]
+
+[ext_resource type="Texture2D" uid="uid://ccn6ofviycq2l" path="res://Level2/Hospital Resources/MapTiles/gbls/Floor_tile_1_hospital_Floors_1_BaseColor.png" id="1_43d81"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5u1hs"]
+resource_name = "Floors_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_43d81")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ta02s"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 0.1, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "Floors_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_utybi"]
+resource_name = "Floor_tile_1_Cube_001"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 0.1, 2),
+"attribute_data": PackedByteArray("IQTXv1IH/39SB9e/IQT/fyEE/39SBydAUgf/fyEEJ0AhBCdAUgdPAFIHJ0AhBE8AIQSv/1IH179SB6//IQTXv8pHN7/yB19/ykdff/IHN79BiF9/akg3v2pIX39BiDe/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_5u1hs"),
+"name": "Floors_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAABU1f//AAD//1TV//8AAAAAVNUAAAAA//9U1f////8AAP+/AAD//////78AAP//AAD/v/////////+/VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////1RVVFVUVVRVVFVUVVRVVFX///9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ta02s")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qmtvu"]
+points = PackedVector3Array(-1, 0, -1, -1, 0.1, -1, 1, 0, -1, -1, 0, 1, -1, 0.1, 1, 1, 0.1, -1, 1, 0, 1, 1, 0.1, 1)
+
+[node name="Floor_tile_1" type="Node3D"]
+
+[node name="Floor_tile_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00999999)
+mesh = SubResource("ArrayMesh_utybi")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor_tile_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00999999)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor_tile_1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00999999)
+shape = SubResource("ConvexPolygonShape3D_qmtvu")
