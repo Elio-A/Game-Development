@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dtytf0qlswe0y" path="res://Forest_DeadEvergreen_N.jpg" id="2_2pr1m"]
 [ext_resource type="MeshLibrary" uid="uid://b0qjm62y34ipf" path="res://trees_mesh.tres" id="3_bxco1"]
 [ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="4_11xl8"]
-[ext_resource type="PackedScene" uid="uid://dvtrysv2fglcs" path="res://normal_zombie.tscn" id="4_vkp31"]
+[ext_resource type="PackedScene" uid="uid://dxkkyxhqm3qv3" path="res://normal_zombie.tscn" id="4_vkp31"]
 [ext_resource type="PackedScene" uid="uid://dpqjyccygd0at" path="res://SceneModels/Crypt/crypt.tscn" id="7_eprha"]
 [ext_resource type="PackedScene" uid="uid://cg4ksrlqto51h" path="res://SceneModels/Path/path_pebble.tscn" id="8_511ym"]
 [ext_resource type="PackedScene" uid="uid://ss1u3bkm4sy1" path="res://SceneModels/Fence/fence.tscn" id="9_s3mfy"]
@@ -807,6 +807,9 @@ transform = Transform3D(-0.998629, 0, -0.052336, 0, 1, 0, 0.052336, 0, -0.998629
 
 [node name="Revolver" parent="Player/Head/Camera3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.319256, -0.218144, -0.350153)
+
+[node name="HealthBar" parent="Player/Head/Camera3D" index="2"]
+offset_top = 450.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.474088, 0.880477, 0, -0.880477, 0.474088, 0, 10.8195, 0)

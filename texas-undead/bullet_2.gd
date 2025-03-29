@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	if rayCast.is_colliding():
 		bulletMesh.visible = false
 		collisionParticles.emitting = true
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.2).timeout
 		queue_free() #Clearing the bullet after a second timer after collision
 
 

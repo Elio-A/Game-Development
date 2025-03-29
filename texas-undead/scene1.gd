@@ -3,6 +3,7 @@ extends Node3D
 @onready var hitRectangle = $UI/HitScreen
 @onready var restartDialog = $Dialogs/GameLost
 @onready var player = $Player
+@onready var healthBar = $Player/Head/Camera3D/HealthBar
 
 var zombies = []
 
@@ -10,6 +11,7 @@ var playerHealth = 100
 
 func _ready() -> void:
 	hitRectangle.visible = false
+	healthBar.visible = true
 	
 	#Restart dialog functionality:
 	restartDialog.add_button("QUIT", true, "quit")
@@ -33,8 +35,10 @@ func _on_player_player_been_hit() -> void:
 	hitRectangle.visible = false
 	
 	#Damage dealing:
-	playerHealth -= 5
+	playerHealth -= 10
 	#print("The player health is now: " + playerHealth)
+	
+	healthBar.value -= 10
 	
 	if playerHealth <= 0:
 		print("Player dead!")
