@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="Texas Undead"
-run/main_scene="res://ground.tscn"
+run/main_scene="uid://bu6vyuddb2tls"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dr8q3unrxg4ex"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/size/resizable=false
+window/stretch/mode="viewport"
 
 [input]
 
