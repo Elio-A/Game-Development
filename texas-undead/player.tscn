@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3i5gjwp8tnfb"]
+[gd_scene load_steps=7 format=3 uid="uid://c3i5gjwp8tnfb"]
 
 [ext_resource type="Script" uid="uid://co02dnmb757q1" path="res://player.gd" id="1_f2ft1"]
 [ext_resource type="PackedScene" uid="uid://bcsye3rf54yq5" path="res://revolver.tscn" id="2_4yft6"]
+[ext_resource type="Texture2D" uid="uid://dlmkk8ss7b7p4" path="res://OtherResourcers/image0000.png" id="3_i3pqv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0terg"]
 
@@ -44,3 +45,23 @@ script = SubResource("GDScript_s1thy")
 
 [node name="Revolver" parent="Head/Camera3D" instance=ExtResource("2_4yft6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300267, -0.218144, -0.396083)
+
+[node name="Crosshair" type="CanvasLayer" parent="Head/Camera3D"]
+layer = 10
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera3D/Crosshair"]
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_i3pqv")
+expand_mode = 1
