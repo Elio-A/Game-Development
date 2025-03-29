@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Texas Undead"
-run/main_scene="uid://bu6vyuddb2tls"
+run/main_scene="uid://q5yna4hyjigg"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://dr8q3unrxg4ex"
 
