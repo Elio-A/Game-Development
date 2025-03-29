@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://q4n2qfi56cfv"]
+
+[ext_resource type="PackedScene" uid="uid://3lrjhsp5amf2" path="res://Level3/Hospital Resources/MapTiles/scenes/Tiles/floor_tile_1.tscn" id="1_63wxr"]
+[ext_resource type="PackedScene" uid="uid://b6d1njhcveb0m" path="res://Level3/Hospital Resources/MapTiles/scenes/Tiles/floor_tile_2.tscn" id="2_irbbe"]
+
+[node name="FloorTileSet" type="Node3D"]
+
+[node name="Floor_tile_1" parent="." instance=ExtResource("1_63wxr")]
+
+[node name="Floor_tile_2" parent="." instance=ExtResource("2_irbbe")]
