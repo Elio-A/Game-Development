@@ -59,7 +59,7 @@ func _on_crypt_body_entered(body: Node3D) -> void:
 func moveToNextLevel():
 	pass #For now
 	#Replace player with scene 2
-	#get_tree().change_scene_to_file("res://player.tscn")
+	get_tree().change_scene_to_file("res://Level2/Level2.tscn")
 		
 
 func onZombieHit(zombie: CharacterBody3D, isHeadshot: bool):
