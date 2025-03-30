@@ -24,6 +24,7 @@ signal playerBeenHit
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var revolverShootSound = $RevolverSound
 
 @onready var gun = $Head/Camera3D/Revolver/AnimationPlayer
 @onready var barrel = $Head/Camera3D/Revolver/RayCast3D
@@ -85,6 +86,7 @@ func _physics_process(delta: float) -> void:
 func shootGun():
 	if !gun.is_playing():
 		gun.play("Shoot")
+		revolverShootSound.play()
 		spawnBullet()
 		canShoot = false
 		await get_tree().create_timer(shootCooldown).timeout

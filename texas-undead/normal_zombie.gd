@@ -18,6 +18,7 @@ var zombieHealth = MAX_HEALTH
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 
+var isActive = false
 
 func _ready():
 	player = get_node(playerPath)
@@ -26,6 +27,23 @@ func _ready():
 	animation.loop_mode = Animation.LOOP_LINEAR
 	
 	stateMachine = animationTree.get("parameters/playback")
+	
+	set_active(false)
+
+func set_active(active: bool):
+	isActive = active
+	visible = active
+	set_process(active)
+	set_physics_process(active)
+	
+func activate():
+	set_active(true)
+	animationTree.set("parameters/conditions/isSpawning", true)
+	stateMachine.travel("ZombieStandUp0")
+	await get_tree().create_timer(animationPlayer.get_animation("ZombieStandUp0").length).timeout
+	
+	animationTree.set("parameters/conditions/isSpawning", false)
+	
 
 func _process(_delta: float) -> void:
 	if animationTree.get("parameters/conditions/isDead"):
