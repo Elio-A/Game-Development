@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dswl78nsea5p5"
+path.s3tc="res://.godot/imported/Oak1_ShingleOakLeaf2_Fall_Normal.jpg-9e8d953784fbd6e66b4d54b55bda97f1.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "69483a11e213d57007c9b219c21ca5bb"
+}
+
+[deps]
+
+source_file="res://Level4/Level4Assets/Oak1_ShingleOakLeaf2_Fall_Normal.jpg"
+dest_files=["res://.godot/imported/Oak1_ShingleOakLeaf2_Fall_Normal.jpg-9e8d953784fbd6e66b4d54b55bda97f1.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://Level4/Level4Assets/Oak1_ShingleOakLeaf2_Fall_Normal.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
