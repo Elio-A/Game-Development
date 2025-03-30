@@ -73,7 +73,6 @@ transform = Transform3D(-0.000876425, 0, -0.00996152, 0, 0.01, 0, 0.00996152, 0,
 playerPath = NodePath("../../../Player")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/Zombies/NormalZombie/Node" index="0"]
-bones/0/position = Vector3(0.717879, 83.1805, -25.9283)
 bones/0/rotation = Quaternion(-0.215096, 0.08928, 0.0722387, 0.969817)
 bones/1/rotation = Quaternion(-0.0236015, 0.210366, 0.954767, 0.208827)
 bones/2/rotation = Quaternion(-0.569644, 0.239768, -0.262595, 0.740986)
@@ -132,7 +131,6 @@ transform = Transform3D(-0.000876425, 0, -0.00996152, 0, 0.01, 0, 0.00996152, 0,
 playerPath = NodePath("../../../Player")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/Zombies/NormalZombie2/Node" index="0"]
-bones/0/position = Vector3(0.717879, 83.1805, -25.9283)
 bones/0/rotation = Quaternion(-0.215096, 0.08928, 0.0722387, 0.969817)
 bones/1/rotation = Quaternion(-0.0236015, 0.210366, 0.954767, 0.208827)
 bones/2/rotation = Quaternion(-0.569644, 0.239768, -0.262595, 0.740986)
@@ -191,7 +189,6 @@ transform = Transform3D(-0.000876425, 0, -0.00996152, 0, 0.01, 0, 0.00996152, 0,
 playerPath = NodePath("../../../Player")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/Zombies/NormalZombie3/Node" index="0"]
-bones/0/position = Vector3(0.717879, 83.1805, -25.9283)
 bones/0/rotation = Quaternion(-0.215096, 0.08928, 0.0722387, 0.969817)
 bones/1/rotation = Quaternion(-0.0236015, 0.210366, 0.954767, 0.208827)
 bones/2/rotation = Quaternion(-0.569644, 0.239768, -0.262595, 0.740986)
@@ -250,7 +247,6 @@ transform = Transform3D(-0.000876425, 0, -0.00996152, 0, 0.01, 0, 0.00996152, 0,
 playerPath = NodePath("../../../Player")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/Zombies/NormalZombie4/Node" index="0"]
-bones/0/position = Vector3(0.717879, 83.1805, -25.9283)
 bones/0/rotation = Quaternion(-0.215096, 0.08928, 0.0722387, 0.969817)
 bones/1/rotation = Quaternion(-0.0236015, 0.210366, 0.954767, 0.208827)
 bones/2/rotation = Quaternion(-0.569644, 0.239768, -0.262595, 0.740986)
@@ -309,7 +305,6 @@ transform = Transform3D(-0.000876425, 0, -0.00996152, 0, 0.01, 0, 0.00996152, 0,
 playerPath = NodePath("../../../Player")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/Zombies/NormalZombie5/Node" index="0"]
-bones/0/position = Vector3(0.717879, 83.1805, -25.9283)
 bones/0/rotation = Quaternion(-0.215096, 0.08928, 0.0722387, 0.969817)
 bones/1/rotation = Quaternion(-0.0236015, 0.210366, 0.954767, 0.208827)
 bones/2/rotation = Quaternion(-0.569644, 0.239768, -0.262595, 0.740986)
@@ -368,7 +363,6 @@ transform = Transform3D(-0.000876425, 0, -0.00996152, 0, 0.01, 0, 0.00996152, 0,
 playerPath = NodePath("../../../Player")
 
 [node name="Skeleton3D" parent="NavigationRegion3D/Zombies/NormalZombie6/Node" index="0"]
-bones/0/position = Vector3(0.717879, 83.1805, -25.9283)
 bones/0/rotation = Quaternion(-0.215096, 0.08928, 0.0722387, 0.969817)
 bones/1/rotation = Quaternion(-0.0236015, 0.210366, 0.954767, 0.208827)
 bones/2/rotation = Quaternion(-0.569644, 0.239768, -0.262595, 0.740986)
@@ -851,9 +845,11 @@ script = ExtResource("17_qgk1r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78023, -0.205139, 19.4594)
 shape = SubResource("BoxShape3D_yx7nb")
 
+[connection signal="body_entered" from="NavigationRegion3D/Crypt2/Area3D" to="." method="_on_crypt_body_entered"]
 [connection signal="body_entered" from="NavigationRegion3D/Zombies/NormalZombie/PhysicsCollision/Area3D" to="." method="_on_zombie_body_entered"]
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 
+[editable path="NavigationRegion3D/Crypt2"]
 [editable path="NavigationRegion3D/Zombies/NormalZombie"]
 [editable path="NavigationRegion3D/Zombies/NormalZombie2"]
 [editable path="NavigationRegion3D/Zombies/NormalZombie3"]
