@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1wn4c3emdnh0"]
+
+[ext_resource type="MeshLibrary" uid="uid://dmq5xvu3axm45" path="res://Level3/CountryPackageLibrary.tres" id="2_88mjf"]
+[ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="3_ah66h"]
+[ext_resource type="PackedScene" uid="uid://dvtrysv2fglcs" path="res://normal_zombie.tscn" id="3_wqvta"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_460py"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cl3e7"]
+size = Vector3(110, 1, 80)
+
+[node name="Level3" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("3_ah66h")]
+transform = Transform3D(-0.99929, 0, -0.0376728, 0, 1, 0, 0.0376728, 0, -0.99929, 0, 0.550524, 0)
+collision_layer = 1
+
+[node name="Ground" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_460py")
+
+[node name="Ground" type="Node3D" parent="Ground"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/Ground/StaticBody3D"]
+shape = SubResource("BoxShape3D_cl3e7")
+
+[node name="GridMap" type="GridMap" parent="Ground/Ground"]
+mesh_library = ExtResource("2_88mjf")
+data = {
+"cells": PackedInt32Array(-1, 65535, 3, -65532, 65535, 3, -65527, 65535, 3, -65522, 65535, 3, -65517, 65535, 3, -65517, 65530, 2, -65522, 65530, 3, -65527, 65530, 2, -65532, 65530, 2, -1, 65530, 2, -1, 65525, 2, -65532, 65525, 3, -65527, 65525, 3, -65522, 65525, 2, -65517, 65525, 2, -65517, 4, 2, -1, 4, 2, -65532, 4, 3, -65527, 4, 3, -65522, 4, 3, -65517, 9, 3, -65522, 9, 3, -65527, 9, 2, -65532, 9, 2, -1, 9, 2, -65517, 14, 2, -65522, 14, 2, -65527, 14, 2, -65532, 14, 3, -1, 14, 3, -6, 14, 3, -11, 14, 3, -6, 9, 2, -11, 9, 2, -11, 4, 2, -6, 4, 2, -6, 65535, 2, -11, 65535, 2, -16, 65535, 2, -21, 65535, 2, -26, 65535, 2, -16, 4, 2, -21, 4, 2, -21, 65530, 2, -16, 65525, 2, -11, 65530, 2, -6, 65525, 2, -26, 9, 2, -21, 14, 2, -16, 14, 2, -6, 65530, 3, -16, 65530, 3, -11, 65525, 3, -21, 65525, 3, -26, 65525, 3, -26, 65530, 3, -26, 4, 3, -26, 14, 3, -21, 9, 3, -16, 9, 3, -65517, 19, 3, -65522, 19, 3, -65527, 19, 3, -65532, 19, 3, -1, 19, 3, -65534, 65520, 2, -65529, 65520, 2, -65524, 65520, 2, -65519, 65520, 2, -65517, 65520, 2, -65512, 65520, 2, -65512, 65525, 2, -65512, 65530, 2, -65512, 65535, 3, -65512, 4, 3, -65512, 9, 3, -65512, 14, 3, -6, 19, 3, -65512, 19, 3, -11, 19, 3, -16, 19, 3, -21, 19, 3, -26, 19, 3, -26, 65520, 3, -21, 65520, 3, -16, 65520, 3, -11, 65520, 3, -6, 65520, 3, -1, 65520, 3)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="NormalZombie" parent="." instance=ExtResource("3_wqvta")]
+transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, 10.63, -0.5, 0)
+playerPath = NodePath("../Player")
