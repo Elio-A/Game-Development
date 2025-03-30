@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://508wt7s8vl1i"]
+
+[ext_resource type="PackedScene" uid="uid://cuie8uvrj0vmc" path="res://Level2/Hospital Resources/MapTiles/scenes/Tiles/tile_wall_doorway_1.tscn" id="1_ntdu5"]
+[ext_resource type="PackedScene" uid="uid://oy67qaep3h3b" path="res://Level2/Hospital Resources/MapTiles/scenes/Tiles/tile_wall_doorway_2.tscn" id="2_ley7m"]
+[ext_resource type="PackedScene" uid="uid://mcusql0jwgiy" path="res://Level2/Hospital Resources/MapTiles/scenes/Tiles/tile_wall_half.tscn" id="3_gm0tm"]
+[ext_resource type="PackedScene" uid="uid://c3kjkr8o5vdga" path="res://Level2/Hospital Resources/MapTiles/scenes/Tiles/tile_wall_window.tscn" id="4_nh5lq"]
+[ext_resource type="PackedScene" uid="uid://vw3gmaxx1ijd" path="res://Level2/Hospital Resources/MapTiles/scenes/Tiles/tile_wall.tscn" id="5_ley7m"]
+
+[node name="WallTileSet" type="Node3D"]
+
+[node name="Tile_Wall_Doorway_1" parent="." instance=ExtResource("1_ntdu5")]
+
+[node name="Tile_Wall_Doorway_2" parent="." instance=ExtResource("2_ley7m")]
+
+[node name="Tile_Wall_Half" parent="." instance=ExtResource("3_gm0tm")]
+
+[node name="Tile_Wall_Window" parent="." instance=ExtResource("4_nh5lq")]
+
+[node name="Tile_Wall" parent="." instance=ExtResource("5_ley7m")]

@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3i5gjwp8tnfb"]
+[gd_scene load_steps=9 format=3 uid="uid://c3i5gjwp8tnfb"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_f2ft1"]
 [ext_resource type="PackedScene" uid="uid://bcsye3rf54yq5" path="res://revolver.tscn" id="2_4yft6"]
+[ext_resource type="Texture2D" uid="uid://dlmkk8ss7b7p4" path="res://OtherResourcers/image0000.png" id="3_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://bcn77b2dl5rpe" path="res://health_bar.tscn" id="4_hqtel"]
+[ext_resource type="AudioStream" uid="uid://d3f0jw3cwbon5" path="res://AudioResources/ytmp3free.cc_revolver-shoot-sound-effect-hd-youtubemp3free.org.mp3" id="5_sweqy"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0terg"]
 
@@ -43,4 +46,34 @@ transform = Transform3D(-0.997841, 0, 0.0656817, 0, 1, 0, -0.0656817, 0, -0.9978
 script = SubResource("GDScript_s1thy")
 
 [node name="Revolver" parent="Head/Camera3D" instance=ExtResource("2_4yft6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300267, -0.218144, -0.396083)
+transform = Transform3D(0.999228, -0.0020734, 0.0392174, 0.0026646, 0.999883, -0.0150287, -0.0391817, 0.0151216, 0.999118, 0.319256, -0.218144, -0.350155)
+
+[node name="Crosshair" type="CanvasLayer" parent="Head/Camera3D"]
+layer = 10
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera3D/Crosshair"]
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_i3pqv")
+expand_mode = 1
+
+[node name="HealthBar" parent="Head/Camera3D" instance=ExtResource("4_hqtel")]
+offset_left = -916.0
+offset_top = 437.0
+offset_right = -620.0
+offset_bottom = 473.0
+
+[node name="RevolverSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_sweqy")
+volume_db = -4.0
