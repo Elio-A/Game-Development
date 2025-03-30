@@ -13,5 +13,4 @@ func activateZombies():
 	var zombies = get_tree().get_nodes_in_group("Zombie")
 	for zombie in zombies:
 		if zombie.has_method("activate"):
-			print("Activating zombie now")
 			zombie.activate()

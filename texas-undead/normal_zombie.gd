@@ -95,6 +95,5 @@ func dead():
 	despawn()
 
 func despawn():
-	print("ZOmbie died!")
 	emit_signal("zombieDied", self)
 	queue_free()
