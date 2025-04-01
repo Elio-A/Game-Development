@@ -1,6 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://8dww7k1u52dy"]
+[gd_scene load_steps=5 format=3 uid="uid://8dww7k1u52dy"]
 
 [ext_resource type="ArrayMesh" uid="uid://b5b386y2dnuc3" path="res://SceneModels/Testing/CountrySide-5-House.obj" id="1_sev1x"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_sev1x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3r41b"]
+albedo_color = Color(1, 1, 0.352941, 1)
+emission_enabled = true
+emission = Color(0.631373, 0.517647, 0.14902, 1)
+emission_energy_multiplier = 10.15
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3r41b"]
 size = Vector3(9.15967, 2.91162, 5.00822)
@@ -11,6 +19,17 @@ size = Vector3(9.15967, 2.91162, 5.00822)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04071, 0, -0.611037)
 mesh = ExtResource("1_sev1x")
 
+[node name="HouseLights" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.325102, 0, 0, 0, 0.231247, 0, 0, 0, 0.311355, -3.53171, -0.273142, -0.565683)
+mesh = SubResource("BoxMesh_sev1x")
+surface_material_override/0 = SubResource("StandardMaterial3D_3r41b")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01709, -0.955811, -0.563988)
 shape = SubResource("BoxShape3D_3r41b")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62221, -0.207524, -0.605405)
+light_color = Color(0.880701, 0.874177, 0, 1)

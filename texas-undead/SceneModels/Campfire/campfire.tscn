@@ -151,6 +151,11 @@ amount = 20
 process_material = SubResource("ParticleProcessMaterial_mpjfg")
 draw_pass_1 = SubResource("QuadMesh_7vqbg")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Fire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.761311, 0.205876)
+light_color = Color(1, 0.0823529, 0.192157, 1)
+omni_range = 5.52
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0129207, 0.017395, 0.245168)
 shape = SubResource("CylinderShape3D_oufq8")
