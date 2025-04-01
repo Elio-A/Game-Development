@@ -1,10 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://dfpvx43iebad5"]
+[gd_scene load_steps=28 format=3 uid="uid://dfpvx43iebad5"]
 
 [ext_resource type="Script" uid="uid://bcle1yxs3gbvq" path="res://scene1.gd" id="1_d4pc4"]
 [ext_resource type="Texture2D" uid="uid://bao4b70wjwj0r" path="res://Forest_DeadEvergreen_S.jpg" id="1_p8yq4"]
 [ext_resource type="MeshLibrary" uid="uid://b0qjm62y34ipf" path="res://trees_mesh.tres" id="3_bxco1"]
 [ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="4_11xl8"]
-[ext_resource type="PackedScene" uid="uid://dxkkyxhqm3qv3" path="res://normal_zombie.tscn" id="4_vkp31"]
+[ext_resource type="PackedScene" uid="uid://dvtrysv2fglcs" path="res://normal_zombie.tscn" id="4_vkp31"]
 [ext_resource type="PackedScene" uid="uid://dpqjyccygd0at" path="res://SceneModels/Crypt/crypt.tscn" id="7_eprha"]
 [ext_resource type="PackedScene" uid="uid://cg4ksrlqto51h" path="res://SceneModels/Path/path_pebble.tscn" id="8_511ym"]
 [ext_resource type="PackedScene" uid="uid://ss1u3bkm4sy1" path="res://SceneModels/Fence/fence.tscn" id="9_s3mfy"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://0hb4mic8we7c" path="res://SceneModels/Camp Fence/camp_fence.tscn" id="17_daj0n"]
 [ext_resource type="Script" uid="uid://8qyxx81kf36o" path="res://zombieSpawnTrigger.gd" id="17_qgk1r"]
 [ext_resource type="PackedScene" uid="uid://8dww7k1u52dy" path="res://SceneModels/Houses/house.tscn" id="18_yx7nb"]
+[ext_resource type="FontFile" uid="uid://1o5vpa468nmb" path="res://Menus/Weston Free.otf" id="20_o2i8s"]
 [ext_resource type="PackedScene" uid="uid://g6fpt0sv2wu4" path="res://SceneModels/Civ Cars/cars.tscn" id="20_y7aq3"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_d4pc4"]
@@ -37,6 +38,17 @@ size = Vector3(150, 0.4, 150)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yx7nb"]
 size = Vector3(263.483, 0.589722, 27.5087)
+
+[sub_resource type="Theme" id="Theme_8llyg"]
+default_font = ExtResource("20_o2i8s")
+
+[sub_resource type="LabelSettings" id="LabelSettings_pla5n"]
+font_size = 31
+font_color = Color(0.872725, 0.164968, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.776471)
+shadow_offset = Vector2(2, 2)
 
 [node name="Ground" type="Node3D"]
 script = ExtResource("1_d4pc4")
@@ -1808,6 +1820,17 @@ script = ExtResource("17_qgk1r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ZombieSpawn/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78023, -0.205139, 19.4594)
 shape = SubResource("BoxShape3D_yx7nb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1522.0
+offset_top = 32.0
+offset_right = 1901.0
+offset_bottom = 74.0
+theme = SubResource("Theme_8llyg")
+text = "Objective: Find Exit
+and escape"
+label_settings = SubResource("LabelSettings_pla5n")
+horizontal_alignment = 2
 
 [connection signal="body_entered" from="NavigationRegion3D/Crypt2/Area3D" to="." method="_on_crypt_body_entered"]
 [connection signal="body_entered" from="NavigationRegion3D/Zombies/NormalZombie/PhysicsCollision/Area3D" to="." method="_on_zombie_body_entered"]

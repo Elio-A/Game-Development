@@ -2,7 +2,7 @@ extends Node
 
 
 func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://ground.tscn")
+	get_tree().change_scene_to_file("res://Cutscenes/Scenes/Cutscene1.tscn")
 
 
 

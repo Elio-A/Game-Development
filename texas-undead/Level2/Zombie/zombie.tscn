@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://dnfnl4yuotqjr"]
 
 [ext_resource type="Script" uid="uid://bm58c2wlbdj7r" path="res://Level2/Zombie/level2Zombie.gd" id="1_agj1e"]
-[ext_resource type="PackedScene" uid="uid://q5yna4hyjigg" path="res://Level2/Zombie/Zombie.gltf" id="1_uiaus"]
+[ext_resource type="PackedScene" uid="uid://q5yna4hyjigg" path="res://Level3/Zombie/Zombie.gltf" id="1_uiaus"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_agj1e"]
 radius = 0.397571
