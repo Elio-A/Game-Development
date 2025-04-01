@@ -35,7 +35,7 @@ script = ExtResource("1_tucj7")
 mesh = SubResource("BoxMesh_q07w0")
 surface_material_override/0 = SubResource("StandardMaterial3D_ct3fc")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." groups=["Bullet"]]
 target_position = Vector3(0, 0, -0.6)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
@@ -51,7 +51,7 @@ draw_pass_1 = SubResource("BoxMesh_ct3fc")
 wait_time = 10.0
 autostart = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Bullet"]]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 1, 0, 8.88824e-05, 0)
 shape = SubResource("BoxShape3D_tucj7")
 
