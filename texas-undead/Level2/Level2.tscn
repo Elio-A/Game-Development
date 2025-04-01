@@ -107,6 +107,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2565, 0, 75.9556)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5808, 0, 83.0589)
 
 [node name="ZombieSpawnTimer" type="Timer" parent="."]
+wait_time = 3.0
 autostart = true
 
 [node name="Label" type="Label" parent="."]
