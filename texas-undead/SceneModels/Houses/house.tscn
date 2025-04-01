@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://8dww7k1u52dy"]
+
+[ext_resource type="ArrayMesh" uid="uid://b5b386y2dnuc3" path="res://SceneModels/Testing/CountrySide-5-House.obj" id="1_sev1x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3r41b"]
+size = Vector3(9.15967, 2.91162, 5.00822)
+
+[node name="House" type="StaticBody3D"]
+
+[node name="CountrySide-5-house" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04071, 0, -0.611037)
+mesh = ExtResource("1_sev1x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01709, -0.955811, -0.563988)
+shape = SubResource("BoxShape3D_3r41b")
