@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://dnfnl4yuotqjr"]
 
-[ext_resource type="Script" path="res://Level3/Zombie/level3Zombie.gd" id="1_1yovp"]
+[ext_resource type="Script" uid="uid://t3hrncrstrjl" path="res://Level3/Zombie/level3Zombie.gd" id="1_1yovp"]
 [ext_resource type="PackedScene" uid="uid://q5yna4hyjigg" path="res://Level3/Zombie/Zombie.gltf" id="1_uiaus"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_agj1e"]
@@ -5155,14 +5155,14 @@ tracks/90/keys = PackedFloat32Array(0, 1, 0.397021, 0.405805, 0.571011, 0.592995
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mnoit"]
 _data = {
-"ATK": SubResource("Animation_f21ym"),
-"ATK_HEAD": SubResource("Animation_ugy1y"),
-"DEAD": SubResource("Animation_cgiye"),
-"HIT": SubResource("Animation_hu52m"),
-"IDLE": SubResource("Animation_leqgm"),
-"RUN": SubResource("Animation_dhr43"),
-"SPAWN": SubResource("Animation_i7t4b"),
-"WALK": SubResource("Animation_xmjbm")
+&"ATK": SubResource("Animation_f21ym"),
+&"ATK_HEAD": SubResource("Animation_ugy1y"),
+&"DEAD": SubResource("Animation_cgiye"),
+&"HIT": SubResource("Animation_hu52m"),
+&"IDLE": SubResource("Animation_leqgm"),
+&"RUN": SubResource("Animation_dhr43"),
+&"SPAWN": SubResource("Animation_i7t4b"),
+&"WALK": SubResource("Animation_xmjbm")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r4hf0"]
