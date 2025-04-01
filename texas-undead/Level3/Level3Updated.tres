@@ -1,0 +1,17 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://c2tjqq0v8hyj"]
+
+[ext_resource type="Texture2D" uid="uid://p6e0efu7sl0x" path="res://Level3/AllSky_Night_MoonBurst Equirect.png" id="1_4o0s1"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b8n0k"]
+panorama = ExtResource("1_4o0s1")
+
+[sub_resource type="Sky" id="Sky_qr5tg"]
+sky_material = SubResource("PanoramaSkyMaterial_b8n0k")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_qr5tg")
+ambient_light_sky_contribution = 0.1
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.015

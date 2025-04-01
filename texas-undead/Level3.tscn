@@ -22,7 +22,7 @@ size = Vector3(100, 0.1, 100)
 height = 127.021
 radius = 30.5464
 
-[node name="Level3" type="Node3D"]
+[node name="World" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("2_4o4tk")]
 transform = Transform3D(-0.99929, 0, -0.0376728, 0, 1, 0, 0.0376728, 0, -0.99929, 0.0049057, -1.90735e-06, -0.062336)

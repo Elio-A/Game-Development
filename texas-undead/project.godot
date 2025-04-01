@@ -15,6 +15,10 @@ run/main_scene="res://ground.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="uid://dr8q3unrxg4ex"
 
+[autoload]
+
+Level3Global="*res://Level3/level_3_global.gd"
+
 [display]
 
 window/size/viewport_width=1920

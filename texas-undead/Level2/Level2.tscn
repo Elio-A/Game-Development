@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://eok3joya6bol"]
 
-[ext_resource type="Script" uid="uid://duiijvun4o1hd" path="res://Level2/level_2.gd" id="1_6vi5b"]
-[ext_resource type="PackedScene" uid="uid://dnfnl4yuotqjr" path="res://Level2/Zombie/zombie.tscn" id="1_64jee"]
+[ext_resource type="Script" path="res://Level2/level_2.gd" id="1_6vi5b"]
+[ext_resource type="PackedScene" uid="uid://dnfnl4yuotqjr" path="res://Level3/Zombie/zombie.tscn" id="1_64jee"]
 [ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="1_t4ii8"]
 [ext_resource type="PackedScene" uid="uid://vxhkes0qilc" path="res://Level2/HospitalMap.tscn" id="2_64jee"]
 [ext_resource type="PackedScene" uid="uid://bc78t37nce5h6" path="res://Level2/Hospital Resources/Furniture/Scenes/Door_swing.tscn" id="3_6vi5b"]
