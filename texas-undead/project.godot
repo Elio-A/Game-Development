@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Texas Undead"
-run/main_scene="uid://bu6vyuddb2tls"
+run/main_scene="res://Menus/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="uid://dr8q3unrxg4ex"
+
+[autoload]
+
+Level3Global="*res://Level3/level_3_global.gd"
 
 [display]
 
