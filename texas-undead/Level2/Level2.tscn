@@ -29,6 +29,12 @@ script = ExtResource("1_6vi5b")
 [node name="Player" parent="." instance=ExtResource("1_t4ii8")]
 transform = Transform3D(-0.99929, 0, -0.0376728, 0, 1, 0, 0.0376728, 0, -0.99929, 4, 0, 0)
 
+[node name="HealthBar" parent="Player/Head/Camera3D" index="2"]
+offset_left = -148.0
+offset_top = -18.0
+offset_right = 148.0
+offset_bottom = 18.0
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_64jee")
 
