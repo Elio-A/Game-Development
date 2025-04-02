@@ -17,6 +17,6 @@ func _process(delta: float) -> void:
 		
 
 func zombieKilled():
-	if(counterOn):
+	if(counterOn && campArea):
 		zombieCount += 1
 	
