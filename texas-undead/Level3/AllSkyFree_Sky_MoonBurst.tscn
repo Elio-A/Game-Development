@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccx5y25rv5rpq"]
+[gd_scene load_steps=3 format=3 uid="uid://ccx5y25rv5rpq"]
 
 [sub_resource type="Sky" id="1"]
 
@@ -16,9 +16,6 @@ fog_enabled = true
 fog_depth_curve = 0.615572
 fog_depth_begin = 0.0
 fog_depth_end = 1024.7
-
-[sub_resource type="Resource" id="Resource_b3m8c"]
-metadata/__load_path__ = "res://AllSkyFree_DemoLandsacpe.tscn"
 
 [node name="AllSkyFree_Sky_MoonBurst" type="Node"]
 

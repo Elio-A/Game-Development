@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var hitRectangle = $UI/HitScreen
-@onready var bloodSplater = $BloodSplater
+@onready var bloodSplater = $UI/BloodSplater
 @onready var restartDialog = $Dialogs/GameLost
 @onready var player = $Player
 @onready var healthBar = $Player/Head/Camera3D/HealthBar
