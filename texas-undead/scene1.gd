@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var hitRectangle = $UI/HitScreen
+@onready var bloodSplater = $BloodSplater
 @onready var restartDialog = $Dialogs/GameLost
 @onready var player = $Player
 @onready var healthBar = $Player/Head/Camera3D/HealthBar
@@ -8,9 +9,11 @@ extends Node3D
 var zombies = []
 
 var playerHealth = 100
+var zombiesKilled = false
 
 func _ready() -> void:
 	hitRectangle.visible = false
+	bloodSplater.visible = false
 	healthBar.visible = true
 	
 	#Restart dialog functionality:
@@ -26,13 +29,15 @@ func _ready() -> void:
 		zombie.connect("zombieDied", onZombieDead)
 	
 func _process(_delta: float) -> void:
-	pass
+	areZombiesKilled()
 
 func _on_player_player_been_hit() -> void:
 	#Hit screen
 	hitRectangle.visible = true
+	bloodSplater.visible = true
 	await get_tree().create_timer(0.3).timeout
 	hitRectangle.visible = false
+	bloodSplater.visible = false
 	
 	#Damage dealing:
 	playerHealth -= 10
@@ -41,7 +46,6 @@ func _on_player_player_been_hit() -> void:
 	healthBar.value -= 10
 	
 	if playerHealth <= 0:
-		print("Player dead!")
 		player.dead()
 		restartDialog.visible = true
 		
@@ -53,14 +57,19 @@ func quitGame(action: String):
 		get_tree().quit()
 
 func _on_crypt_body_entered(body: Node3D) -> void:
-	if body.is_in_group("Player"):
-		moveToNextLevel()
+	if zombiesKilled == true:
+		if body.is_in_group("Player"):
+			moveToNextLevel()
 		
 func moveToNextLevel():
 	pass #For now
 	#Replace player with scene 2
 	get_tree().change_scene_to_file("res://Cutscenes/Scenes/Cutscene2.tscn")
 		
+		
+func areZombiesKilled():
+	if len(zombies) == 0:
+		zombiesKilled = true
 
 func onZombieHit(zombie: CharacterBody3D, isHeadshot: bool):
 	var damage
