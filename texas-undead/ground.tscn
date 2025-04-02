@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dfpvx43iebad5"]
+[gd_scene load_steps=39 format=3 uid="uid://dfpvx43iebad5"]
 
 [ext_resource type="Script" uid="uid://bcle1yxs3gbvq" path="res://scene1.gd" id="1_d4pc4"]
 [ext_resource type="Texture2D" uid="uid://bao4b70wjwj0r" path="res://Forest_DeadEvergreen_S.jpg" id="1_p8yq4"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://uuwhg5cucldm" path="res://SceneModels/WatchTower/watch_tower.tscn" id="21_bihkv"]
 [ext_resource type="PackedScene" uid="uid://chl4hqjf6qa1u" path="res://SceneModels/UtilityBuilding/utility_building.tscn" id="22_8llyg"]
 [ext_resource type="Texture2D" uid="uid://7f380xp4i18y" path="res://Level2/bloodSplater.png" id="24_bihkv"]
+[ext_resource type="FontFile" uid="uid://1o5vpa468nmb" path="res://Menus/Weston Free.otf" id="25_r2pav"]
 
 [sub_resource type="Gradient" id="Gradient_pla5n"]
 colors = PackedColorArray(0, 0, 0, 1, 1, 0.6, 0.360784, 1)
@@ -62,6 +63,17 @@ size = Vector3(150, 0.4, 150)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yx7nb"]
 size = Vector3(263.483, 0.589722, 27.5087)
+
+[sub_resource type="Theme" id="Theme_8cv87"]
+default_font = ExtResource("25_r2pav")
+
+[sub_resource type="LabelSettings" id="LabelSettings_my0fj"]
+font_size = 31
+font_color = Color(0.872725, 0.164968, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.776471)
+shadow_offset = Vector2(2, 2)
 
 [node name="Ground" type="Node3D"]
 script = ExtResource("1_d4pc4")
@@ -1886,6 +1898,19 @@ script = ExtResource("17_qgk1r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ZombieSpawn/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78023, -0.205139, 19.4594)
 shape = SubResource("BoxShape3D_yx7nb")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1465.0
+offset_top = 27.0
+offset_right = 1902.0
+offset_bottom = 104.0
+theme = SubResource("Theme_8cv87")
+text = "Objective: Kill all 
+zombies to progress 
+and find exit"
+label_settings = SubResource("LabelSettings_my0fj")
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [connection signal="body_entered" from="NavigationRegion3D/Crypt2/Area3D" to="." method="_on_crypt_body_entered"]
 [connection signal="body_entered" from="NavigationRegion3D/Zombies/NormalZombie/PhysicsCollision/Area3D" to="." method="_on_zombie_body_entered"]

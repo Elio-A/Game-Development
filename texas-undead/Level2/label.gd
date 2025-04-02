@@ -1,7 +1,7 @@
 extends Label
 
 @onready var timer = $"../LevelTimer"
-var time_left := 120 # 2 minutes in seconds
+var time_left := 2 # 2 minutes in seconds
 
 func _ready():
 	update_label()
