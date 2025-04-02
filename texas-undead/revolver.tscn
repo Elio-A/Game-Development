@@ -44,7 +44,7 @@ _data = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
-"": SubResource("AnimationLibrary_tl5pe")
+&"": SubResource("AnimationLibrary_tl5pe")
 }
 
 [node name="RayCast3D" type="RayCast3D" parent="." index="2"]
