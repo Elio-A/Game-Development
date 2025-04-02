@@ -18,7 +18,7 @@ func _ready():
 	
 func _process(delta: float) -> void:
 	if(Level3Global.completed):
-		
+		$WorldEnvironment/FogVolume.visible = false
 		timer.start()
 	
 func getRandomChild(parentNode):
