@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=4 uid="uid://deqc8dmibx7me"]
 
 [ext_resource type="Texture2D" uid="uid://rt3gevqbgc3m" path="res://Level2/Hospital Resources/Furniture/glbs/Door_1f_hospital_Door_1_BaseColor.png" id="1_ord6s"]
-[ext_resource type="Texture2D" uid="uid://c0ayhjfperdrf" path="res://Level2/Hospital Resources/Furniture/glbs/Door_1f_hospital_Door_1_OcclusionRoughnessMetallic.png" id="2_2ttmu"]
+[ext_resource type="Texture2D" uid="uid://cbpnh68i2d4x5" path="res://Level2/Hospital Resources/Furniture/glbs/Door_1f_hospital_Door_1_OcclusionRoughnessMetallic.png" id="2_2ttmu"]
 [ext_resource type="Texture2D" uid="uid://ccjwsyn8iro6l" path="res://Level2/Hospital Resources/Furniture/glbs/Door_1f_hospital_Door_1_Normal.png" id="3_evcin"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f4a4i"]

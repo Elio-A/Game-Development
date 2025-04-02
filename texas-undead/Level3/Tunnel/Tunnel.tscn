@@ -1,7 +1,9 @@
 [gd_scene load_steps=22 format=3 uid="uid://bedvtelxysxms"]
 
-[ext_resource type="PackedScene" uid="uid://cnvenulxa0mb7" path="res://Level3/Tunnel/Tunnel.glb" id="1_88kyc"]
 [ext_resource type="Texture2D" uid="uid://babv3vwt6kpgi" path="res://Level3/Tunnel/FBX_2.png" id="2_sh6j3"]
+
+[sub_resource type="Resource" id="Resource_iwsvi"]
+metadata/__load_path__ = "res://Level3/Tunnel/Tunnel.glb"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sq4ae"]
 albedo_texture = ExtResource("2_sh6j3")
@@ -62,7 +64,7 @@ points = PackedVector3Array(-2052.7, 88.3973, -0.0239258, -2027.66, 161.847, -0.
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Tunnel" parent="." instance=ExtResource("1_88kyc")]
+[node name="Tunnel" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 4.71116, 0, -1.98911)
 
 [node name="Cube" parent="Tunnel" index="0"]
