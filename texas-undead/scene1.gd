@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var hitRectangle = $UI/HitScreen
-@onready var bloodSplater = $BloodSplater
+@onready var bloodSplater = $UI/BloodSplater
 @onready var restartDialog = $Dialogs/GameLost
 @onready var player = $Player
 @onready var healthBar = $Player/Head/Camera3D/HealthBar
@@ -65,7 +65,6 @@ func moveToNextLevel():
 	pass #For now
 	#Replace player with scene 2
 	get_tree().change_scene_to_file("res://Cutscenes/Scenes/Cutscene2.tscn")
-		
 		
 func areZombiesKilled():
 	if len(zombies) == 0:

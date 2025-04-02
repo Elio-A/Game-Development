@@ -1,11 +1,11 @@
 [gd_scene load_steps=46 format=4 uid="uid://d1wn4c3emdnh0"]
 
-[ext_resource type="Script" path="res://level_3.gd" id="1_5h7gn"]
+[ext_resource type="Script" uid="uid://duq6qoslsbyck" path="res://level_3.gd" id="1_5h7gn"]
 [ext_resource type="MeshLibrary" uid="uid://dmq5xvu3axm45" path="res://Level3/CountryPackageLibrary.tres" id="2_88mjf"]
 [ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="3_ah66h"]
 [ext_resource type="ArrayMesh" uid="uid://bwcplvh8gxj5h" path="res://Level3/CountryPackage/Obj/CountrySide-5-House.obj" id="3_pc45m"]
 [ext_resource type="Texture2D" uid="uid://7f380xp4i18y" path="res://Level2/bloodSplater.png" id="5_e7uxk"]
-[ext_resource type="PackedScene" uid="uid://57unlc8jagns" path="res://Level3/Tunnel/Tunnel.tscn" id="5_huvfh"]
+[ext_resource type="PackedScene" uid="uid://bedvtelxysxms" path="res://Level3/Tunnel/Tunnel.tscn" id="5_huvfh"]
 [ext_resource type="Texture2D" uid="uid://cyvyeiomtfjif" path="res://Level3/Tunnel/Tunnel_FBX_0.png" id="6_85xsx"]
 [ext_resource type="PackedScene" uid="uid://byb1e0k6q5at2" path="res://tree.tscn" id="7_l86oi"]
 [ext_resource type="PackedScene" uid="uid://bbxtna0u0117t" path="res://Level3/3. Models/gltf/car.glb" id="7_srbey"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b3pb0kgbumydk" path="res://SceneModels/Campfire/campfire.tscn" id="11_pu3wa"]
 [ext_resource type="PackedScene" uid="uid://ce0kivoqo642o" path="res://SceneModels/Benches/bench.tscn" id="12_ya8hy"]
 [ext_resource type="Environment" uid="uid://c2tjqq0v8hyj" path="res://Level3/Level3Updated.tres" id="13_bxiq6"]
-[ext_resource type="Script" path="res://zombie_counter.gd" id="14_ojnp3"]
+[ext_resource type="Script" uid="uid://dxbid5ek8c2dx" path="res://zombie_counter.gd" id="14_ojnp3"]
 [ext_resource type="FontFile" uid="uid://1o5vpa468nmb" path="res://Menus/Weston Free.otf" id="15_5fmge"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_460py"]
