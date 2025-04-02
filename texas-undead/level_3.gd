@@ -66,4 +66,4 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 func _on_door_body_entered(body: Node3D) -> void:
 	if(Level3Global.completed):
 		if(body.is_in_group("Player")):
-			print("Level Completed")
+			get_tree().change_scene_to_file("res://Level4/Level4.tscn")
