@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c02836ygxdcs5"]
+
+[ext_resource type="FontFile" uid="uid://1o5vpa468nmb" path="res://Menus/Weston Free.otf" id="1_k6wn1"]
+[ext_resource type="Script" uid="uid://ts3hk3g0srl3" path="res://Cutscenes/Scenes/cutscene_1.gd" id="1_qwxk6"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_ta0w8"]
+file = "res://Cutscenes/Source Videos/Cutscene1-converted.ogg"
+
+[sub_resource type="Theme" id="Theme_qwxk6"]
+default_font = ExtResource("1_k6wn1")
+default_font_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_yn3sd"]
+font_color = Color(1, 1, 1, 0.74902)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.403922)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer"]
+offset_right = 1921.0
+offset_bottom = 1080.0
+stream = SubResource("VideoStreamTheora_ta0w8")
+autoplay = true
+script = ExtResource("1_qwxk6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 369.0
+offset_bottom = 42.0
+theme = SubResource("Theme_qwxk6")
+theme_override_colors/font_color = Color(1, 1, 1, 0.552941)
+theme_override_font_sizes/font_size = 20
+text = "Press [Esc] to Skip"
+label_settings = SubResource("LabelSettings_yn3sd")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
