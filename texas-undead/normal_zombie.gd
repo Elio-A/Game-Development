@@ -10,6 +10,8 @@ const speed = 4
 const ATTACK_RANGE = 2
 
 const MAX_HEALTH = 10
+
+
 var zombieHealth = MAX_HEALTH
 
 @export var playerPath : NodePath
