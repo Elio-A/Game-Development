@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://dnfnl4yuotqjr"]
 
-[ext_resource type="Script" uid="uid://t3hrncrstrjl" path="res://Level3/Zombie/level3Zombie.gd" id="1_1yovp"]
-[ext_resource type="PackedScene" uid="uid://q5yna4hyjigg" path="res://Level3/Zombie/Zombie.gltf" id="1_uiaus"]
+[ext_resource type="Script" path="res://Level3/Zombie/level3Zombie.gd" id="1_1yovp"]
+[ext_resource type="PackedScene" uid="uid://q5yna4hyjigg" path="res://Level2/Zombie/Zombie.gltf" id="1_uiaus"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_agj1e"]
 radius = 0.397571
@@ -5155,14 +5155,14 @@ tracks/90/keys = PackedFloat32Array(0, 1, 0.397021, 0.405805, 0.571011, 0.592995
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mnoit"]
 _data = {
-&"ATK": SubResource("Animation_f21ym"),
-&"ATK_HEAD": SubResource("Animation_ugy1y"),
-&"DEAD": SubResource("Animation_cgiye"),
-&"HIT": SubResource("Animation_hu52m"),
-&"IDLE": SubResource("Animation_leqgm"),
-&"RUN": SubResource("Animation_dhr43"),
-&"SPAWN": SubResource("Animation_i7t4b"),
-&"WALK": SubResource("Animation_xmjbm")
+"ATK": SubResource("Animation_f21ym"),
+"ATK_HEAD": SubResource("Animation_ugy1y"),
+"DEAD": SubResource("Animation_cgiye"),
+"HIT": SubResource("Animation_hu52m"),
+"IDLE": SubResource("Animation_leqgm"),
+"RUN": SubResource("Animation_dhr43"),
+"SPAWN": SubResource("Animation_i7t4b"),
+"WALK": SubResource("Animation_xmjbm")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r4hf0"]
@@ -5324,7 +5324,7 @@ bones/46/rotation = Quaternion(5.23328e-07, -1.266e-06, 0.270019, 0.962855)
 [node name="PhysicalBoneSimulator3D" type="PhysicalBoneSimulator3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="2"]
 
 [node name="Physical Bone Hips_02" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(49.4176, -1.65609, 6.39928, 6.60467, 10.4142, -48.3085, 0.267965, 48.7298, 10.5416, -0.530493, 83.1543, -0.778399)
+transform = Transform3D(48.2104, 12.6979, 0.559276, 0.11449, 1.75991, -49.8265, -12.7097, 48.1815, 1.6726, -0.165849, 87.2384, -0.174094)
 joint_type = 1
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13467e-05, -4.41232e-05, 0.105264)
 body_offset = Transform3D(0.000294089, 0.00256348, -49.8577, -0.000180483, 49.8577, 0.00256157, 49.8577, 0.000182658, 0.000291813, 5.24821, 0.00193024, 0.000535011)
@@ -5340,9 +5340,9 @@ transform = Transform3D(1, 8.82449e-06, 1.3455e-06, -2.81014e-06, 0.168145, 0.98
 shape = SubResource("CapsuleShape3D_agj1e")
 
 [node name="Physical Bone Head_07" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-48.7316, 7.3732, 7.52681, 6.39404, 49.0028, -6.60515, -8.37456, -5.49069, -48.8417, -6.40727, 125.5, 35.6036)
+transform = Transform3D(-46.2361, 2.74789, -18.4516, 18.6397, 8.80658, -45.396, 0.757198, -48.9968, -9.1942, 1.32584, 125.668, 43.5239)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000601239, -0.000438668, 0.0686639)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000601239, -0.000438567, 0.0686639)
 body_offset = Transform3D(-49.8577, 0.00114751, -0.00216675, 0.00243092, 17.7853, -46.5776, -0.000303984, -46.5776, -17.7853, -0.0298271, 3.206, 1.20078)
 bone_name = "Head_07"
 joint_constraints/bias = 0.3

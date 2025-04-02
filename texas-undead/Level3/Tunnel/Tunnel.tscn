@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bedvtelxysxms"]
+[gd_scene load_steps=23 format=3 uid="uid://57unlc8jagns"]
 
 [ext_resource type="PackedScene" uid="uid://cyywxjfjoyloh" path="res://Level3/Tunnel/Tunnel.glb" id="1_hact3"]
 [ext_resource type="Texture2D" uid="uid://babv3vwt6kpgi" path="res://Level3/Tunnel/FBX_2.png" id="2_sh6j3"]
