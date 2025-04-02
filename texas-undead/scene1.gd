@@ -66,7 +66,6 @@ func moveToNextLevel():
 	#Replace player with scene 2
 	get_tree().change_scene_to_file("res://Cutscenes/Scenes/Cutscene2.tscn")
 		
-		
 func areZombiesKilled():
 	if len(zombies) == 0:
 		zombiesKilled = true

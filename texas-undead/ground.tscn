@@ -1855,6 +1855,9 @@ transform = Transform3D(-0.998629, 0, -0.052336, 0, 1, 0, 0.052336, 0, -0.998629
 [node name="Revolver" parent="Player/Head/Camera3D" index="0"]
 transform = Transform3D(0.999229, -0.00207341, 0.0392174, 0.0026646, 0.999883, -0.0150287, -0.0391817, 0.0151216, 0.999118, 0.319256, -0.218144, -0.350155)
 
+[node name="Snub_38_Barrel" parent="Player/Head/Camera3D/Revolver/Revovler_38" index="4"]
+transform = Transform3D(1, 0, -2.32831e-10, 2.98023e-08, 1, 9.31323e-10, -1.16415e-10, 9.31323e-10, 1, 0, 0, 0)
+
 [node name="HealthBar" parent="Player/Head/Camera3D" index="2"]
 offset_top = 450.0
 

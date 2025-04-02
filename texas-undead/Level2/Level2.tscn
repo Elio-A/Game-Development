@@ -27,13 +27,7 @@ shadow_offset = Vector2(2, 2)
 script = ExtResource("1_6vi5b")
 
 [node name="Player" parent="." instance=ExtResource("1_t4ii8")]
-transform = Transform3D(-0.99929, 0, -0.0376728, 0, 1, 0, 0.0376728, 0, -0.99929, 4, 0, 0)
-
-[node name="Camera3D" parent="Player/Head" index="0"]
-current = true
-
-[node name="Revolver" parent="Player/Head/Camera3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-0.99929, 0, -0.0376728, 0, 1, 0, 0.0376728, 0, -0.99929, 4.50897, 0, 0)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_64jee")
@@ -141,9 +135,7 @@ label_settings = SubResource("LabelSettings_bh83k")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="Label" method="_on_level_timer_timeout"]
 
-[editable path="Player"]
 [editable path="NavigationRegion3D/Hospital"]
