@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxrccl5eiqt2m"
-path.s3tc="res://.godot/imported/Grass-021_orm.png-9a0b412aaf83d494d6f44c422db2b6d2.s3tc.ctex"
+uid="uid://brsxd0aipm1oj"
+path.s3tc="res://.godot/imported/wooden_wall_post-apocalyptic_texture.png-66ffa5852afbadc26427e5157017ef16.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "5ea6a943fd76ab580302dece199fe194"
+}
 
 [deps]
 
-source_file="res://Level3/Textures/Grass/Grass-021/Grass-021_orm.png"
-dest_files=["res://.godot/imported/Grass-021_orm.png-9a0b412aaf83d494d6f44c422db2b6d2.s3tc.ctex"]
+source_file="res://Level3/3. Models/gltf/wooden_wall_post-apocalyptic_texture.png"
+dest_files=["res://.godot/imported/wooden_wall_post-apocalyptic_texture.png-66ffa5852afbadc26427e5157017ef16.s3tc.ctex"]
 
 [params]
 
@@ -24,8 +27,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=8
-roughness/src_normal="res://Level3/Textures/Grass/Grass-021/Grass-021_normal.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
