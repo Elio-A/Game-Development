@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=4 uid="uid://dgpp2yjwa15c6"]
+
+[ext_resource type="Material" uid="uid://ba6dvnpjd80mw" path="res://MineMap/MinesAndCaveSet_Godot/LoafbrrAssets/MineAndCavesSet/material/Mines_Trim.material" id="1_5xwni"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sd4pr"]
+_surfaces = [{
+"aabb": AABB(-0.4, 0, -0.0602614, 0.8, 2.01998, 0.120523),
+"format": 34896613377,
+"index_count": 180,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAFAARABUAFAAQABEAFgAVABcAFgAUABUAEgAXABMAEgAWABcAEAATABEAEAASABMAGAAbABkAGAAaABsAGgAfABsAGgAeAB8AHgAdAB8AHgAcAB0AHAAZAB0AHAAYABkAIAAjACEAIAAiACMAIgAnACMAIgAmACcAJgAlACcAJgAkACUAJAAhACUAJAAgACEAKAArACkAKAAqACsAKgAvACsAKgAuAC8ALgAtAC8ALgAsAC0ALAApAC0ALAAoACkACAALAAkACAAKAAsACgAPAAsACgAOAA8ADgANAA8ADgAMAA0ADAAJAA0ADAAIAAkAMAAzADEAMAAyADMAMgA3ADMAMgA2ADcANgA1ADcANgA0ADUANAAxADUANAAwADEAEgAUABYAEgAQABQACgAMAA4ACgAIAAwA"),
+"name": "MinesTrim",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("/x94a9TgAAD/33hr1OAAAP8feGsqHwAA/994ayofAAD/H8te1OAAAP/fy17U4AAA/x/LXiofAAD/38teKh8AAP/fAAD//wAA/9//////AAD/3wAAAAAAAP/f//8AAAAA//8AAP//AAD///////8AAP//AAAAAAAA/////wAAAAAAAAAA//8AAAAA/////wAAAAAAAAAAAAAAAP//AAAAAP8fAAD//wAA/x//////AAD/HwAAAAAAAP8f//8AAAAA/x+Z0NTgAAD/35nQ1OAAAP8fmdAqHwAA/9+Z0CofAAD/H+3D1OAAAP/f7cPU4AAA/x/twyofAAD/3+3DKh8AAP8fdv3U4AAA/992/dTgAAD/H3b9Kh8AAP/fdv0qHwAA/x/K8NTgAAD/38rw1OAAAP8fyvAqHwAA/9/K8CofAAD/Hwie1OAAAP/fCJ7U4AAA/x8IniofAAD/3wieKh8AAP8fXJHU4AAA/99ckdTgAAD/H1yRKh8AAP/fXJEqHwAA/x+QMtTgAAD/35Ay1OAAAP8fkDIqHwAA/9+QMiofAAD/H+Ql1OAAAP/f5CXU4AAA/x/kJSofAAD/3+QlKh8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gyv4r"]
+resource_name = "Modular_Mine_Set_Ladder_Short"
+_surfaces = [{
+"aabb": AABB(-0.4, 0, -0.0602614, 0.8, 2.01998, 0.120523),
+"attribute_data": PackedByteArray("AAAaKwAA5TT/fxor/3/lNAAA5TQAABor/3/lNP9/GisAAOU0AAAaK/9/5TT/fxorAAAaKwAA5TT/fxor/3/lNP//5RQZ6+VU//9vAAAA5RQAAG8A//9vAI//5VT//+UUAABvAAAA5RT//28AGetvQP//5RQAAG8AAADlFP//5RSP/29A//9vAAAA5RQAAG8A///lFBnr5VT//28AAADlFAAAbwD//28Aj//lVP//5RQAAG8AAADlFP//bwAZ629A///lFAAAbwAAAOUU///lFI//b0D//28AAADlFAAAbwAAABorAADlNP9/Giv/f+U0AADlNAAAGiv/f+U0/38aKwAA5TQAABor/3/lNP9/GisAABorAADlNP9/Giv/f+U0AAAaKwAA5TT/fxor/3/lNAAA5TQAABor/3/lNP9/GisAAOU0AAAaK/9/5TT/fxorAAAaKwAA5TT/fxor/3/lNAAAGisAAOU0/38aK/9/5TQAAOU0AAAaK/9/5TT/fxorAADlNAAAGiv/f+U0/38aKwAAGisAAOU0/38aK/9/5TQAABorAADlNP9/Giv/f+U0AADlNAAAGiv/f+U0/38aKwAA5TQAABor/3/lNP9/GisAABorAADlNP9/Giv/f+U0"),
+"format": 34896613399,
+"index_count": 180,
+"index_data": PackedByteArray("AQAHAAMAAQAFAAcABAAOAAYABAAMAA4ADQALAA8ADQAJAAsACAACAAoACAAAAAIALgAnADEALgAkACcANQAyADcANQAwADIAKQA2ACwAKQAzADYAJgAtACgAJgArAC0AOQA/ADsAOQA9AD8APABGAD4APABEAEYARQBDAEcARQBBAEMAQAA6AEIAQAA4ADoASQBPAEsASQBNAE8ATABWAE4ATABUAFYAVQBTAFcAVQBRAFMAUABKAFIAUABIAEoAWQBfAFsAWQBdAF8AXABmAF4AXABkAGYAZQBjAGcAZQBhAGMAYABaAGIAYABYAFoAEgAZABQAEgAXABkAFQAiABgAFQAfACIAIQAeACMAIQAcAB4AGgATAB0AGgAQABMAaQBvAGsAaQBtAG8AbAB2AG4AbAB0AHYAdQBzAHcAdQBxAHMAcABqAHIAcABoAGoAKgAvADQAKgAlAC8AFgAbACAAFgARABsA"),
+"material": ExtResource("1_5xwni"),
+"name": "MinesTrim",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 120,
+"vertex_data": PackedByteArray("/x94a9TgAID/H3hr1OD/v//feGvU4ACA/994a9Tg/7//H3hrKh////8feGsqH/+//994ayof////33hrKh//v/8fy17U4ACA/x/LXtTg/7//38te1OAAgP/fy17U4P+//x/LXiof////H8teKh//v//fy14qH////9/LXiof/7//3wAA////v//fAAD//1TV/98AAP//VNX/3///////v//f/////1TV/98AAAAA////3wAAAABU1f/fAAAAAFTV/9///wAA////3///AABU1f//AAD///+///8AAP//VNX//wAA//9U1f////////+/////////VNX//wAAAAD/////AAAAAFTV//8AAAAAVNX/////AAD///////8AAFTVAAAAAP///78AAAAA//9U1QAAAAD//1TVAAD//////78AAP////9U1QAAAAAAAP//AAAAAAAAVNUAAAAAAABU1QAA//8AAP//AAD//wAAVNX/HwAA////v/8fAAD//1TV/x8AAP//VNX/H///////v/8f/////1TV/x8AAAAA////HwAAAABU1f8fAAAAAFTV/x///wAA////H///AABU1f8fmdDU4ACA/x+Z0NTg/7//35nQ1OAAgP/fmdDU4P+//x+Z0Cof////H5nQKh//v//fmdAqH////9+Z0Cof/7//H+3D1OAAgP8f7cPU4P+//9/tw9TgAID/3+3D1OD/v/8f7cMqH////x/twyof/7//3+3DKh/////f7cMqH/+//x92/dTgAID/H3b91OD/v//fdv3U4ACA/992/dTg/7//H3b9Kh////8fdv0qH/+//992/Sof////33b9Kh//v/8fyvDU4ACA/x/K8NTg/7//38rw1OAAgP/fyvDU4P+//x/K8Cof////H8rwKh//v//fyvAqH////9/K8Cof/7//Hwie1OAAgP8fCJ7U4P+//98IntTgAID/3wie1OD/v/8fCJ4qH////x8Iniof/7//3wieKh/////fCJ4qH/+//x9ckdTgAID/H1yR1OD/v//fXJHU4ACA/99ckdTg/7//H1yRKh////8fXJEqH/+//99ckSof////31yRKh//v/8fkDLU4ACA/x+QMtTg/7//35Ay1OAAgP/fkDLU4P+//x+QMiof////H5AyKh//v//fkDIqH////9+QMiof/7//H+Ql1OAAgP8f5CXU4P+//9/kJdTgAID/3+Ql1OD/v/8f5CUqH////x/kJSof/7//3+QlKh/////f5CUqH/+//3////7//3//f////v//f/7//3/+//9//v//f/7//3//f///AAD/f/9///8AAP9//v//fwAA/3/+//9/AAD/f/9//39UVVRVVFWqqv9//39UVaqq/z//v1RVVFVUVaqq/z//v1RVqqr/f/9/VFVUVaqqVFX/f/9/qqpUVf8//79UVVRVqqpUVf8//7+qqlRV/3//f1RVVFVUVaqq/3//f1RVqqr/P/+/VFVUVVRVqqr/v/8/VFWqqv9//39UVVRVqqpUVf9//3+qqlRV/z//v1RVVFWqqlRV/7//P6qqVFX/f////v//f/9////+//9//v//f/7//3/+//9//v//f/9///8AAP9//3///wAA/3/+//9/AAD/f/7//38AAP9//3////7//3//f////v//f/7//3/+//9//v//f/7//3//f///AAD/f/9///8AAP9//v//fwAA/3/+//9/AAD/f/9////+//9//3////7//3/+//9//v//f/7//3/+//9//3///wAA/3//f///AAD/f/7//38AAP9//v//fwAA/3//f////v//f/9////+//9//v//f/7//3/+//9//v//f/9///8AAP9//3///wAA/3/+//9/AAD/f/7//38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_sd4pr")
+
+[node name="Ladder_Short" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_gyv4r")
+skeleton = NodePath("")
