@@ -1858,6 +1858,9 @@ transform = Transform3D(0.999229, -0.00207341, 0.0392174, 0.0026646, 0.999883, -
 [node name="HealthBar" parent="Player/Head/Camera3D" index="2"]
 offset_top = 450.0
 
+[node name="StaticCam" type="Camera3D" parent="."]
+transform = Transform3D(-0.66609, -0.264465, 0.697412, -0.0251922, 0.942472, 0.333333, -0.745446, 0.204461, -0.634434, -26.6862, 2.74792, 11.1501)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.474088, 0.880477, 0, -0.880477, 0.474088, 0, 10.8195, 0)
 
