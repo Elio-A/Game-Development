@@ -2310,7 +2310,7 @@ mesh = SubResource("BoxMesh_tqwd0")
 surface_material_override/0 = SubResource("StandardMaterial3D_1iil1")
 
 [node name="Tree-01-1" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_uvp72")
 skeleton = NodePath("")
 
@@ -2322,7 +2322,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_mldoa")
 
 [node name="Tree-01-2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_r2kso")
 skeleton = NodePath("")
 
@@ -2334,7 +2334,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_ouqy3")
 
 [node name="Tree-01-3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_wksew")
 skeleton = NodePath("")
 
@@ -2346,7 +2346,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_hqu8b")
 
 [node name="Tree-01-4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_37i02")
 skeleton = NodePath("")
 
@@ -2358,7 +2358,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_vo05v")
 
 [node name="Tree-02-1" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_rxmlx")
 skeleton = NodePath("")
 
@@ -2370,7 +2370,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_x17ea")
 
 [node name="Tree-02-2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_4xekq")
 skeleton = NodePath("")
 
@@ -2382,7 +2382,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_ybeh8")
 
 [node name="Tree-02-3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1fkn6")
 skeleton = NodePath("")
 
@@ -2394,7 +2394,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_b2rt6")
 
 [node name="Tree-02-4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_hnulv")
 skeleton = NodePath("")
 
@@ -2406,7 +2406,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_sbugd")
 
 [node name="Tree-03-1" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_kod5p")
 skeleton = NodePath("")
 
@@ -2418,7 +2418,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_8r4d1")
 
 [node name="Tree-03-2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_vtkwd")
 skeleton = NodePath("")
 
@@ -2430,7 +2430,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_a6bvo")
 
 [node name="Tree-03-3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_i3h4o")
 skeleton = NodePath("")
 
@@ -2442,7 +2442,7 @@ collision_mask = 3
 shape = SubResource("ConvexPolygonShape3D_pceej")
 
 [node name="Tree-03-4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_bxi1o")
 skeleton = NodePath("")
 
