@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://d1wn4c3emdnh0"]
+[gd_scene load_steps=47 format=4 uid="uid://d1wn4c3emdnh0"]
 
 [ext_resource type="Script" uid="uid://duq6qoslsbyck" path="res://level_3.gd" id="1_5h7gn"]
 [ext_resource type="MeshLibrary" uid="uid://dmq5xvu3axm45" path="res://Level3/CountryPackageLibrary.tres" id="2_88mjf"]
@@ -124,13 +124,15 @@ density = 8.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_bavog"]
 size = Vector3(87.9746, 35.9017, 80.4772)
 
-[sub_resource type="LabelSettings" id="LabelSettings_81juo"]
-font = ExtResource("15_5fmge")
-font_size = 20
-font_color = Color(0.87451, 0.164706, 0, 1)
-outline_size = 3
+[sub_resource type="Theme" id="Theme_xqt64"]
+default_font = ExtResource("15_5fmge")
+
+[sub_resource type="LabelSettings" id="LabelSettings_nutuk"]
+font_size = 31
+font_color = Color(0.872725, 0.164968, 0, 1)
+outline_size = 5
 outline_color = Color(0, 0, 0, 1)
-shadow_color = Color(0, 0, 0, 0.823529)
+shadow_color = Color(0, 0, 0, 0.776471)
 shadow_offset = Vector2(2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1n5fy"]
@@ -754,14 +756,14 @@ shape = SubResource("BoxShape3D_bavog")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -302.0
-offset_right = 304.0
-offset_bottom = 28.0
+offset_left = -408.0
+offset_top = 42.0
+offset_right = 414.0
+offset_bottom = 84.0
 grow_horizontal = 2
-size_flags_horizontal = 4
+theme = SubResource("Theme_xqt64")
 text = "Help Glen clear his camp from the Zombies: 0/15"
-label_settings = SubResource("LabelSettings_81juo")
-horizontal_alignment = 1
+label_settings = SubResource("LabelSettings_nutuk")
 script = ExtResource("14_ojnp3")
 
 [node name="Outside Barrier" type="Node3D" parent="."]
@@ -787,9 +789,7 @@ shape = SubResource("BoxShape3D_fe5r8")
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 [connection signal="body_entered" from="Ground/House/Door" to="." method="_on_door_body_entered"]
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]
-[connection signal="timeout" from="ZombieSpawnTimer" to="ZombieCounter" method="_on_zombie_spawn_timer_timeout"]
 [connection signal="timeout" from="ZombieSpawnTimer2" to="." method="_on_zombie_spawn_timer_timeout"]
-[connection signal="timeout" from="ZombieSpawnTimer2" to="ZombieCounter" method="_on_zombie_spawn_timer_timeout"]
 [connection signal="body_entered" from="CampArea" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="CampArea" to="." method="_on_area_3d_body_exited"]
 

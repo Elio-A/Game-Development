@@ -15,6 +15,7 @@ extends Node3D
 @onready var orbitTimer = $Spider/OrbitTimer
 @onready var spotlight = $Player/SpotLight3D
 @onready var spawns_outside = $spawns_outside
+@onready var label = $Label
 
 var playerHealth = 100
 var zombie = load("res://Level3/Zombie3.1/zombie.tscn")
@@ -85,6 +86,10 @@ func _on_door_body_entered(body: Node3D) -> void:
 func _on_room_door_body_entered(body: Node3D) -> void:
 	if(body.is_in_group("Player")):
 		Level31Global.roomEntered = true
+		if(!spider.spiderDeath):
+			label.text = "The Spider Holds the Key to the Exit. Eliminate it to Obtain It"
+		else:
+			label.text = "The key has been Obtained. Make your way to the Exit"
 
 
 func _on_room_door_body_exited(body: Node3D) -> void:
@@ -100,8 +105,11 @@ func _on_room_door_body_exited(body: Node3D) -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if(spider.spiderDeath && body.is_in_group("Player")):
-		get_tree().change_scene_to_file("res://Cutscenes/Scenes/Cutscene3.tscn")
+	if(body.is_in_group("Player")):
+		if(spider.spiderDeath):
+			get_tree().change_scene_to_file("res://Cutscenes/Scenes/Cutscene3.tscn")
+		else:
+			label.text = "You must find a Key to Unlock the Gate"
 
 
 func _on_area_glitch_body_entered(body: Node3D) -> void:
