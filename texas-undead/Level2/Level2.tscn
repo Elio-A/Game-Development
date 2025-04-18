@@ -23,7 +23,7 @@ outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 0.776471)
 shadow_offset = Vector2(2, 2)
 
-[node name="World" type="Node3D"]
+[node name="World2" type="Node3D"]
 script = ExtResource("1_6vi5b")
 
 [node name="Player" parent="." instance=ExtResource("1_t4ii8")]

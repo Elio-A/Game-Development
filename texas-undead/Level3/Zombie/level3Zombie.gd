@@ -17,7 +17,6 @@ func _ready():
 	player = get_node(playerPath)
 	stateMachine =animationTree.get("parameters/playback")
 	add_to_group("enemies")
-	print("Added")
 	
 
 func _process(delta):
@@ -61,10 +60,9 @@ func onZombieHit(isHeadshot: bool):
 		damage = 5
 	Health -= damage
 	if(Health < 0):
-		Level31Global.zombieKilled()
+		Level3Global.zombieKilled()
 		animationTree.set("parameters/conditions/isDead", true)
 		await get_tree().create_timer(animationTree.get_animation("DEAD").length).timeout
-		print("Removed")
 		queue_free()
 		
 	
@@ -72,11 +70,9 @@ func onZombieHit(isHeadshot: bool):
 
 func _on_head_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Bullet"):
-		print("HEADHIT")
 		onZombieHit(true)
 
 
 func _on_body_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Bullet"):
-		print("HEADHIT")
 		onZombieHit(true)

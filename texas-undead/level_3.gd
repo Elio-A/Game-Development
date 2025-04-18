@@ -55,11 +55,13 @@ func _on_player_player_been_hit() -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if(body.is_in_group("Player")):
+		print("Entered Camp")
 		Level3Global.campArea = true
 
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if(body.is_in_group("Player")):
+		print("Left camp")
 		Level3Global.campArea = false
 
 

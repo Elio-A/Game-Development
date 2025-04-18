@@ -8,7 +8,7 @@ var counterOn = true
 var timer = 1.5
 
 func _process(delta: float) -> void:
-	if(zombieCount == 5):
+	if(zombieCount == 15):
 		completed = true
 		counterOn = false
 		
@@ -17,6 +17,9 @@ func _process(delta: float) -> void:
 		
 
 func zombieKilled():
+	print(counterOn)
+	print(campArea)
 	if(counterOn && campArea):
+		print("Zombie killed inside the camp")
 		zombieCount += 1
 	

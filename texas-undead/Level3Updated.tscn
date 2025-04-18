@@ -122,7 +122,7 @@ albedo_texture = ExtResource("7_xc6nj")
 density = 8.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bavog"]
-size = Vector3(101.959, 29.1842, 80.4772)
+size = Vector3(87.9746, 35.9017, 80.4772)
 
 [sub_resource type="LabelSettings" id="LabelSettings_81juo"]
 font = ExtResource("15_5fmge")
@@ -747,7 +747,7 @@ wait_time = 0.3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.9677, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CampArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3951, 14.6242, 38.7568)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3873, 11.2655, 38.7568)
 shape = SubResource("BoxShape3D_bavog")
 
 [node name="ZombieCounter" type="Label" parent="."]
@@ -759,7 +759,7 @@ offset_right = 304.0
 offset_bottom = 28.0
 grow_horizontal = 2
 size_flags_horizontal = 4
-text = "Help Glen clear his camp from the Zombies: 0/5"
+text = "Help Glen clear his camp from the Zombies: 0/15"
 label_settings = SubResource("LabelSettings_81juo")
 horizontal_alignment = 1
 script = ExtResource("14_ojnp3")
