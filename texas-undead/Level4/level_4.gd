@@ -6,6 +6,7 @@ extends Node3D
 @onready var hitRectangle = $UI
 @onready var player = $Player
 @onready var healthBar = $Player/Head/Camera3D/HealthBar
+@onready var restartDialog = $Dialogs/GameLost
 
 var playerHealth = 100
 var zombie = load("res://Level4/Zombie/zombie.tscn")
@@ -13,6 +14,18 @@ var instance
 
 var zombieCounter = 0
 	
+func _ready() -> void:
+	restartDialog.add_button("QUIT", true, "quit")
+	restartDialog.connect("confirmed", restartLevel)
+	restartDialog.connect("custom_action", quitGame)
+	
+func restartLevel():
+	get_tree().reload_current_scene()
+	
+func quitGame(action: String):
+	if action == "quit":
+		get_tree().quit()
+
 func getRandomChild(parentNode):
 	var randomId = randi() % parentNode.get_child_count()
 	return parentNode.get_child(randomId)
@@ -48,7 +61,8 @@ func _on_player_player_been_hit() -> void:
 	healthBar.value -= 10
 	
 	if playerHealth <= 0:
-		print("Player dead!")
+		player.dead()
+		restartDialog.visible = true
 
 
 func _on_door_body_entered(body: Node3D) -> void:

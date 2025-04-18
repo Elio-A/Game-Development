@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://7vxnx28c88g1"]
 
-[ext_resource type="Script" uid="uid://t3hrncrstrjl" path="res://Level4/Zombie/level4Zombie.gd" id="1_nlqgo"]
+[ext_resource type="Script" uid="uid://t3hrncrstrjl" path="res://Level3/Zombie/level3Zombie.gd" id="1_nlqgo"]
 [ext_resource type="PackedScene" uid="uid://q5yna4hyjigg" path="res://Level4/Zombie/Zombie.gltf" id="2_rd6xu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_agj1e"]
@@ -5323,9 +5323,9 @@ bones/46/rotation = Quaternion(0.000154854, 0.000549157, 0.258537, 0.966001)
 [node name="PhysicalBoneSimulator3D" type="PhysicalBoneSimulator3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="2"]
 
 [node name="Physical Bone Hips_02" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(49.6155, -3.47136, 3.46997, 3.53193, 0.774679, -49.7264, 3.4083, 49.7307, 1.01683, -0.244619, 90.8203, -0.104121)
+transform = Transform3D(49.6155, -3.47137, 3.46991, 3.53187, 0.774691, -49.7264, 3.40832, 49.7307, 1.01684, -0.244612, 90.8203, -0.104122)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60377e-06, -6.82523e-05, 0.105755)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60376e-06, -6.82522e-05, 0.105754)
 body_offset = Transform3D(0.000246517, 0.0027734, -49.8577, -0.000344038, 49.8577, 0.00277364, 49.8577, 0.000342607, 0.000243366, 5.27267, 0.00310957, 0.000253677)
 bone_name = "Hips_02"
 joint_constraints/bias = 0.3
@@ -5339,9 +5339,9 @@ transform = Transform3D(1, 8.82449e-06, 1.3455e-06, -2.81014e-06, 0.168145, 0.98
 shape = SubResource("CapsuleShape3D_agj1e")
 
 [node name="Physical Bone Head_07" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-46.4109, 6.61282, -16.9733, 18.1988, 18.8459, -42.4196, 0.789508, -45.6825, -19.9568, 0.96221, 132.838, 46.991)
+transform = Transform3D(-46.4108, 6.61285, -16.9733, 18.1989, 18.8459, -42.4196, 0.789532, -45.6825, -19.9569, 0.962262, 132.838, 46.9911)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00090671, -0.000571467, 0.0694442)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000906709, -0.000571489, 0.0694443)
 body_offset = Transform3D(-49.8577, 0.00154322, -0.00320637, 0.00354953, 17.7856, -46.5775, -0.000291467, -46.5775, -17.7856, -0.0449829, 3.24471, 1.20849)
 bone_name = "Head_07"
 joint_constraints/bias = 0.3
