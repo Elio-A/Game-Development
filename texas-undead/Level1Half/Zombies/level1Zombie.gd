@@ -11,6 +11,9 @@ var stateMachine
 @onready var navAgent = $NavigationAgent3D
 @onready var animationTree = $AnimationTree
 
+var attack_cooldown = 0.0
+const ATTACK_INTERVAL = 1.0
+
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
 	if not player:
@@ -23,6 +26,7 @@ func _process(delta):
 		return
 
 	velocity = Vector3.ZERO
+	attack_cooldown -= delta
 
 	match stateMachine.get_current_node():
 		"WALK":
@@ -34,15 +38,17 @@ func _process(delta):
 			var target_rotation = atan2(dir.x, dir.z)
 			rotation.y = lerp_angle(rotation.y, target_rotation, delta * 5.0)
 
+			if targetInRange() and attack_cooldown <= 0.0:
+				animationTree.set("parameters/conditions/attack", true)
+				attack_cooldown = ATTACK_INTERVAL
+
 		"ATK":
 			var dir = (player.global_position - global_position).normalized()
 			var target_rotation = atan2(dir.x, dir.z)
 			rotation.y = lerp_angle(rotation.y, target_rotation, delta * 5.0)
+			animationTree.set("parameters/conditions/attack", false)
 
-	# Condition to check if player is in range to attack
-	animationTree.set("parameters/conditions/attack", targetInRange())
 	animationTree.set("parameters/conditions/walk", !targetInRange())
-
 	move_and_slide()
 
 func targetInRange():
@@ -58,7 +64,7 @@ func onZombieHit(isHeadshot: bool):
 	Health -= damage
 	if Health < 0:
 		zombieDied()
-		
+
 func zombieDied():
 	animationTree.set("parameters/conditions/isDead", true)
 	await get_tree().create_timer(animationTree.get_animation("DEAD").length).timeout
