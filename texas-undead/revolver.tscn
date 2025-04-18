@@ -42,6 +42,8 @@ _data = {
 
 [node name="Revolver" instance=ExtResource("1_l565l")]
 
+[node name="Bullet1" parent="Revovler_38/Cylinder_Arm/Extractor_Rod/Revolving_Cylinder/Bullets" index="0" groups=["Bullet"]]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
 &"": SubResource("AnimationLibrary_tl5pe")
