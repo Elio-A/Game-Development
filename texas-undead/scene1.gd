@@ -64,7 +64,7 @@ func _on_crypt_body_entered(body: Node3D) -> void:
 func moveToNextLevel():
 	pass #For now
 	#Replace player with scene 2
-	get_tree().change_scene_to_file("res://Cutscenes/Scenes/Cutscene2.tscn")
+	get_tree().change_scene_to_file("res://Level1Half/Level1.5.tscn")
 		
 func areZombiesKilled():
 	if len(zombies) == 0:
