@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://cofljcu0mkkan"]
+
+[ext_resource type="PackedScene" uid="uid://dqwdq31415gs0" path="res://Level5/blackwater_park_map2.tscn" id="1_4khnh"]
+[ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="2_px65p"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_4khnh"]
+
+[sub_resource type="Gradient" id="Gradient_ikuf0"]
+colors = PackedColorArray(0, 0, 0, 1, 0.574095, 0.713509, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8wt5x"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_72nm8"]
+seamless = true
+color_ramp = SubResource("Gradient_ikuf0")
+noise = SubResource("FastNoiseLite_8wt5x")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_duq61"]
+panorama = SubResource("NoiseTexture2D_72nm8")
+
+[sub_resource type="Sky" id="Sky_837cp"]
+sky_material = SubResource("PanoramaSkyMaterial_duq61")
+
+[sub_resource type="Environment" id="Environment_p26cv"]
+background_mode = 2
+sky = SubResource("Sky_837cp")
+
+[node name="World" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_4khnh")
+
+[node name="BlackwaterParkMap2" parent="NavigationRegion3D" instance=ExtResource("1_4khnh")]
+
+[node name="Player" parent="." instance=ExtResource("2_px65p")]
+transform = Transform3D(-6.99503, 0, -0.26371, 0, 7, 0, 0.26371, 0, -6.99503, 363.68, 0, 212.767)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p26cv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.953932, -0.300023, 0, 0.300023, -0.953932, 307.494, 189.167, -329.144)

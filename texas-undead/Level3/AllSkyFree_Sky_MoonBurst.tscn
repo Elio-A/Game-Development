@@ -22,11 +22,8 @@ fog_depth_end = 1024.7
 [node name="WorldEnvironment_MoonBurst" type="WorldEnvironment" parent="."]
 environment = SubResource("2")
 
-[node name="DirectionalLight_MoonBurst" type="DirectionalLight" parent="."]
+[node name="DirectionalLight_MoonBurst" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.849579, 0.527461, 0, -0.527461, 0.849579, 0, 26.5368, 0)
 light_color = Color(0.52549, 0.619608, 0.733333, 1)
 light_energy = 0.32
-light_specular = 1.0
 shadow_enabled = true
-
-[node name="AllSkyFree_DemoLandscape" parent="."]
