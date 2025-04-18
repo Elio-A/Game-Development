@@ -16,6 +16,7 @@ extends Node3D
 @onready var spotlight = $Player/SpotLight3D
 @onready var spawns_outside = $spawns_outside
 @onready var label = $Label
+@onready var restartDialog = $Dialogs/GameLost
 
 var playerHealth = 100
 var zombie = load("res://Level3/Zombie3.1/zombie.tscn")
@@ -26,7 +27,19 @@ func _ready():
 	physicalDoorCollision.disabled = true
 	physicalDoor.visible = false
 	#spotlight.global_transform = player.global_transform
+		
+	restartDialog.add_button("QUIT", true, "quit")
+	restartDialog.connect("confirmed", restartLevel)
+	restartDialog.connect("custom_action", quitGame)
+
 	randomize()
+	
+func restartLevel():
+	get_tree().reload_current_scene()
+	
+func quitGame(action: String):
+	if action == "quit":
+		get_tree().quit()
 	
 func _process(delta: float) -> void:
 	if(spider.spiderDeath):
@@ -74,7 +87,8 @@ func _on_player_player_been_hit() -> void:
 	healthBar.value -= 10
 	
 	if playerHealth <= 0:
-		print("Player dead!")
+		player.dead()
+		restartDialog.visible = true
 
 
 func _on_door_body_entered(body: Node3D) -> void:

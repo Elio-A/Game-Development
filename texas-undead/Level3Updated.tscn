@@ -786,6 +786,15 @@ shape = SubResource("BoxShape3D_fe5r8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.0468, 39.4212, -101.731)
 shape = SubResource("BoxShape3D_fe5r8")
 
+[node name="Dialogs" type="Node3D" parent="."]
+
+[node name="GameLost" type="AcceptDialog" parent="Dialogs"]
+auto_translate_mode = 1
+title = "You Died!"
+initial_position = 1
+ok_button_text = "RESTART"
+dialog_text = "Them Dang Zombies Got You!"
+
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 [connection signal="body_entered" from="Ground/House/Door" to="." method="_on_door_body_entered"]
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]

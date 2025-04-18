@@ -616,6 +616,15 @@ theme = SubResource("Theme_8j2fu")
 text = "Objective: Find an Exit out of the Sewers"
 label_settings = SubResource("LabelSettings_xvyfx")
 
+[node name="Dialogs" type="Node3D" parent="."]
+
+[node name="GameLost" type="AcceptDialog" parent="Dialogs"]
+auto_translate_mode = 1
+title = "You Died!"
+initial_position = 1
+ok_button_text = "RESTART"
+dialog_text = "Them Dang Zombies Got You!"
+
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 [connection signal="body_entered" from="RoomDoor" to="." method="_on_room_door_body_entered"]
 [connection signal="body_exited" from="RoomDoor" to="." method="_on_room_door_body_exited"]

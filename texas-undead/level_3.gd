@@ -6,6 +6,7 @@ extends Node3D
 @onready var player = $Player
 @onready var healthBar = $Player/Head/Camera3D/HealthBar
 @onready var timer = $ZombieSpawnTimer2
+@onready var restartDialog = $Dialogs/GameLost
 
 var playerHealth = 100
 var aroundCamp
@@ -15,12 +16,22 @@ var instance
 func _ready():
 	aroundCamp = false
 	randomize()
+	restartDialog.add_button("QUIT", true, "quit")
+	restartDialog.connect("confirmed", restartLevel)
+	restartDialog.connect("custom_action", quitGame)
 	
 func _process(delta: float) -> void:
 	if(Level3Global.completed):
 		$WorldEnvironment/FogVolume.visible = false
 		timer.start()
+
+func restartLevel():
+	get_tree().reload_current_scene()
 	
+func quitGame(action: String):
+	if action == "quit":
+		get_tree().quit()
+
 func getRandomChild(parentNode):
 	var randomId = randi() % parentNode.get_child_count()
 	return parentNode.get_child(randomId)
@@ -49,7 +60,8 @@ func _on_player_player_been_hit() -> void:
 	healthBar.value -= 10
 	
 	if playerHealth <= 0:
-		print("Player dead!")
+		player.dead()
+		restartDialog.visible = true
 		
 
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://on7b60345p52"]
 
-[ext_resource type="Script" uid="uid://bh2x6ioikyesi" path="res://Level4/level_4.gd" id="1_72nm8"]
+[ext_resource type="Script" path="res://Level4/level_4.gd" id="1_72nm8"]
 [ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="1_76xwv"]
 [ext_resource type="PackedScene" uid="uid://d4bwcold16otm" path="res://Level4/blackwater_park_map.tscn" id="2_w24qt"]
 [ext_resource type="Texture2D" uid="uid://7f380xp4i18y" path="res://Level2/bloodSplater.png" id="4_6xx81"]

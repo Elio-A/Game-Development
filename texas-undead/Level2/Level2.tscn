@@ -107,7 +107,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2565, 0, 75.9556)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5808, 0, 83.0589)
 
 [node name="ZombieSpawnTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 1.5
 autostart = true
 
 [node name="Label" type="Label" parent="."]
@@ -134,6 +134,15 @@ zombies for 2 minutes"
 label_settings = SubResource("LabelSettings_bh83k")
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Dialogs" type="Node3D" parent="."]
+
+[node name="GameLost" type="AcceptDialog" parent="Dialogs"]
+auto_translate_mode = 1
+title = "You Died!"
+initial_position = 1
+ok_button_text = "RESTART"
+dialog_text = "Them Dang Zombies Got You!"
 
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]
