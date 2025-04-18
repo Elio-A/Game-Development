@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://co02dnmb757q1" path="res://player.gd" id="1_f2ft1"]
 [ext_resource type="PackedScene" uid="uid://bcsye3rf54yq5" path="res://revolver.tscn" id="2_4yft6"]
 [ext_resource type="Texture2D" uid="uid://dlmkk8ss7b7p4" path="res://OtherResourcers/image0000.png" id="3_i3pqv"]
-[ext_resource type="PackedScene" uid="uid://cwwc7dund8wua" path="res://health_bar.tscn" id="4_hqtel"]
+[ext_resource type="PackedScene" uid="uid://bcn77b2dl5rpe" path="res://health_bar.tscn" id="4_hqtel"]
 [ext_resource type="AudioStream" uid="uid://d3f0jw3cwbon5" path="res://AudioResources/ytmp3free.cc_revolver-shoot-sound-effect-hd-youtubemp3free.org.mp3" id="5_sweqy"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0terg"]
