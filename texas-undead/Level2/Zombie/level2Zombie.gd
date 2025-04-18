@@ -1,18 +1,19 @@
 extends CharacterBody3D
 
-var player = null
+#var player = null
 var stateMachine
 @export var SPEED = 4.0
 @export var ATTACK_RANGE = 1
 @export var Health = 10
 
-@export var playerPath := "/root/World/Player"
+@export var playerPath := "$Player/root/World/Player"
 @onready var navAgent = $NavigationAgent3D
 @onready var animationTree = $AnimationTree
+@onready var player = get_tree().get_root().find_child("Player", true, false)
 
 
 func _ready():
-	player = get_node(playerPath)
+	#player = get_node(playerPath)
 	stateMachine =animationTree.get("parameters/playback")
 	
 
