@@ -135,6 +135,7 @@ label_settings = SubResource("LabelSettings_bh83k")
 horizontal_alignment = 2
 vertical_alignment = 1
 
+[connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="Label" method="_on_level_timer_timeout"]
 

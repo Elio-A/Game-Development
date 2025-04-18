@@ -1,7 +1,7 @@
 extends Label
 
 @onready var timer = $"../LevelTimer"
-var time_left := 30 # 2 minutes in seconds
+var time_left := 120 # 2 minutes in seconds
 
 func _ready():
 	update_label()
@@ -20,4 +20,4 @@ func _on_level_timer_timeout() -> void:
 	timer.start() # restart timer every second
 	update_label()
 	if time_left == 0:
-		get_tree().change_scene_to_file("res://Cutscenes/Scenes/Cutscene3.tscn")
+		get_tree().change_scene_to_file("res://Level2/Basement/level_basment.tscn")
