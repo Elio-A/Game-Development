@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-#var player = null
 var stateMachine
 @export var SPEED = 4.0
 @export var ATTACK_RANGE = 1
@@ -13,7 +12,6 @@ var stateMachine
 
 
 func _ready():
-	#player = get_node(playerPath)
 	stateMachine =animationTree.get("parameters/playback")
 	
 
