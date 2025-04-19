@@ -64,7 +64,7 @@ func _on_door_body_entered(body: Node3D) -> void:
 		print("New Weapon Acquired")
 		stairsPath.monitoring = true
 		groceryDoor.monitoring = false
-		
+		$Label2.text = "Objective: Find your way to the stairs"
 
 func _on_next_level_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):
