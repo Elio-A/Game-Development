@@ -6,6 +6,13 @@ extends Node3D
 @onready var hitRectangle = $UI
 @onready var player = $Player
 @onready var healthBar = $Player/Head/Camera3D/HealthBar
+@onready var groceryDoor = $Door
+@onready var stairsPath = $StaticBody3D/NextLevel
+
+func _ready():
+	groceryDoor.monitoring = true
+	stairsPath.monitoring = false
+
 
 var playerHealth = 100
 var zombie = load("res://Level4/Zombie/zombie.tscn")
@@ -52,13 +59,17 @@ func _on_player_player_been_hit() -> void:
 
 
 func _on_door_body_entered(body: Node3D) -> void:
+	print(body.get_groups())
 	if(body.is_in_group("Player")):
 		print("New Weapon Acquired")
-
+		stairsPath.monitoring = true
+		groceryDoor.monitoring = false
+		
 
 func _on_next_level_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):
 			moveToNextLevel()
+		
 
 func moveToNextLevel():
 	pass #For now

@@ -21,7 +21,6 @@ func _ready():
 	restartDialog.connect("confirmed", restartLevel)
 	restartDialog.connect("custom_action", quitGame)
 
-
 func restartLevel():
 	get_tree().reload_current_scene()
 		
