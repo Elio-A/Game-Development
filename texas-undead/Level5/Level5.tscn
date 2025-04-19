@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cofljcu0mkkan"]
+[gd_scene load_steps=14 format=3 uid="uid://cofljcu0mkkan"]
 
 [ext_resource type="PackedScene" uid="uid://dqwdq31415gs0" path="res://Level5/blackwater_park_map2.tscn" id="1_4khnh"]
 [ext_resource type="Script" uid="uid://bw28nawwmwo8c" path="res://Level5/level_5.gd" id="1_duq61"]
@@ -30,7 +30,10 @@ sky_material = SubResource("PanoramaSkyMaterial_duq61")
 background_mode = 2
 sky = SubResource("Sky_837cp")
 
-[node name="World" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_duq61"]
+size = Vector3(20.0989, 21.3433, 1)
+
+[node name="World2" type="Node3D"]
 script = ExtResource("1_duq61")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
@@ -39,7 +42,7 @@ navigation_mesh = SubResource("NavigationMesh_4khnh")
 [node name="BlackwaterParkMap2" parent="NavigationRegion3D" instance=ExtResource("1_4khnh")]
 
 [node name="Player" parent="." instance=ExtResource("2_px65p")]
-transform = Transform3D(-6.99503, 0, -0.26371, 0, 7, 0, 0.26371, 0, -6.99503, -88.2337, 10.8893, 230.548)
+transform = Transform3D(-6.99503, 0, -0.26371, 0, 7, 0, 0.26371, 0, -6.99503, 356.407, -0.0445828, 213.026)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_p26cv")
@@ -48,7 +51,15 @@ environment = SubResource("Environment_p26cv")
 transform = Transform3D(1, 0, 0, 0, -0.953932, -0.300023, 0, 0.300023, -0.953932, 307.494, 189.167, -329.144)
 
 [node name="BossZombie" parent="." instance=ExtResource("3_ikuf0")]
-transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 10.264, 0)
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 544.173, -46.8479, 45.9415)
+
+[node name="PhysicalBone3D" parent="BossZombie/AuxScene/Node/Skeleton3D/PhysicalBoneSimulator3D" index="0"]
+transform = Transform3D(8.33333, 1.41345e-13, 2.95547e-07, -1.35003e-13, 8.33333, -1.78814e-07, -2.95547e-07, 1.78814e-07, 8.33333, 0, 97.7101, -0.000396729)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49847e-12, -11.7252, 4.7859e-05)
+body_offset = Transform3D(8.33333, 1.41345e-13, 2.95547e-07, -1.35003e-13, 8.33333, -1.78814e-07, -2.95547e-07, 1.78814e-07, 8.33333, 0, 97.7101, -0.000396729)
+
+[node name="ZombieBossHealthBar" parent="BossZombie" index="4"]
+max_value = 100.0
 
 [node name="UI" type="Control" parent="."]
 visible = false
@@ -71,4 +82,34 @@ offset_bottom = 1302.0
 mouse_filter = 2
 color = Color(0.47451, 0.0509804, 0, 0.345098)
 
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 535.099, -58.7582, 95.8481)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.12097, 10.1716, 13.4808)
+shape = SubResource("BoxShape3D_duq61")
+
+[node name="Dialogs" type="Node3D" parent="."]
+
+[node name="GameLost" type="AcceptDialog" parent="Dialogs"]
+auto_translate_mode = 1
+title = "You Died!"
+initial_position = 1
+ok_button_text = "RESTART"
+dialog_text = "Them Dang Zombies Got You!"
+
+[node name="Finish" type="AcceptDialog" parent="."]
+auto_translate_mode = 1
+title = "Game Completed"
+initial_position = 1
+ok_button_text = "Quit"
+dialog_text = "You made it back to your familiy! It's up to you to keep them safe"
+
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
+[connection signal="body_entered" from="Area3D" to="BossZombie" method="_on_entered"]
+[connection signal="confirmed" from="Finish" to="." method="_on_confirmed"]
+
+[editable path="BossZombie"]
+[editable path="BossZombie/AuxScene"]
+[editable path="BossZombie/ZombieBossHealthBar"]

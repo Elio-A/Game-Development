@@ -3,9 +3,34 @@ extends Node3D
 @onready var hitRectangle = $UI
 @onready var player = $Player
 @onready var healthBar = $Player/Head/Camera3D/HealthBar
+@onready var restartDialog = $Dialogs/GameLost
+@onready var boss = $BossZombie
+@onready var finish = $Finish
+@onready var health = $BossZombie/ZombieBossHealthBar
 
 var playerHealth = 100
 
+func _ready() -> void:
+	restartDialog.add_button("QUIT", true, "quit")
+	restartDialog.connect("confirmed", restartLevel)
+	restartDialog.connect("custom_action", quitGame)
+	health.visible = false
+
+func _process(delta: float) -> void:
+	if(Level31Global.health && !Level31Global.killed):
+		health.visible = true
+		
+	if(Level31Global.killed):
+		finish.visible = true
+		
+
+func restartLevel():
+	get_tree().reload_current_scene()
+	
+func quitGame(action: String):
+	if action == "quit":
+		get_tree().quit()
+		
 func _on_player_player_been_hit() -> void:
 	# Hit screen
 	hitRectangle.visible = true
@@ -19,8 +44,16 @@ func _on_player_player_been_hit() -> void:
 
 	
 	#Damage dealing:
-	playerHealth -= 10
-	healthBar.value -= 10
+	playerHealth -= 20
+	healthBar.value -= 20
 	
 	if playerHealth <= 0:
-		print("Player dead!")
+		player.dead()
+		restartDialog.visible = true
+
+
+func _on_confirmed() -> void:
+	get_tree().quit()
+
+func dead():
+	finish.visible = true

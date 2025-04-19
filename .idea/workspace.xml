@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dba3e6ef-3bb5-4b8b-bde8-14357680c132" name="Changes" comment="Merging Player into Zombie" />
+    <list default="true" id="dba3e6ef-3bb5-4b8b-bde8-14357680c132" name="Changes" comment="Merging Player into Zombie">
+      <change afterPath="$PROJECT_DIR$/texas-undead/Level5/level_5.gd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texas-undead/Level5/level_5.gd.uid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/Level3.1.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/Level3.1.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/Level3/Zombie3.1/Spider/spider_boss.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/Level3/Zombie3.1/Spider/spider_boss.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/Level5/BossZombie/boss_zombie.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/Level5/BossZombie/boss_zombie.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/Level5/Level5.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/Level5/Level5.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/Level5/blackwater_park_map2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/Level5/blackwater_park_map2.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texas-undead/boss_zombie.gd" beforeDir="false" afterPath="$PROJECT_DIR$/texas-undead/boss_zombie.gd" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +40,7 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Zombie",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>

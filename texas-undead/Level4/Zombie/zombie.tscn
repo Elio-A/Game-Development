@@ -5323,9 +5323,9 @@ bones/46/rotation = Quaternion(-0.000374914, -0.00132661, 0.353949, 0.935264)
 [node name="PhysicalBoneSimulator3D" type="PhysicalBoneSimulator3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="2"]
 
 [node name="Physical Bone Hips_02" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(46.6437, 17.6089, 0.283628, -0.247324, 1.45784, -49.8358, -17.6094, 46.6218, 1.45122, -0.145889, 77.3921, -0.150292)
+transform = Transform3D(46.6437, 17.6089, 0.283618, -0.247346, 1.45787, -49.8358, -17.6094, 46.6218, 1.45125, -0.145887, 77.3921, -0.150296)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.25742e-06, -0.0001169, 0.107409)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.25743e-06, -0.0001169, 0.107409)
 body_offset = Transform3D(0.000296533, 0.00585258, -49.8577, -0.000375748, 49.8577, 0.00585091, 49.8577, 0.00037384, 0.000292778, 5.35517, 0.00519991, -0.000393242)
 bone_name = "Hips_02"
 joint_constraints/bias = 0.3
@@ -5339,9 +5339,9 @@ transform = Transform3D(1, 8.82449e-06, 1.3455e-06, -2.81014e-06, 0.168145, 0.98
 shape = SubResource("CapsuleShape3D_agj1e")
 
 [node name="Physical Bone Head_07" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/a61d1b34416346b0b585cf3600dcff80_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-46.5378, 6.19442, -16.7826, 17.8187, 11.8988, -45.0189, -1.58798, -48.0191, -13.3203, 3.70803, 128.867, 44.6189)
+transform = Transform3D(-46.5378, 6.19439, -16.7826, 17.8186, 11.8988, -45.0189, -1.58795, -48.0191, -13.3203, 3.70806, 128.867, 44.6189)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00191312, -0.00097183, 0.0722359)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00191312, -0.000971967, 0.0722357)
 body_offset = Transform3D(-49.8577, 0.00290561, -0.00678614, 0.00736967, 17.7872, -46.5769, -0.000297904, -46.5769, -17.7872, -0.0948906, 3.38182, 1.2396)
 bone_name = "Head_07"
 joint_constraints/bias = 0.3

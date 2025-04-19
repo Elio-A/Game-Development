@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://7vxnx28c88g1"]
 
-[ext_resource type="Script" uid="uid://t3hrncrstrjl" path="res://Level3/Zombie/level3Zombie.gd" id="1_nlqgo"]
+[ext_resource type="Script" uid="uid://t3hrncrstrjl" path="res://Level4/Zombie/level4Zombie.gd" id="1_nlqgo"]
 [ext_resource type="PackedScene" uid="uid://q5yna4hyjigg" path="res://Level4/Zombie/Zombie.gltf" id="2_rd6xu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_agj1e"]

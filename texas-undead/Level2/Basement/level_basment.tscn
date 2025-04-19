@@ -24,7 +24,7 @@ shadow_offset = Vector2(2, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_h4s8f"]
 size = Vector3(3.70178, 3.18018, 2.79541)
 
-[node name="World" type="Node3D"]
+[node name="World2" type="Node3D"]
 script = ExtResource("1_h4s8f")
 
 [node name="Player" parent="." instance=ExtResource("2_pljwj")]
@@ -143,6 +143,15 @@ collision_mask = 7
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.308365, 1.08435, 0.895683)
 shape = SubResource("BoxShape3D_h4s8f")
+
+[node name="Dialogs" type="Node3D" parent="."]
+
+[node name="GameLost" type="AcceptDialog" parent="Dialogs"]
+auto_translate_mode = 1
+title = "You Died!"
+initial_position = 1
+ok_button_text = "RESTART"
+dialog_text = "Them Dang Zombies Got You!"
 
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]

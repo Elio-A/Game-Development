@@ -8,10 +8,21 @@ extends Node3D
 @onready var healthBar = $Player/Head/Camera3D/HealthBar
 @onready var groceryDoor = $Door
 @onready var stairsPath = $StaticBody3D/NextLevel
+@onready var restartDialog = $Dialogs/GameLost
 
 func _ready():
 	groceryDoor.monitoring = true
 	stairsPath.monitoring = false
+	restartDialog.add_button("QUIT", true, "quit")
+	restartDialog.connect("confirmed", restartLevel)
+	restartDialog.connect("custom_action", quitGame)
+
+func restartLevel():
+	get_tree().reload_current_scene()
+	
+func quitGame(action: String):
+	if action == "quit":
+		get_tree().quit()
 
 
 var playerHealth = 100
@@ -55,7 +66,8 @@ func _on_player_player_been_hit() -> void:
 	healthBar.value -= 10
 	
 	if playerHealth <= 0:
-		print("Player dead!")
+		player.dead()
+		restartDialog.visible = true
 
 
 func _on_door_body_entered(body: Node3D) -> void:

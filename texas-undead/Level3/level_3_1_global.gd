@@ -7,6 +7,8 @@ var completed = false
 var counterOn = true
 var roomEntered = false
 var timer = 1.5
+var killed = false
+var health = false
 
 func _process(delta: float) -> void:
 	if(zombieCount == 5):

@@ -63,7 +63,7 @@ shadow_offset = Vector2(2, 2)
 script = ExtResource("1_72nm8")
 
 [node name="Player" parent="." instance=ExtResource("1_76xwv")]
-transform = Transform3D(-0.99863, 0, -0.052336, 0, 1, 0, 0.052336, 0, -0.99863, 238.266, -0.0236487, 167.659)
+transform = Transform3D(-0.99863, 0, -0.052336, 0, 1, 0, 0.052336, 0, -0.99863, -34.5654, -0.0236487, -24.8091)
 
 [node name="Revolver" parent="Player/Head/Camera3D" index="0"]
 transform = Transform3D(0.999229, -0.00207341, 0.0392174, 0.0026646, 0.999883, -0.0150287, -0.0391817, 0.0151216, 0.999118, 0.319256, -0.218144, -0.350155)
@@ -168,6 +168,15 @@ text = "Objective: Make you're way to undercover gunstore (grocery)"
 label_settings = SubResource("LabelSettings_2bfty")
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Dialogs" type="Node3D" parent="."]
+
+[node name="GameLost" type="AcceptDialog" parent="Dialogs"]
+auto_translate_mode = 1
+title = "You Died!"
+initial_position = 1
+ok_button_text = "RESTART"
+dialog_text = "Them Dang Zombies Got You!"
 
 [connection signal="playerBeenHit" from="Player" to="." method="_on_player_player_been_hit"]
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]
