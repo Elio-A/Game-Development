@@ -1,6 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://blkommpvws3xe"]
+[gd_scene load_steps=32 format=3 uid="uid://bc4bepvrybkxg"]
 
-[ext_resource type="Script" uid="uid://bv0gky5uvylbo" path="res://level_3.1.gd" id="1_k4imn"]
+[ext_resource type="Script" path="res://level_3.1.gd" id="1_k4imn"]
 [ext_resource type="MeshLibrary" uid="uid://cpogiju3aspeb" path="res://Level3/sewer/Sewer.tres" id="1_mtp8d"]
 [ext_resource type="PackedScene" uid="uid://c3i5gjwp8tnfb" path="res://player.tscn" id="2_dlkla"]
 [ext_resource type="Texture2D" uid="uid://b4vwsrfvxmw0e" path="res://Level3/sewer/Sewer_brick_modern.jpg" id="3_dlkla"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://0ygjkrrrtjv1" path="res://Level3/sewer/Sewer_concrete_dirty.jpg" id="5_k4imn"]
 [ext_resource type="Texture2D" uid="uid://7f380xp4i18y" path="res://Level2/bloodSplater.png" id="7_b5olt"]
 [ext_resource type="PackedScene" uid="uid://c5iqohanl4age" path="res://Level3/Zombie3.1/Spider/spider_boss.tscn" id="8_uugko"]
-[ext_resource type="Script" uid="uid://bdmcaxn1x6dgx" path="res://OrbitCamera.gd" id="9_kxego"]
+[ext_resource type="Script" path="res://OrbitCamera.gd" id="9_kxego"]
 [ext_resource type="Environment" uid="uid://c2tjqq0v8hyj" path="res://Level3/Level3Updated.tres" id="10_m66xi"]
 [ext_resource type="FontFile" uid="uid://1o5vpa468nmb" path="res://Menus/Weston Free.otf" id="11_bh4qq"]
 

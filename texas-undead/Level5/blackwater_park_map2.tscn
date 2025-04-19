@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://dqwdq31415gs0"]
+[gd_scene load_steps=41 format=4 uid="uid://dqwdq31415gs0"]
 
 [ext_resource type="Material" uid="uid://dmleucj004xy6" path="res://Level4/grass_material.tres" id="1_fks4p"]
 [ext_resource type="MeshLibrary" uid="uid://boooc6smo76il" path="res://Level4/Level4MeshLibrary.tres" id="2_ueicy"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cydmk5odmyhkx" path="res://Level4/Level4Models/wood_stairs.tscn" id="11_tyuwx"]
 [ext_resource type="Texture2D" uid="uid://cd0ctvmcv5svc" path="res://Level4/Level4Assets/worn_planks_diff_4k.jpg" id="12_7yo0p"]
 [ext_resource type="PackedScene" uid="uid://bk0en6o6yihp6" path="res://Level4/Level4Models/wood_deck.tscn" id="13_a04b4"]
+[ext_resource type="Texture2D" uid="uid://t7vhbvxkg3ng" path="res://Level4/Level4Assets/WoodDeck_Wood_Lum.jpg" id="13_g3wn1"]
 [ext_resource type="PackedScene" uid="uid://ci16nr8sfh764" path="res://Level4/Level4Assets/yosemite_waterfall.glb" id="14_mhe21"]
 [ext_resource type="Texture2D" uid="uid://dwk5db2tlb6ee" path="res://Level4/Level4Assets/MossStones_stones_baseColor.png" id="15_e4q14"]
 [ext_resource type="Texture2D" uid="uid://bj3m2akqernrm" path="res://Level4/Level4Assets/MossStones_stones_Metalness-stones_Roughness.png" id="16_g3c25"]
@@ -263,6 +264,15 @@ shadow_mesh = SubResource("ArrayMesh_hgrm2")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_shofm"]
 points = PackedVector3Array(765.231, 105.682, -31.4691, 774.3, 85.7681, -5.47984, 770.161, 192.911, 19.0076, 768.944, 224.312, 19.6949, 769.918, 153.635, -22.3054, 783.916, 121.533, -39.8692, 824.632, -126.01, -105.161, 835.8, -174.866, -116.819, 828.862, -173.361, -90.0405, 802.144, -25.7388, -24.5709, 791.128, 37.8648, -5.09801, 839.178, -56.1863, 17.7094, 839.208, 38.5168, 56.1715, 774.543, 202.191, 33.7459, 779.929, 229.478, 35.5277, 791.493, 233.591, 32.015, 887.197, 252.502, 1.52022, 873.564, 244.225, -13.0144, 790.58, 193.814, -13.0908, 783.003, 175.606, -21.7963, 788.724, 161.812, -32.08, 959.805, -15.9074, -128.452, 1008.65, -171.305, -88.6404, 945.137, -210.48, -88.5386, 923.471, -218.757, -88.335, 869.639, -207.22, -98.7969, 839.056, -195.081, -104.117, 991.209, 4.15686, -130.233, 973.712, -80.9656, -119.084, 864.161, -196.084, -62.2184, 979.372, -233.103, 77.6808, 924.718, -179.13, 45.2769, 967.108, -147.428, 113.674, 871.556, 67.4094, 103.212, 787.446, 216.788, 46.4987, 839.573, 209.013, 73.2262, 833.061, 241.968, 27.0513, 902.717, 256.966, 7.0948, 891.031, 247.436, -12.5308, 994.739, 230.782, -56.0075, 1002.5, 216.135, -70.8985, 921.249, 226.218, -40.9637, 897.787, 171.392, -64.4839, 1052.16, 173.348, -99.9169, 1034.39, -140.005, -52.0365, 1006, -243.486, -46.0038, 982.902, -236.815, -73.1131, 1028.21, -62.657, -103.531, 962.878, -237.216, -75.5822, 985.214, -252.465, -59.5711, 1008.31, -255.474, 8.77481, 971.064, -237.467, 20.7131, 1052.07, 110.046, -116.055, 1011.93, -253.518, 34.7132, 1003.02, -243.787, 64.6734, 1021.52, -233.755, 111.205, 1011.23, -213.741, 112.986, 1024.01, -130.023, 122.812, 953.688, -23.1305, 121.081, 944.042, 171.944, 125.205, 912.059, 173.198, 111.739, 947.876, 239.811, 36.8514, 975.172, 175.204, 126.401, 966.073, 243.623, -19.9381, 1052.44, 226.218, -69.0912, 993.4, 237.203, -44.1965, 1036.22, 225.265, -69.6003, 1033.48, 204.047, -84.9241, 1051.31, 213.176, -79.4513, 1068.44, 207.708, -81.4368, 1063.85, 140.543, -106.102, 1060.2, -137.798, 37.7423, 1053.44, -214.995, 84.299, 1056.3, 2.80252, -71.9676, 1060.99, -73.592, -4.02892, 1022.55, -247.298, 42.5278, 1063.27, 110.698, -98.186, 1044.37, -232.2, 108.583, 1029.28, -223.622, 113.19, 1009.83, 18.5529, 126.554, 1004.23, 12.1324, 129.812, 1048.02, -214.343, 110.619, 982.78, 226.97, 37.2077, 1039.05, 221.703, -24.7236, 974.807, 212.674, 71.6735, 1010.23, 135.527, 99.2664, 1006.24, 195.319, 80.5317, 1054.63, 220.349, -44.3747, 1076.08, -36.2726, 24.9131, 1066.92, -98.6723, 61.7716, 1033.05, -8.03215, 100.997, 1021.34, 53.1638, 105.299, 1065.61, -48.8127, 60.677, 1024.9, 213.226, 17.4549, 1026.69, 97.0543, 84.2226)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_2bcee"]
+size = Vector2(50, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uarpw"]
+albedo_texture = ExtResource("13_g3wn1")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g3wn1"]
+points = PackedVector3Array(-25.7937, -0.793495, -50.7837, 26.5873, 0.793495, 50.7837, 26.5873, -0.793495, 50.7837, 26.5873, 0.793495, -50.7837, -25.7937, 0.793495, 50.7837, -25.7937, -0.793495, 50.7837, 26.5873, -0.793495, -50.7837, -25.7937, 0.793495, -50.7837)
+
 [node name="BlackwaterParkMap2" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -437,3 +447,13 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stone11/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_shofm")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 541.838, -57.859, 58.461)
+mesh = SubResource("PlaneMesh_2bcee")
+surface_material_override/0 = SubResource("StandardMaterial3D_uarpw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_g3wn1")
