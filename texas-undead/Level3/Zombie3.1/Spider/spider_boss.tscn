@@ -1,8 +1,8 @@
 [gd_scene load_steps=45 format=3 uid="uid://c5iqohanl4age"]
 
-[ext_resource type="Script" uid="uid://2f4tujkma7qx" path="res://spider_boss.gd" id="1_gcuda"]
+[ext_resource type="Script" path="res://spider_boss.gd" id="1_gcuda"]
 [ext_resource type="PackedScene" uid="uid://chh3sf3ugre0h" path="res://Level3/Zombie3.1/Spider/scene.gltf" id="2_oq68y"]
-[ext_resource type="PackedScene" uid="uid://cebp3hniwbpts" path="res://spider_health_bar.tscn" id="3_oq68y"]
+[ext_resource type="PackedScene" uid="uid://dnsbqxgm6igg8" path="res://spider_health_bar.tscn" id="3_oq68y"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_gcuda"]
 radius = 2.07956
@@ -3479,7 +3479,7 @@ states/RUN/node = SubResource("AnimationNodeAnimation_gcuda")
 states/RUN/position = Vector2(405, 142)
 states/Start/position = Vector2(117, 142)
 transitions = ["ATK", "RUN", SubResource("AnimationNodeStateMachineTransition_gcuda"), "RUN", "ATK", SubResource("AnimationNodeStateMachineTransition_7jgvn"), "RUN", "DEAD", SubResource("AnimationNodeStateMachineTransition_7ylj2"), "DEAD", "DEAD_IDLE", SubResource("AnimationNodeStateMachineTransition_0omxn"), "ATK", "DEAD", SubResource("AnimationNodeStateMachineTransition_53w7k"), "RUN", "HIT", SubResource("AnimationNodeStateMachineTransition_bx766"), "HIT", "RUN", SubResource("AnimationNodeStateMachineTransition_4cria"), "Start", "IDLE", SubResource("AnimationNodeStateMachineTransition_oq68y"), "IDLE", "RUN", SubResource("AnimationNodeStateMachineTransition_tu24a")]
-graph_offset = Vector2(-115, 29.8148)
+graph_offset = Vector2(-115, 39.5926)
 
 [node name="SpiderBoss" type="CharacterBody3D" groups=["Spider"]]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -3489,70 +3489,70 @@ script = ExtResource("1_gcuda")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4" index="0"]
-bones/2/position = Vector3(0, 253.692, 0)
+bones/2/position = Vector3(0, 255.519, 0)
 bones/2/rotation = Quaternion(-0.0784592, 0, 0, 0.996917)
-bones/2/scale = Vector3(0.991088, 1.01663, 1)
-bones/3/position = Vector3(-405.94, -229.031, 240.414)
-bones/3/rotation = Quaternion(0.250539, -0.45105, 0.148786, 0.843592)
-bones/4/position = Vector3(-39.4152, 47.7815, 197.817)
-bones/4/rotation = Quaternion(-0.293476, 0.293108, -0.153877, 0.896817)
-bones/4/scale = Vector3(1.00818, 0.990054, 1.00219)
-bones/5/position = Vector3(49.6805, -17.8395, 172.948)
-bones/5/rotation = Quaternion(0.120028, 0.783613, 0.0497771, 0.607509)
-bones/5/scale = Vector3(1.0006, 1.00909, 0.990215)
-bones/6/position = Vector3(-31.3312, 4.5753, 167.186)
-bones/6/rotation = Quaternion(-0.0183627, 0.453406, 0.0161399, 0.890969)
-bones/6/scale = Vector3(1.00086, 1.00006, 0.999161)
-bones/7/position = Vector3(-355.793, -236.879, -199.262)
-bones/7/rotation = Quaternion(0.0715538, 0.954414, -0.0541564, -0.284676)
-bones/8/position = Vector3(65.7416, 22.4596, 131.387)
-bones/8/rotation = Quaternion(-0.252283, 0.107525, -0.0257672, 0.961316)
-bones/8/scale = Vector3(0.999132, 0.999725, 1.00127)
-bones/9/position = Vector3(-8.02003, -3.52557, 135.713)
-bones/9/rotation = Quaternion(0.127458, -0.36267, -0.0543074, 0.921561)
-bones/9/scale = Vector3(1.0029, 0.996343, 1.001)
-bones/10/position = Vector3(21.4413, 61.4378, 123.407)
-bones/10/rotation = Quaternion(-0.0159475, -0.433421, -0.0829546, 0.897224)
-bones/10/scale = Vector3(0.995354, 1.00485, 0.99969)
-bones/11/position = Vector3(13.7371, -248.04, -315.713)
-bones/11/rotation = Quaternion(-0.0190764, 0.991152, -0.0788345, 0.10507)
-bones/12/position = Vector3(-3.51561, 44.7868, 185.186)
-bones/12/rotation = Quaternion(-0.343523, 0.374444, -0.0670551, 0.858655)
-bones/12/scale = Vector3(1.00219, 0.99706, 1.00077)
-bones/13/position = Vector3(-41.3149, -18.8033, 154.373)
-bones/13/rotation = Quaternion(-0.000601557, 0.322541, 0.117544, 0.939229)
-bones/13/scale = Vector3(0.994916, 1.00006, 1.00545)
-bones/14/position = Vector3(30.4611, 16.2173, 166.493)
-bones/14/rotation = Quaternion(0.0390266, 0.569676, 0.162822, 0.804634)
-bones/14/scale = Vector3(0.995079, 1.00264, 1.00225)
-bones/15/position = Vector3(336.274, -229.031, 186.748)
-bones/15/rotation = Quaternion(0.259526, 0.486772, -0.128386, 0.824146)
-bones/16/position = Vector3(34.3567, 2.41362, 121.669)
-bones/16/rotation = Quaternion(-0.404053, -0.191257, 0.0928116, 0.88969)
-bones/16/scale = Vector3(1.00441, 0.989784, 1.00623)
-bones/17/position = Vector3(-9.20728, -2.20232, 94.5325)
-bones/17/rotation = Quaternion(0.0878226, -0.757734, -0.0801142, 0.641645)
-bones/17/scale = Vector3(0.997266, 1.00804, 0.994717)
-bones/18/position = Vector3(16.4281, -1.57685, 80.9119)
-bones/18/rotation = Quaternion(-0.0175506, -0.319032, -0.0961878, 0.942687)
-bones/18/scale = Vector3(0.998894, 1.00297, 0.998123)
-bones/19/position = Vector3(357.136, -236.879, -170.094)
-bones/19/rotation = Quaternion(-0.072744, 0.925991, -0.113535, 0.352646)
-bones/20/position = Vector3(-87.8061, 14.0176, 114.314)
-bones/20/rotation = Quaternion(-0.245005, -0.240412, 0.101168, 0.933777)
-bones/20/scale = Vector3(0.999121, 0.997404, 1.00364)
-bones/21/position = Vector3(-20.7981, -1.29764, 129.403)
-bones/21/rotation = Quaternion(0.137903, 0.42458, 0.0613078, 0.892724)
-bones/21/scale = Vector3(1.00158, 0.998463, 1.00018)
-bones/22/position = Vector3(-43.4345, 59.7739, 104.049)
-bones/22/rotation = Quaternion(-0.0283131, 0.417053, 0.0644258, 0.906154)
-bones/22/scale = Vector3(0.998046, 1.00534, 0.996493)
+bones/2/scale = Vector3(0.991482, 1.01593, 1)
+bones/3/position = Vector3(-407.564, -233.336, 238.379)
+bones/3/rotation = Quaternion(0.244944, -0.453443, 0.145569, 0.844513)
+bones/4/position = Vector3(-37.7089, 53.1964, 195.127)
+bones/4/rotation = Quaternion(-0.296751, 0.292295, -0.149468, 0.896751)
+bones/4/scale = Vector3(1.00769, 0.99056, 1.00213)
+bones/5/position = Vector3(49.5656, -22.158, 172.057)
+bones/5/rotation = Quaternion(0.117052, 0.786925, 0.0506151, 0.603727)
+bones/5/scale = Vector3(1.00063, 1.00855, 0.990754)
+bones/6/position = Vector3(-32.6949, 8.37857, 167.189)
+bones/6/rotation = Quaternion(-0.029054, 0.437382, 0.0183505, 0.898619)
+bones/6/scale = Vector3(1.00027, 0.999861, 0.999877)
+bones/7/position = Vector3(-355.458, -233.242, -200.027)
+bones/7/rotation = Quaternion(0.0631979, 0.952956, -0.0646335, -0.289314)
+bones/8/position = Vector3(67.4973, 20.1537, 132.794)
+bones/8/rotation = Quaternion(-0.258946, 0.101857, -0.0247893, 0.960186)
+bones/8/scale = Vector3(0.999278, 0.999348, 1.00144)
+bones/9/position = Vector3(-8.7147, -2.6487, 135.692)
+bones/9/rotation = Quaternion(0.120736, -0.383794, -0.0538031, 0.913909)
+bones/9/scale = Vector3(1.00261, 0.996962, 1.00065)
+bones/10/position = Vector3(21.0609, 55.7015, 125.053)
+bones/10/rotation = Quaternion(-0.0159991, -0.419583, -0.0837883, 0.9037)
+bones/10/scale = Vector3(0.995608, 1.00435, 0.999976)
+bones/11/position = Vector3(14.2817, -247.341, -314.853)
+bones/11/rotation = Quaternion(-0.0191156, 0.991571, -0.0835835, 0.0971389)
+bones/12/position = Vector3(-2.52368, 44.948, 184.897)
+bones/12/rotation = Quaternion(-0.340259, 0.375167, -0.0662006, 0.859704)
+bones/12/scale = Vector3(1.00151, 0.997782, 1.00072)
+bones/13/position = Vector3(-38.7302, -18.7278, 154.947)
+bones/13/rotation = Quaternion(0.00479141, 0.320498, 0.114936, 0.940238)
+bones/13/scale = Vector3(0.995173, 1.00012, 1.00506)
+bones/14/position = Vector3(30.8985, 15.2117, 166.332)
+bones/14/rotation = Quaternion(0.0419481, 0.572897, 0.151598, 0.804393)
+bones/14/scale = Vector3(0.995839, 1.00224, 1.00189)
+bones/15/position = Vector3(337.898, -233.336, 184.713)
+bones/15/rotation = Quaternion(0.251586, 0.488725, -0.125587, 0.825882)
+bones/16/position = Vector3(32.6461, 7.8894, 118.98)
+bones/16/rotation = Quaternion(-0.393261, -0.187354, 0.0909944, 0.895525)
+bones/16/scale = Vector3(1.00409, 0.990317, 1.00598)
+bones/17/position = Vector3(-9.24312, -6.54792, 93.6945)
+bones/17/rotation = Quaternion(0.0833605, -0.760311, -0.0719245, 0.64016)
+bones/17/scale = Vector3(0.997439, 1.0072, 0.995377)
+bones/18/position = Vector3(17.8943, 2.08956, 80.8431)
+bones/18/rotation = Quaternion(-0.019017, -0.298856, -0.0932013, 0.949546)
+bones/18/scale = Vector3(0.9991, 1.00259, 0.998292)
+bones/19/position = Vector3(356.802, -233.242, -170.859)
+bones/19/rotation = Quaternion(-0.0748111, 0.928803, -0.113813, 0.344637)
+bones/20/position = Vector3(-89.521, 11.5757, 115.721)
+bones/20/rotation = Quaternion(-0.237302, -0.238787, 0.103696, 0.935904)
+bones/20/scale = Vector3(0.999279, 0.997911, 1.0029)
+bones/21/position = Vector3(-20.1036, -0.185714, 129.282)
+bones/21/rotation = Quaternion(0.140506, 0.417057, 0.0687083, 0.895322)
+bones/21/scale = Vector3(1.00132, 0.998836, 1.00003)
+bones/22/position = Vector3(-42.4192, 53.975, 104.991)
+bones/22/rotation = Quaternion(-0.0294852, 0.422451, 0.0485153, 0.904606)
+bones/22/scale = Vector3(0.998397, 1.00493, 0.9966)
 bones/23/position = Vector3(0, 53.4403, 66.7515)
-bones/23/rotation = Quaternion(0.136022, 0.247543, 0.0604835, 0.957373)
+bones/23/rotation = Quaternion(0.162395, -0.359997, 0.0547698, 0.917077)
 bones/24/position = Vector3(0, 53.4082, 66.8)
-bones/24/rotation = Quaternion(0.260138, 0.1551, 0.0444032, 0.951998)
+bones/24/rotation = Quaternion(0.242319, -0.315484, -0.0727453, 0.914582)
 bones/25/position = Vector3(0, 53.4082, 66.8)
-bones/25/rotation = Quaternion(0.0678524, 0.178117, 0.0126335, 0.981586)
+bones/25/rotation = Quaternion(0.0833625, -0.159423, -0.00891583, 0.983644)
 
 [node name="PhysicalBoneSimulator3D" type="PhysicalBoneSimulator3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="1"]
 
@@ -3562,10 +3562,10 @@ body_offset = Transform3D(200, 1.11384e-22, 5.01628e-07, -1.11384e-22, 200, 0, -
 bone_name = "_rootJoint"
 
 [node name="Physical Bone Root_00" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(200, 5.01628e-07, -1.11384e-22, -1.11384e-22, 0, -200, -5.01628e-07, 200, 0, 6.31061e-23, 53.0458, 5.0822e-21)
+transform = Transform3D(200, 5.01628e-07, -1.11384e-22, -1.11384e-22, 0, -200, -5.01628e-07, 200, 0, 6.99246e-23, 53.0458, 5.0822e-21)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67819e-25, -2.5411e-23, 0.265229)
-body_offset = Transform3D(200, 5.01628e-07, -1.11384e-22, -1.11384e-22, 0, -200, -5.01628e-07, 200, 0, 6.3106e-23, 53.0458, 5.0822e-21)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01911e-25, -2.5411e-23, 0.265229)
+body_offset = Transform3D(200, 5.01628e-07, -1.11384e-22, -1.11384e-22, 0, -200, -5.01628e-07, 200, 0, 6.99245e-23, 53.0458, 5.0822e-21)
 bone_name = "Root_00"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3586,10 +3586,10 @@ shape = SubResource("SphereShape3D_oq68y")
 debug_color = Color(0.418336, 0.604469, 7.70092e-07, 0.42)
 
 [node name="Physical Bone tete_01" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-89.2183, -84.4904, 157.802, -27.9965, 180.734, 80.9401, -176.794, 14.0172, -92.4513, -184.727, 153.197, 110.686)
+transform = Transform3D(-89.2759, -84.512, 157.758, -27.986, 180.72, 80.9756, -176.767, 14.0708, -92.4955, -184.821, 155.042, 110.637)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0068534, 0.0250941, 1.18794)
-body_offset = Transform3D(-90.0206, -85.2501, 159.221, 0.00488091, 173.432, 92.8619, -178.997, 42.1177, -78.6512, -186.389, -114.666, 93.6026)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00612128, 0.0245447, 1.18816)
+body_offset = Transform3D(-90.0429, -85.238, 159.113, 0.0109081, 173.53, 92.9676, -178.969, 42.1685, -78.6893, -186.409, -114.72, 93.5563)
 bone_name = "tete_01"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3598,10 +3598,10 @@ joint_constraints/impulse_clamp = 0.0
 [node name="Area3D" type="Area3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D/Physical Bone tete_01"]
 
 [node name="Physical Bone tentaculeAV1_R_02" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-113.619, -87.634, 139.324, -34.5415, 178.22, 83.9312, -160.927, 23.6187, -116.381, -459.566, 24.477, 323.412)
+transform = Transform3D(-113.185, -85.7976, 140.812, -34.2458, 179.301, 81.7222, -161.296, 22.1373, -116.161, -461.743, 22.8268, 322.086)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00486003, 0.00952899, 0.420827)
-body_offset = Transform3D(-200.462, -1.50116, -5.43396, -0.0260696, 197.68, -13.8716, 6.7486, -9.76509, -199.492, 3.27531, 3.95398, 84.0119)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00602104, 0.00961131, 0.420109)
+body_offset = Transform3D(-200.434, -1.43909, -5.43851, -0.0451164, 197.716, -13.6532, 6.71127, -9.76717, -199.554, 3.50542, 3.83578, 83.8881)
 bone_name = "tentaculeAV1_R_02"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3614,10 +3614,10 @@ transform = Transform3D(1, 0, 0, 0, 0.056414, 0.998407, 0, -0.998407, 0.056414, 
 shape = SubResource("CapsuleShape3D_7jgvn")
 
 [node name="Physical Bone tentaculeAV2_R_03" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-188.223, 19.9441, 64.608, 12.2815, 198.007, -25.3437, -66.4916, -19.884, -187.573, -601.609, 9.6481, 419.765)
+transform = Transform3D(-187.556, 21.7414, 65.9541, 12.7363, 197.493, -28.8836, -68.2672, -22.8864, -186.59, -604.731, 17.1642, 418.028)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00325427, -0.00154552, 0.329961)
-body_offset = Transform3D(-199.916, 1.0696, 0.40995, -0.00199318, 198.649, 6.84229, 0.69585, 6.66939, -199.635, 0.516968, -1.95067, 65.8798)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00274551, -0.0017245, 0.329075)
+body_offset = Transform3D(-199.931, 1.07215, 0.340473, -0.00641632, 198.688, 6.9648, 0.722065, 6.67117, -199.643, 0.438721, -1.94929, 65.7072)
 bone_name = "tentaculeAV2_R_03"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3630,10 +3630,10 @@ transform = Transform3D(1, 0, 0, 0, -0.0312363, 0.999512, 0, -0.999512, -0.03123
 shape = SubResource("CapsuleShape3D_bx766")
 
 [node name="Physical Bone tentaculeAV3_R_04" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-20.8946, 29.7714, -196.665, -21.8908, 196.202, 32.027, 197.697, 24.8717, -17.2392, -532.574, -1.84675, 543.196)
+transform = Transform3D(-20.5951, 30.543, -196.578, -17.9679, 196.535, 32.4188, 198.124, 20.9988, -17.4943, -537.055, 3.02165, 541.347)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00230776, 0.00242671, 0.297788)
-body_offset = Transform3D(-199.322, -0.33713, -1.42882, 0.00251198, 197.098, -1.29203, 0.298527, -0.284745, -202.07, 0.886292, -0.0935516, 60.1742)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00342174, 0.00265655, 0.297713)
+body_offset = Transform3D(-199.354, -0.236311, -1.37903, 0.00393105, 197.214, -1.33164, 0.305405, -0.289742, -201.977, 1.09332, -0.127476, 60.131)
 bone_name = "tentaculeAV3_R_04"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3646,10 +3646,10 @@ transform = Transform3D(0.982222, 0.187724, 1.86265e-09, 0.0286997, -0.150164, 0
 shape = SubResource("CapsuleShape3D_7ylj2")
 
 [node name="Physical Bone tentaculeAR1_R_06" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(165.443, 26.0091, 109.326, -50.5149, 191.016, 31.0006, -100.384, -53.2572, 164.581, -398.876, -28.9979, -230.582)
+transform = Transform3D(164.881, 21.5156, 111.136, -48.767, 190.7, 35.4318, -102.156, -56.3091, 162.46, -398.574, -25.6409, -230.771)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00524639, 0.000206986, 0.430974)
-body_offset = Transform3D(-201.136, -1.44945, -0.828644, -0.0082016, 196.702, -7.74424, -0.825478, -7.69677, -200.386, -0.697815, 3.29681, 86.3585)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00856959, 0.00135855, 0.427644)
+body_offset = Transform3D(-201.087, -1.26737, -0.763008, -0.0145779, 196.82, -7.93354, -0.859634, -7.70092, -200.367, -1.39522, 3.12521, 85.6886)
 bone_name = "tentaculeAR1_R_06"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3662,10 +3662,10 @@ transform = Transform3D(1, 0, 0, 0, 0.0535734, 0.998564, 0, -0.998564, 0.0535734
 shape = SubResource("CapsuleShape3D_0omxn")
 
 [node name="Physical Bone tentaculeAR2_R_07" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(141.641, 72.1653, 121.367, -36.7008, 184.814, -67.0593, -136.348, 25.2203, 144.129, -518.414, 22.2833, -290.245)
+transform = Transform3D(141.88, 70.3081, 122.175, -36.2915, 185.722, -64.7326, -136.209, 23.7518, 144.509, -522.699, 21.2117, -289.387)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71277e-05, -0.00571, 0.353177)
-body_offset = Transform3D(-201.061, -1.33092, -1.41904, 0.0197239, 197.682, 4.32362, 0.0866013, 0.915979, -199.721, 0.490128, -0.398239, 70.5419)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00141938, -0.00497178, 0.35372)
+body_offset = Transform3D(-200.995, -1.2291, -1.34072, 0.0337315, 197.811, 4.13615, 0.0462036, 0.932262, -199.727, 0.753418, -0.479614, 70.6521)
 bone_name = "tentaculeAR2_R_07"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3678,10 +3678,10 @@ transform = Transform3D(1, 0, 0, 0, -0.196579, 0.980488, 0, -0.980488, -0.196579
 shape = SubResource("CapsuleShape3D_53w7k")
 
 [node name="Physical Bone tentaculeAR3_R_08" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(196.439, 37.4674, -2.8143, -37.2253, 196.108, 12.4918, 5.0997, -11.7455, 199.59, -550.696, 36.8395, -413.899)
+transform = Transform3D(196.108, 37.4253, -11.8715, -36.5733, 196.12, 14.1129, 14.2821, -11.6674, 199.148, -550.803, 35.0521, -413.395)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00280017, -0.00215223, 0.352208)
-body_offset = Transform3D(-200.971, -1.93862, 4.78072, -0.00726151, 197.684, 0.0952501, -4.25796, -0.654548, -199.681, -2.25073, 0.391891, 70.3158)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0036496, -0.00218344, 0.352299)
+body_offset = Transform3D(-200.899, -1.92399, 4.90732, -0.00688154, 197.758, 0.0181837, -4.24623, -0.653018, -199.748, -2.46625, 0.425362, 70.3542)
 bone_name = "tentaculeAR3_R_08"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3694,10 +3694,10 @@ transform = Transform3D(1, 0, 0, 0, -0.0516388, 0.998666, 0, -0.998666, -0.05163
 shape = SubResource("CapsuleShape3D_4cria")
 
 [node name="Physical Bone queue1_010" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(194.206, -7.1076, -47.2606, 19.0442, 192.904, 49.2464, 43.8338, -52.3199, 187.993, 31.2518, -63.6936, -343.41)
+transform = Transform3D(194.943, -7.01807, -44.1375, 18.5353, 192.427, 51.2683, 40.6671, -54.0624, 188.211, 30.6497, -61.6253, -342.702)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012245, 0.00155011, 0.377987)
-body_offset = Transform3D(-201.621, 0.791474, 5.8732, 0.0218506, 196.49, -11.3145, -5.06422, -10.5206, -199.664, -1.97433, 3.97211, 75.493)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000986879, 0.00167236, 0.377688)
+body_offset = Transform3D(-201.558, 0.772096, 5.77844, 0.0259361, 196.631, -11.3429, -5.05219, -10.5206, -199.644, -1.98483, 3.95522, 75.4256)
 bone_name = "queue1_010"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3710,10 +3710,10 @@ transform = Transform3D(1, 0, 0, 0, 0.0466183, 0.998913, 0, -0.998913, 0.0466183
 shape = SubResource("CapsuleShape3D_tu24a")
 
 [node name="Physical Bone queue2_011" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(160.819, -4.36663, 118.82, 48.6773, 184.766, -59.0932, -108.479, 76.4357, 149.632, 19.8496, -38.9621, -502.783)
+transform = Transform3D(159.413, -2.21863, 120.759, 45.9481, 186.045, -57.2376, -111.698, 73.3652, 148.799, 15.926, -38.5825, -502.211)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00344747, -0.00363434, 0.299144)
-body_offset = Transform3D(-200.378, 1.86825, -4.14019, 0.0112534, 198.2, 3.03253, 1.57592, 0.732487, -199.875, 0.554504, -0.186798, 59.7996)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00307967, -0.00356861, 0.298989)
+body_offset = Transform3D(-200.48, 1.73121, -3.95926, 0.0205803, 198.109, 2.92482, 1.53818, 0.733856, -199.929, 0.57254, -0.16745, 59.7837)
 bone_name = "queue2_011"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3726,10 +3726,10 @@ transform = Transform3D(1, 0, 0, 0, -0.0759533, 0.997111, 0, -0.997111, -0.07595
 shape = SubResource("CapsuleShape3D_l0s2y")
 
 [node name="Physical Bone queue3_012" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(56.2906, 22.1397, 190.634, 33.2054, 194.545, -32.3989, -189.021, 40.7691, 51.0795, -61.9143, -5.56103, -619.72)
+transform = Transform3D(54.6045, 21.4933, 191.197, 29.772, 195.41, -30.4696, -190.084, 36.7805, 50.1519, -69.8489, -7.83398, -617.726)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000951894, -0.00298386, 0.320728)
-body_offset = Transform3D(-200.542, 2.16162, 1.59212, -0.000118256, 197.705, 3.23267, -2.67503, 1.76475, -200.127, -0.313293, -0.446884, 64.194)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00158021, -0.00301417, 0.320324)
+body_offset = Transform3D(-200.597, 1.90623, 1.57685, 0.00163651, 197.638, 3.1717, -2.65024, 1.76442, -200.214, -0.182373, -0.420258, 64.1427)
 bone_name = "queue3_012"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3742,10 +3742,10 @@ transform = Transform3D(1, 0, 0, 0, 0.0675452, 0.997716, 0, -0.997716, 0.0675452
 shape = SubResource("CapsuleShape3D_qceyb")
 
 [node name="Physical Bone tentaculeAV1_L_014" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-102.948, 84.2891, -149.322, 22.3475, 179.278, 85.7911, 170.007, 27.475, -101.699, 394.593, 15.2319, 264.005)
+transform = Transform3D(-102.588, 82.0822, -150.792, 22.8089, 180.62, 82.8014, 170.163, 25.2749, -102.008, 396.65, 13.9347, 262.654)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00444586, 0.0101393, 0.419419)
-body_offset = Transform3D(-200.359, 0.963041, 5.38842, -0.0283432, 197.644, -13.9022, -6.87125, -9.77258, -199.629, -3.16054, 3.82672, 83.7969)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00470026, 0.0103995, 0.417566)
+body_offset = Transform3D(-200.333, 0.90975, 5.48882, -0.0420914, 197.67, -13.6635, -6.90247, -9.77457, -199.696, -3.24303, 3.64955, 83.4554)
 bone_name = "tentaculeAV1_L_014"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3758,10 +3758,10 @@ transform = Transform3D(1, 0, 0, 0, 0.127705, 0.991812, 0, -0.991812, 0.127705, 
 shape = SubResource("CapsuleShape3D_ly721")
 
 [node name="Physical Bone tentaculeAV2_L_015" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-158.185, -47.5177, -112.781, -13.2973, 189.891, -61.3556, 121.658, -41.0292, -153.349, 476.668, 12.7527, 300.146)
+transform = Transform3D(-156.857, -46.58, -115.005, -12.4587, 190.348, -60.1031, 123.453, -39.9739, -152.189, 479.779, 17.7842, 299.403)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00224557, -0.00396189, 0.330887)
-body_offset = Transform3D(-200.16, -1.68171, -0.798996, 0.0141964, 198.938, 8.57521, -0.608444, 6.67573, -199.044, -0.191757, -2.04922, 65.8862)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00139517, -0.00392225, 0.330025)
+body_offset = Transform3D(-200.161, -1.56667, -0.719017, 0.0275173, 198.944, 8.47311, -0.650078, 6.6853, -199.104, -0.048111, -2.01599, 65.7346)
 bone_name = "tentaculeAV2_L_015"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3774,10 +3774,10 @@ transform = Transform3D(1, 0, 0, 0, -0.241295, 0.970452, 0, -0.970452, -0.241295
 shape = SubResource("CapsuleShape3D_b1o1u")
 
 [node name="Physical Bone tentaculeAV3_L_016" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-91.8218, -27.8742, 175.476, -20.1102, 197.885, 20.9107, -176.534, -8.04403, -93.6534, 433.371, 15.2752, 354.977)
+transform = Transform3D(-92.8088, -29.4373, 174.7, -22.2135, 197.597, 21.4947, -175.764, -9.42897, -94.9632, 437.588, 15.5967, 354.895)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00175161, 0.0025374, 0.296153)
-body_offset = Transform3D(-199.871, -1.4664, 1.63783, -0.00263929, 197.139, -1.97369, -0.231743, -0.293622, -201.44, -0.831421, 0.0842896, 59.6573)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00300953, 0.00238228, 0.295878)
+body_offset = Transform3D(-199.847, -1.38065, 1.50522, -0.00250673, 197.366, -1.91364, -0.18885, -0.292121, -201.297, -1.04352, 0.0960159, 59.5593)
 bone_name = "tentaculeAV3_L_016"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3790,10 +3790,10 @@ transform = Transform3D(1, 0, 0, 0, -0.177617, 0.9841, 0, -0.9841, -0.177617, -4
 shape = SubResource("CapsuleShape3D_7vixb")
 
 [node name="Physical Bone tentaculeAR1_L_018" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(147.882, -16.8869, -133.588, 63.106, 183.972, 46.6025, 118.947, -76.6093, 141.36, 411.378, -31.5918, -192.109)
+transform = Transform3D(149.998, -17.9409, -131.068, 63.1817, 183.808, 47.1468, 116.227, -76.765, 143.521, 410.248, -26.2868, -194.434)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00426515, 0.00168382, 0.434372)
-body_offset = Transform3D(-200.83, 1.54377, 1.26612, -0.0235443, 196.79, -8.39304, 0.681702, -7.67859, -200.579, 0.304001, 3.31445, 87.1358)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00373219, 0.00159079, 0.43502)
+body_offset = Transform3D(-200.816, 1.50195, 1.21761, -0.0312576, 196.924, -8.3623, 0.639122, -7.68165, -200.517, 0.217407, 3.32462, 87.2386)
 bone_name = "tentaculeAR1_L_018"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3806,10 +3806,10 @@ transform = Transform3D(1, 0, 0, 0, 0.131305, 0.991342, 0, -0.991342, 0.131305, 
 shape = SubResource("CapsuleShape3D_m4c00")
 
 [node name="Physical Bone tentaculeAR2_L_019" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(77.3242, -64.5418, -172.787, 19.4835, 189.166, -61.9409, 183.416, 7.11519, 79.423, 553.255, 21.5223, -191.009)
+transform = Transform3D(80.8364, -61.2619, -172.373, 19.6627, 190.27, -58.4015, 181.876, 6.65822, 82.9265, 554.634, 23.3208, -194.997)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0022209, -0.00662604, 0.349209)
-body_offset = Transform3D(-200.439, 0.158577, 1.238, -0.00788641, 197.885, 4.12049, 0.0803299, 0.825078, -200.132, 0.0138855, -0.127701, 69.8933)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00242646, -0.00629732, 0.348434)
+body_offset = Transform3D(-200.42, 0.147827, 1.19658, -0.0175219, 197.841, 3.8399, 0.10302, 0.812893, -200.272, 0.0703125, -0.092041, 69.7863)
 bone_name = "tentaculeAR2_L_019"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
@@ -3822,10 +3822,10 @@ transform = Transform3D(1, 0, 0, 0, 0.0617279, -0.998093, 0, 0.998093, 0.0617279
 shape = SubResource("CapsuleShape3D_r6gve")
 
 [node name="Physical Bone tentaculeAR3_L_020" type="PhysicalBone3D" parent="Sketchfab_Scene/Sketchfab_model/8b449b56c497489fb376d797a1511cd3_fbx/Object_2/RootNode/Object_4/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(192.701, -13.5257, -51.8032, 17.555, 198.777, 13.4021, 50.58, -17.4599, 192.709, 629.086, 37.9224, -263.487)
+transform = Transform3D(193.279, -7.08511, -50.9201, 11.2297, 199.126, 14.9182, 50.1692, -17.276, 192.833, 629.256, 39.0619, -269.174)
 joint_type = 1
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00730074, -0.00372908, 0.3484)
-body_offset = Transform3D(-200.976, 1.0616, -4.2042, -0.00384617, 197.474, 0.42856, 4.34155, -0.640705, -199.896, 2.93597, 0.587114, 69.6095)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00988563, -0.00370653, 0.347498)
+body_offset = Transform3D(-201.053, 0.646513, -4.11526, -0.00487709, 197.435, 0.254564, 4.37142, -0.631088, -199.941, 3.41998, 0.643387, 69.4334)
 bone_name = "tentaculeAR3_L_020"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
